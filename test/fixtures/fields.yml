@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  node_id: 1
+  field_descriptor_id: 1
+  data: MyString
+
+two:
+  node_id: 1
+  field_descriptor_id: 1
+  data: MyString

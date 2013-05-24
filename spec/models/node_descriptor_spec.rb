@@ -1,0 +1,40 @@
+require 'spec_helper'
+
+describe NodeDescriptor do
+  let!(:parent_node_descriptor){ FactoryGirl.create :node_descriptor }
+  let!(:child_node_descriptor_1){ FactoryGirl.create :node_descriptor }
+  let!(:child_node_descriptor_2){ FactoryGirl.create :node_descriptor }
+
+  let!(:field_descriptor_1){ FactoryGirl.create :field_descriptor }
+  let!(:field_descriptor_2){ FactoryGirl.create :field_descriptor }
+
+  before(:all) do
+    parent_node_descriptor.child_node_descriptors.push child_node_descriptor_1
+    parent_node_descriptor.child_node_descriptors.push child_node_descriptor_2
+
+    parent_node_descriptor.field_descriptors.push field_descriptor_1
+    parent_node_descriptor.field_descriptors.push field_descriptor_2
+  end
+
+  describe "relations between node descriptors" do
+    it "should contains multiple node descriptors" do
+      parent_node_descriptor.child_node_descriptors(true).length.should == 2
+    end
+
+    specify "two child node descriptors have only one parent node descriptor " do
+      child_node_descriptor_1.parent_node_descriptors.should == [parent_node_descriptor]
+      child_node_descriptor_2.parent_node_descriptors.should == [parent_node_descriptor]
+    end
+  end
+
+  describe "relations between node descriptor and field descriptors" do
+    it "should contains multiple field descriptors" do
+      parent_node_descriptor.field_descriptors(true).length.should == 2
+    end
+
+    specify "two field descriptors have only one parent node descriptor " do
+      field_descriptor_1.node_descriptors.should == [parent_node_descriptor]
+      field_descriptor_2.node_descriptors.should == [parent_node_descriptor]
+    end
+  end
+end
