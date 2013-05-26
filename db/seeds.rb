@@ -52,9 +52,23 @@ analyzing_test_runs_content_field = Field.create({field_descriptor: content_fiel
 techniques.child_nodes.push adopt_techniques
 techniques.child_nodes.push trial_techniques
 
-adopt_techniques.push aggregates_as_documents
-adopt_techniques.push automated_deployment_pipeline
+adopt_techniques.child_nodes.push aggregates_as_documents
+adopt_techniques.child_nodes.push automated_deployment_pipeline
 
-trial_techniques.push analyzing_test_runs
+trial_techniques.child_nodes.push analyzing_test_runs
 
+tools = Node.create({node_descriptor: category_descriptor})
+title_field = Field.create({field_descriptor: title_field_descriptor, node: tools, data: "Tools"})
+content_field = Field.create({field_descriptor: content_field_descriptor, node: tools, data: "Tools trends."})
 
+adopt_tools = Node.create({node_descriptor: assessment_descriptor})
+adopt_tools_title_field = Field.create({field_descriptor: title_field_descriptor, node: adopt_tools, data: "Tools - Adopt"})
+adopt_tools_content_field = Field.create({field_descriptor: content_field_descriptor, node: adopt_tools, data: "Adopt tools."})
+
+d3 = Node.create({node_descriptor: technology_descriptor})
+d3_title_field = Field.create({field_descriptor: title_field_descriptor, node: d3, data: "D3"})
+d3_content_field = Field.create({field_descriptor: content_field_descriptor, node: d3, data: "D3 continues to gain traction as..."})
+
+tools.child_nodes.push adopt_tools
+
+adopt_tools.child_nodes.push d3
