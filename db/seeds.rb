@@ -13,6 +13,10 @@ technology_descriptor = NodeDescriptor.create({name: 'Technology'})
 title_field_descriptor = FieldDescriptor.create({name: 'Title', field_type: 'Text'})
 content_field_descriptor = FieldDescriptor.create({name: 'Content', field_type: 'Long Text'})
 
+category_descriptor.child_node_descriptors.push assessment_descriptor
+assessment_descriptor.child_node_descriptors.push technology_descriptor
+
+# TODO: support creating relation like this
 RelationDescriptor.create({name: 'Contains multiple assessments', parent_node_descriptor: category_descriptor, child_node_descriptor: assessment_descriptor})
 RelationDescriptor.create({name: 'Contains multiple technologies', parent_node_descriptor: assessment_descriptor, child_node_descriptor: technology_descriptor})
 
@@ -25,50 +29,49 @@ assessment_descriptor.field_descriptors.push content_field_descriptor
 technology_descriptor.field_descriptors.push title_field_descriptor
 technology_descriptor.field_descriptors.push content_field_descriptor
 
-techniques = Node.create({node_descriptor: category_descriptor})
-title_field = Field.create({field_descriptor: title_field_descriptor, node: techniques, data: "Techniques"})
-content_field = Field.create({field_descriptor: content_field_descriptor, node: techniques, data: "Techniques trends."})
+category_clazz = Global::Category
+assessment_clazz = Global::Assessment
+technology_clazz = Global::Technology
 
-adopt_techniques = Node.create({node_descriptor: assessment_descriptor})
-adopt_techniques_title_field = Field.create({field_descriptor: title_field_descriptor, node: adopt_techniques, data: "Techniques - Adopt"})
-adopt_techniques_content_field = Field.create({field_descriptor: content_field_descriptor, node: adopt_techniques, data: "Adopt techniques."})
+techniques = category_clazz.new
+techniques.title = "Techniques"
+techniques.content = "Techniques trends."
 
-trial_techniques = Node.create({node_descriptor: assessment_descriptor})
-adopt_techniques_title_field = Field.create({field_descriptor: title_field_descriptor, node: trial_techniques, data: "Techniques - Trial"})
-adopt_techniques_content_field = Field.create({field_descriptor: content_field_descriptor, node: trial_techniques, data: "Trial techniques."})
+adopt_techniques = assessment_clazz.new
+adopt_techniques.title = "Techniques - Adopt"
+adopt_techniques.content = "Adopt techniques"
 
-aggregates_as_documents = Node.create({node_descriptor: technology_descriptor})
-aggregates_as_documents_title_field = Field.create({field_descriptor: title_field_descriptor, node: aggregates_as_documents, data: "Aggregates as documents"})
-aggregates_as_documents_content_field = Field.create({field_descriptor: content_field_descriptor, node: aggregates_as_documents, data: "No explanation."})
+trial_techniques = assessment_clazz.new
+trial_techniques.title = "Techniques - Trial"
+trial_techniques.content = "Trial techniques"
 
-automated_deployment_pipeline = Node.create({node_descriptor: technology_descriptor})
-automated_deployment_pipeline_title_field = Field.create({field_descriptor: title_field_descriptor, node: automated_deployment_pipeline, data: "Automated deployment pipeline"})
-automated_deployment_pipeline_content_field = Field.create({field_descriptor: content_field_descriptor, node: automated_deployment_pipeline, data: "No explanation."})
+aggregates_as_documents = technology_clazz.new
+aggregates_as_documents.title = "Aggregates as documents"
+aggregates_as_documents.content = "No explanation"
 
-analyzing_test_runs = Node.create({node_descriptor: technology_descriptor})
-analyzing_test_runs_title_field = Field.create({field_descriptor: title_field_descriptor, node: analyzing_test_runs, data: "Analyzing test runs"})
-analyzing_test_runs_content_field = Field.create({field_descriptor: content_field_descriptor, node: analyzing_test_runs, data: "Failing tests reveal bugs in production..."})
+analyzing_test_runs = technology_clazz.new
+analyzing_test_runs.title = "Analyzing test runs"
+analyzing_test_runs.content = "Failing tests reveal bugs in production..."
 
-techniques.child_nodes.push adopt_techniques
-techniques.child_nodes.push trial_techniques
+techniques.add adopt_techniques
+techniques.add trial_techniques
 
-adopt_techniques.child_nodes.push aggregates_as_documents
-adopt_techniques.child_nodes.push automated_deployment_pipeline
+adopt_techniques.add aggregates_as_documents
+trial_techniques.add analyzing_test_runs
 
-trial_techniques.child_nodes.push analyzing_test_runs
+tools = category_clazz.new
+tools.title = "Tools"
+tools.content = "Tools Trends"
 
-tools = Node.create({node_descriptor: category_descriptor})
-title_field = Field.create({field_descriptor: title_field_descriptor, node: tools, data: "Tools"})
-content_field = Field.create({field_descriptor: content_field_descriptor, node: tools, data: "Tools trends."})
+adopt_tools = assessment_clazz.new
+adopt_tools.title = "Tools - Adopt"
+adopt_tools.content = "Adopt tools"
 
-adopt_tools = Node.create({node_descriptor: assessment_descriptor})
-adopt_tools_title_field = Field.create({field_descriptor: title_field_descriptor, node: adopt_tools, data: "Tools - Adopt"})
-adopt_tools_content_field = Field.create({field_descriptor: content_field_descriptor, node: adopt_tools, data: "Adopt tools."})
+d3 = technology_clazz.new
+d3.title = "D3"
+d3.content = "D3 continues to gain traction as..."
 
-d3 = Node.create({node_descriptor: technology_descriptor})
-d3_title_field = Field.create({field_descriptor: title_field_descriptor, node: d3, data: "D3"})
-d3_content_field = Field.create({field_descriptor: content_field_descriptor, node: d3, data: "D3 continues to gain traction as..."})
+tools.add adopt_tools
+adopt_tools.add d3
 
-tools.child_nodes.push adopt_tools
 
-adopt_tools.child_nodes.push d3
