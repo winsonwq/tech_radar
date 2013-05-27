@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :field_descriptor do
-    sequence(:name) { |n| "NodeDescriptor#{n}" }
-    sequence(:field_type) { |n| "NodeDescriptor Type#{n}" }
+    sequence(:name) { |n| "FieldDescriptor#{n}" }
+    sequence(:field_type) { |n| "FieldDescriptor Type#{n}" }
   end
 end

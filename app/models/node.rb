@@ -21,4 +21,5 @@ class Node < ActiveRecord::Base
   belongs_to :node_descriptor
 
   attr_accessible :node_descriptor
+
 end
