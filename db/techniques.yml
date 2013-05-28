@@ -1,5 +1,6 @@
 Techniques:
-  adopt:
+
+  Adopt:
     - title: Aggregates as documents
       content:
     - title: Automated deployment pipeline
@@ -9,29 +10,29 @@ Techniques:
     - title: In-process acceptance testing
       content:
     - title: Mobile testing on mobile networks
-      content:
+      content: We increasingly see mobile applications that work really well during development and testing, but run into trouble when they are deployed in the real world. Mobile testing on mobile networks reveals how your app performs under a variety of conditions. You might test using 3G or LTE or deliberately use a poor WiFi network with overloaded access points. Measure network performance for your target environment, then simulate the conditions using latency and packet-loss inducing tools. In addition, it is sometimes necessary to examine exactly how your device and software are using the network with a tool such as Wireshark.
     - title: Performance testing as a first-class citizen
-      content:
+      content: While unit and acceptance testing are widely embraced as standard development practices, this trend has not continued into the realm of performance testing. Currently, the common tooling drives testers towards creating throw away code and a click and script mentality. Treating performance testing as a first-class citizen enables the creation of better tests that cover more functionality, leading to better tooling to create and run performance tests, resulting in a test suite that is maintainable and can itself be tested.
     - title: Promises for asynchronous programming
-      content:
+      content: The use of promises for asynchronous programming is an old technique that is also known as futures. It is gaining renewed interest in light of the extensive use of JavaScript on both the client and server side. This technique eliminates the use of deeply nested callbacks, flags and pollers and has first-class support from libraries such as jQuery. Teams developing JavaScript codebases of significant complexity should take advantage of this.
     - title: Windows infrastructure automation
-      content:
+      content: Previously, support for Windows in tools like Chef and Puppet was lacking, leading to large amounts of Powershell scripting to achieve simple infrastructure automation tasks. Achieving the same level of automation for Windows was more challenging than for Unix. In the last 12 months however, both Chef and Puppet support for Windows has improved drastically. That support, combined with the inherent power of Powershell makes Windows infrastructure automation extremely viable.
 
-  trial:
+  Trial:
     - title: Analyzing test runs
-      content:
+      content: Failing tests reveal bugs in production code. However, analyzing test runs for other properties can reveal interesting information. A simple example would be to monitor which tests fail frequently and run them earlier in your build pipeline to get fast feedback. Similarly, tracking other properties such as test execution times and ratios of long-running tests to fast-tests can provide actionable metrics.
     - title: Blue-green deployment
-      content:
+      content: Blue-green deployment is a pattern for performing software upgrades. By setting up the latest version of your application on an identical clone of your production application stack, traffic can be switched, near instantaneously, from the current production stack to the new one as soon as the test suite and the business determine it is appropriate. Though this is an old technique, infrastructure automation and resources in the cloud make it worth reconsidering.
     - title: Co-location by telepresence
-      content:
+      content: Increasing quality and range of choices for inexpensive or free video conferencing is leading to a new way of working for distributed teams. Always-on video connections can help create a sense of co-location by telepresence, even when the team is distributed geographically. This is becoming the defacto standard in some of our offshore delivery centers. We are also seeing increased use of screen-sharing tools like ScreenHero for remote pairing. We would caution those looking for a silver bullet to eliminate the need for physical co-location. There is no substitute for the understanding and empathy created by face-to-face communication.
     - title: Continuous delivery for mobile devices
-      content:
+      content: With HTML5 blurring the line between traditional native apps and web apps, we are beginning to experiment with continuous delivery for mobile devices. Services such as TestFlight allow you to deploy native apps to real devices multiple times per day. With a wholly or partially HTML5-based application changes can be deployed without submitting a new app to an app store. If your organization has an enterprise app store, you may be able to easily push builds to it. While the techniques for implementing CD to mobile devices are improving, we note that testing practices are lagging behind. To be successful you will need to increase your focus on automated testing to ensure that everything actually works once it gets to the device.
     - title: Database migrations for NoSQL
-      content:
+      content: NoSQL data stores continue to become mainstream, and teams should acknowledge the need for database migrations for NoSQL. Especially with an implicit or dynamic schema you are likely to want to reconfigure data over time. There are several approaches such as running an explicit migration when deploying a new build of your application, or using dynamic migrations in code as documents are loaded and processed.
     - title: Edge Side Includes for page composition
       content:
     - title: HTML5 storage instead of cookies
-      content:
+      content: HTML5 storage, also known as local storage or web storage, is a mechanism for storing client side data in modern browsers, including iOS and Android mobile browsers. We recommend using HTML5 storage instead of cookies in almost all cases. HTML5 Storage can accommodate up to 5MB of data while cookies are limited to 4KB. Cookie data is transmitted in every request, which slows down your application and potentially exposes data over insecure HTTP connections. In contrast, HTML5 storage data remains securely in the browser. Cookies should be reserved for storing small simple pieces of data like a session ID.
     - title: Logs as data
       content:
     - title: Micro-services
@@ -39,22 +40,26 @@ Techniques:
     - title: Mobile first
       content:
     - title: Perimeterless enterprise
-      content:
+      content: Technology trends have broken down the garden walls that used to surround corporate IT networks and lead to a perimeterless enterprise. Employees frequently use their own consumer devices to access corporate data through cloud services and web APIs, often without the organization’s knowledge. As devices continue to proliferate and more applications move to the cloud, businesses are being forced to rethink fundamental assumptions about data access and network security.
     - title: Responsive web design
       content:
     - title: Semantic monitoring
       content:
 
-  assess:
+  Assess:
     - title: Capturing client-side JavaScript errors
-      content:
+      content: Capturing client-side JavaScript errors has helped our delivery teams to identify issues specific to a browser or plugin configuration that impact user experience. Over the past year a number of service providers have started to surface in support of this requirement. Other than storing these errors in application data stores web applications can log this data to web analytics or existing monitoring tools such as New Relic to offload storage requirements.
     - title: Collaborative analytics and data science
-      content:
+      content: For years, teams and organizations have seen the dangers of siloing expertise around technical disciplines. While we value input from experts on advanced applications, developers should have basic knowledge of user interfaces, databases, and data science, the newest industry darling. While advanced applications requires deep expertise, we are pushing for collaborative analytics and data science, where all developers use basic statistical analysis and tools to make better decisions, and work closely with experts when things get complicated.
     - title: Development environments in the cloud
-      content:
+      content: Development environments in the cloud allow you to entirely outsource development infrastructure, leaving your team with nothing more than laptops and an internet connection. By using a combination of best-of-breed services such as private GitHub repositories and Snap CI’s continuous integration in the cloud, your teams may never need to bother in-house IT for infrastructure again.
     - title: Focus on mean time to recovery
-      content:
+      content: In previous radars we recommended arranging automated acceptance tests into longer journeys and, in what we call semantic monitoring, running these tests continuously against a production environment. We still believe that this is an important technique for scenarios the team can anticipate in advance. A variation of this approach, seen especially with startups, is to reduce the number of tests while increasing monitoring and automatic alarms. This shifts the focus from avoiding problems that can be anticipated to reducing mean time to recovery for all problems.
     - title: Machine image as a build artifact
-      content:
+      content: Most virtualization technologies provide a way to launch a machine from an image. By creating a machine image as a build artifact early in your build pipeline and promoting it through the pipeline as it passes further suites of tests, you can reliably deploy the exact machine that passed the tests into production. This technique eliminates most causes of the snowflake server anti-pattern.
     - title: Minimizing application configuration
+      content: Application configuration can be a source of pain when getting started with a new tool, managing deployments to different environments, or trying to understand why applications behave differently in different places. We are a big fan of minimizing application configuration, trying to ensure that applications work sensibly out of the box with the bare minimum of configuration.
+
+  Hold:
+    - title: Exhaustive browser based testing
       content:
