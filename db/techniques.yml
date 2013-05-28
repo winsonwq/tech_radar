@@ -1,0 +1,60 @@
+Techniques:
+  adopt:
+    - title: Aggregates as documents
+      content:
+    - title: Automated deployment pipeline
+      content:
+    - title: Guerrilla testing
+      content:
+    - title: In-process acceptance testing
+      content:
+    - title: Mobile testing on mobile networks
+      content:
+    - title: Performance testing as a first-class citizen
+      content:
+    - title: Promises for asynchronous programming
+      content:
+    - title: Windows infrastructure automation
+      content:
+
+  trial:
+    - title: Analyzing test runs
+      content:
+    - title: Blue-green deployment
+      content:
+    - title: Co-location by telepresence
+      content:
+    - title: Continuous delivery for mobile devices
+      content:
+    - title: Database migrations for NoSQL
+      content:
+    - title: Edge Side Includes for page composition
+      content:
+    - title: HTML5 storage instead of cookies
+      content:
+    - title: Logs as data
+      content:
+    - title: Micro-services
+      content:
+    - title: Mobile first
+      content:
+    - title: Perimeterless enterprise
+      content:
+    - title: Responsive web design
+      content:
+    - title: Semantic monitoring
+      content:
+
+  assess:
+    - title: Capturing client-side JavaScript errors
+      content:
+    - title: Collaborative analytics and data science
+      content:
+    - title: Development environments in the cloud
+      content:
+    - title: Focus on mean time to recovery
+      content:
+    - title: Machine image as a build artifact
+      content:
+    - title: Minimizing application configuration
+      content:

@@ -1,0 +1,58 @@
+Platforms:
+  Adopt:
+
+    - title: Elastic Search
+      content:
+    - title: MongoDB
+      content:
+    - title: Neo4J
+      content:
+    - title: Redis
+      content:
+    - title: SMS and USSD as a UI
+      content:
+
+  Trial:
+
+    - title: BigQuery
+      content:
+    - title: Continuous integration in the cloud
+      content:
+    - title: Couchbase
+      content:
+    - title: Hadoop 2.0
+      content:
+    - title: Node.js
+      content:
+    - title: OpenStack
+      content:
+    - title: Rackspace Cloud
+      content:
+    - title: Riak
+      content:
+
+  Assess:
+
+    - title: Azure
+      content:
+    - title: Calatrava
+      content:
+    - title: Datomic
+      content:
+    - title: PhoneGap/Apache Cordova
+      content:
+    - title: PostgreSQL for NoSQL
+      content:
+    - title: Vumi
+      content:
+    - title: Zepto.js
+      content:
+
+  Hold:
+
+    - title: Big enterprise solutions
+      content:
+    - title: Singleton infrastructure
+      content:
+    - title: WS-*
+      content:

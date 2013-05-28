@@ -1,0 +1,70 @@
+Tools:
+  Adopt:
+
+    - title: D3
+      content:
+    - title: Embedded servlet containers
+      content:
+    - title: Frank
+      content:
+    - title: Gradle
+      content:
+    - title: Graphite
+      content:
+    - title: Immutable servers
+      content:
+    - title: NuGet
+      content:
+    - title: PSake
+      content:
+
+  Trial:
+
+    - title: Apache Pig
+      content:
+    - title: Gatling
+      content:
+    - title: Jekyll
+      content:
+    - title: Locust
+      content:
+    - title: Logstash & Graylog2
+      content:
+    - title: PhantomJS
+      content:
+    - title: Puppet-librarian and Chef-librarian
+      content:
+    - title: TestFlight & HockeyApp
+      content:
+
+  Assess:
+
+    - title: Browser-based templating
+      content:
+    - title: Faraday
+      content:
+    - title: Hystrix
+      content:
+    - title: Icon fonts
+      content:
+    - title: Light Table
+      content:
+    - title: Octopus
+      content:
+    - title: Reactive Extensions for .Net
+      content:
+    - title: Riemann
+      content:
+    - title: Snowplow Analytics
+      content:
+    - title: UIAutomator
+      content:
+
+  Hold:
+
+    - title: Heavyweight test tools
+      content:
+    - title: Maven
+      content:
+    - title: TFS
+      content:

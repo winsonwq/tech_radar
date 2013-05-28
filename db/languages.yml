@@ -1,0 +1,57 @@
+Languages:
+  Adopt:
+    - title: Clojure
+      content:
+    - title: CSS frameworks
+      content:
+    - title: Jasmine paired with Node.js
+      content:
+    - title: Scala
+      content:
+    - title: Sinatra
+      content:
+
+  Trial:
+    - title: CoffeeScript
+      content:
+    - title: Dropwizard
+      content:
+    - title: HTML5 for offline applications
+      content:
+    - title: JavaScript as a platform
+      content:
+    - title: JavaScript MV* frameworks
+      content:
+    - title: Play Framework 2
+      content:
+    - title: Require.js & NPM
+      content:
+    - title: Scratch, Alice, and Kodu
+      content:
+
+  Assess:
+
+    - title: ClojureScript
+      content:
+    - title: Gremlin
+      content:
+    - title: Lua
+      content:
+    - title: Nancy
+      content:
+    - title: OWIN
+      content:
+    - title: RubyMotion
+      content:
+    - title: Twitter Bootstrap
+      content:
+
+  Hold:
+    - title: Backbone.js
+      content:
+    - title: Component-based frameworks
+      content:
+    - title: Handwritten CSS
+      content:
+    - title: Logic in stored procedures
+      content:
