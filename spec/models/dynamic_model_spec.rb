@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+include Global
+
 describe "dynamic model" do
 
   let!(:blog_descriptor) { FactoryGirl.create :node_descriptor, name: "Blog" }
@@ -8,12 +10,9 @@ describe "dynamic model" do
   let!(:title_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Title" }
   let!(:content_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Content" }
 
-  let!(:blog_clazz) { Global.const_get blog_descriptor.name }
-  let!(:comment_clazz) { Global.const_get comment_descriptor.name }
-
-  let!(:blog) { blog_clazz.new }
-  let!(:comment1) { comment_clazz.new }
-  let!(:comment2) { comment_clazz.new }
+  let!(:blog) { Blog.new }
+  let!(:comment1) { Comment.new }
+  let!(:comment2) { Comment.new }
 
   before :all do
     comment_descriptor.parent_node_descriptors.push blog_descriptor
@@ -61,8 +60,8 @@ describe "dynamic model" do
       comment2.add blog
 
       comment1.blogs.length.should == 1
-      comment1.blogs.first.title.should == "blog title"
-      comment1.blogs.first.content.should == "blog content"
+      comment1.blogs.first.title.should == blog.title
+      comment1.blogs.first.content.should == blog.content
     end
 
   end
