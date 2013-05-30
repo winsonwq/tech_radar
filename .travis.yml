@@ -4,6 +4,6 @@ rvm:
 env:
   - DB=mysql
 # uncomment this line if your project needs to run something other than `rake`:
-script: rake db:drop && rake db:setup && rake db:migrate:status && rspec -c
+script: rake db:reset && rake db:migrate:status && rspec -c
 before_script:
   - cp config/database.yml.example config/database.yml
