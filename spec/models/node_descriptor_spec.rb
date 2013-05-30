@@ -42,9 +42,11 @@ describe NodeDescriptor do
 
   describe "callbacks when creating new model" do
 
-    let!(:clazz) {Global.const_get(parent_node_descriptor.name)}
+    let!(:clazz) {TechRadar.const_get(parent_node_descriptor.name)}
 
     specify { clazz.should_not be_nil }
+
+    specify { clazz.singleton_methods.should include(:all) }
 
     describe "instance of clazz" do
 

@@ -37,14 +37,14 @@ dirname = File.dirname(File.expand_path(__FILE__))
   file_path = File.join(dirname, file)
   source = YAML::load_file(file_path)
 
-  category = Global::Category.new
+  category = TechRadar::Category.new
 
   source[source.keys.first].each do |key, arr|
-    assess = Global::Assessment.new
+    assess = TechRadar::Assessment.new
     category.add assess
 
     arr.each do |item|
-      tech = Global::Technology.new
+      tech = TechRadar::Technology.new
       tech.title = item["title"]
       tech.content = item["content"]
       assess.add tech

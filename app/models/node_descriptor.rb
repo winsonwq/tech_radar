@@ -22,17 +22,19 @@ class NodeDescriptor < ActiveRecord::Base
            inverse_of: :child_node_descriptors,
            after_add: [:after_add_node_descriptor, :complete_node_descriptor_relation]
 
+  has_many :nodes
+
   attr_accessible :name
   after_create :create_model
 
   def clazz
-    Global.const_get self.name.to_sym
+    TechRadar.const_get self.name.to_sym
   end
 
   private
 
   def clazz= new_clazz
-    Global.const_set self.name, new_clazz
+    TechRadar.const_set self.name, new_clazz
   end
 
   def create_model
@@ -40,14 +42,21 @@ class NodeDescriptor < ActiveRecord::Base
     self.clazz = Class.new do
       attr :node
 
-      define_method :initialize do
-        @node = Node.create({ node_descriptor: descriptor })
+      define_method :initialize do |*args|
+        @node = args.first || Node.create({ node_descriptor: descriptor })
       end
 
       # TODO: should use ActiveRecord:Relation class
       define_method :add do |elem|
         self.node.child_nodes.push elem.node if descriptor.child_node_descriptors.include? elem.node.node_descriptor
         self.node.parent_nodes.push elem.node if descriptor.parent_node_descriptors.include? elem.node.node_descriptor
+      end
+
+      define_singleton_method :all do |*args|
+        force_load = args.first
+        descriptor.nodes(force_load).map do |node|
+          descriptor.clazz.new node
+        end
       end
     end
   end
@@ -99,7 +108,7 @@ class NodeDescriptor < ActiveRecord::Base
         end
 
         relations = relations.map do |node|
-          clazz = Global.const_get(node.node_descriptor.name)
+          clazz = TechRadar.const_get(node.node_descriptor.name)
           elem = clazz.new
           elem.instance_variable_set("@node", node)
           elem
@@ -112,16 +121,11 @@ class NodeDescriptor < ActiveRecord::Base
 
   def complete_node_descriptor_relation descriptor
     clazz_name = descriptor.name
-    clazz = Global.const_get(clazz_name)
+    clazz = TechRadar.const_get(clazz_name)
 
     if clazz.instance_methods.index(self.name.pluralize.underscore.to_sym).nil?
       descriptor.send(:after_add_node_descriptor, self)
     end
   end
-
-end
-
-# TODO: should use global variable in order to call Classes directly
-module Global
 
 end
