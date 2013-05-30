@@ -18,7 +18,11 @@ class Weixin
     response_body = Weixin.xml_gen "world"
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
     if parsed_xml["Content"] == "radar"
-      response_body = Weixin.xml_gen "1. Techniques\n2. Tools\n3. Platforms\n4. Languages"
+      response_body = ""
+      Category.all.each_with_index do |c, idx|
+        response_body += "#{idx + 1}. #{c.title}\n"
+      end
+      response_body = Weixin.xml_gen response_body.strip
     end
     response_body
   end

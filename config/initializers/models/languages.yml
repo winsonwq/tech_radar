@@ -1,0 +1,57 @@
+Languages:
+
+  Adopt:
+    - title: Clojure
+      content:
+    - title: CSS frameworks
+      content: Along with JavaScript and HTML, CSS is a core technology for creating websites. Unfortunately, the language itself lacks key features, which leads to a high level of duplication and a lack of meaningful abstractions. While CSS3 aims to rectify some of these issues, it will be years before the modules that make up CSS3 will be properly supported in most browsers. Fortunately, there is a solution today using CSS frameworks like SASS, SCSS, and LESS. Due to their quality and support, we believe that the days of handwritten CSS, for anything apart from trivial work, are over. CSS frameworks simplify the development of large scale CSS codebases without having to start from scratch each time. Because of the abundance of frameworks, it is important to pick one that enables continued enhancement and maintenance of the codebase, rather than something that just helps you get started quickly. Frameworks based on mix-ins, such as Compass, or with a specific focus, such as Susy, are much better suited in this regard.
+    - title: Jasmine paired with Node.js
+      content:
+    - title: Scala
+      content:
+    - title: Sinatra
+      content: Micro-frameworks are emerging as a way to handle increasing complexity in applications both on client- and server-side. Sinatra was one of the first examples of that trend in the server-side space, exposing a lightweight DSL to build fast services that can be easily composed. Similar offerings are available for other languages, including Spark for Java, Flask for Python, Sclatra for Scala, Compojure for Clojure and Nancy for .NET.
+
+  Trial:
+    - title: CoffeeScript
+      content: The expansion of single-page and mobile browser-based applications into mainstream use, along with continued growth of node.js for server-side applications, have led to increased adoption of CoffeeScript to simplify JavaScript codebases. As a language that compiles into JavaScript code for runtime execution, many concerns have been raised about the difficulty of debugging applications written in CoffeeScript. The introduction of Source Maps in CoffeeScript 1.6.1 is helping producers of development tools address this concern. We expect this will lead to further adoption of the language following the lead of highly visible technology firms such as Dropbox.
+    - title: Dropwizard
+      content:
+    - title: HTML5 for offline applications
+      content:
+    - title: JavaScript as a platform
+      content:
+    - title: JavaScript MV* frameworks
+      content: Single-page web application development continues to flourish along with the frameworks supporting data binding, client-side templates, validation, and other capabilities. The JavaScript MV* frameworks in active use on ThoughtWorks projects include AngularJS, Knockout, and Ember.js. Each has advocates and a few detractors. We expect continuing innovative churn in this vibrant space.
+    - title: Play Framework 2
+      content: The recent release of Play Framework 2.1.1 with support for controller dependency injection, asynchronous, non-blocking I/O, a code-reload workflow, database migrations, asset pipelining, and flexible deployment options has made it more attractive to developers. For this reason Play re-appears on the radar as something for teams to seriously consider when building web applications and services on the JVM. A word of caution however, Play embraces a functional programming style which, when working with the Java language, still translates into a plethora of static methods that may be difficult to unit test outside a running server.
+    - title: Require.js & NPM
+      content: Our continued use of node.js on new production applications has re-enforced our need for reliable packaging of JavaScript code and libraries. The Node Package Manager (npm) is an important part of the node.js ecosystem and a useful tool for packaging node.js applications. Developers of browser applications with large amounts of JavaScript or CoffeeScript should consider Require.js to help with structuring their code and loading dependencies at run time.
+    - title: Scratch, Alice, and Kodu
+      content:
+
+  Assess:
+    - title: ClojureScript
+      content:
+    - title: Gremlin
+      content:
+    - title: Lua
+      content:
+    - title: Nancy
+      content: Micro-frameworks are emerging as a way to handle increasing complexity in applications both on client- and server-side. Sinatra was one of the first examples of that trend in the server-side space, exposing a lightweight DSL to build fast services that can be easily composed. Similar offerings are available for other languages, including Spark for Java, Flask for Python, Sclatra for Scala, Compojure for Clojure and Nancy for .NET.
+    - title: OWIN
+      content: One thing that has slowed the evolution of a rich, open source web development ecosystem on the .NET platform has been over-dependence on IIS and the ASP.NET framework. OWIN specifies an open HTTP handling interface that decouples web server from application much like Rack has done for the Ruby community. We are excited about OWIN because it opens up the possibility of new .NET web development tools composed of simple, independently-developed modules. Nancy is the perfect example of this. We also hope it will increase the practice of deploying web applications as standalone, self-hosted services on the .NET platform.
+    - title: RubyMotion
+      content:
+    - title: Twitter Bootstrap
+      content: Twitter Bootstrap is a popular CSS framework which allows you to quickly produce a good looking website with fluid and responsive layouts. In this edition of the radar, Bootstrap moves back from Trial to Assess based on our experiences using it over time. If you wish to replace or extensively customize the look and feel of your application, Bootstrap can present a challenge due to its deep integration with HTML markup. This doesn’t necessarily make it a bad choice but it is worth keeping these limitations in mind when choosing it over available alternatives.
+
+  Hold:
+    - title: Backbone.js
+      content:
+    - title: Component-based frameworks
+      content:
+    - title: Handwritten CSS
+      content: Along with JavaScript and HTML, CSS is a core technology for creating websites. Unfortunately, the language itself lacks key features, which leads to a high level of duplication and a lack of meaningful abstractions. While CSS3 aims to rectify some of these issues, it will be years before the modules that make up CSS3 will be properly supported in most browsers. Fortunately, there is a solution today using CSS frameworks like SASS, SCSS, and LESS. Due to their quality and support, we believe that the days of handwritten CSS, for anything apart from trivial work, are over.
+    - title: Logic in stored procedures
+      content:

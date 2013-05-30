@@ -1,18 +1,15 @@
 require 'spec_helper'
 require 'xmlsimple'
 
+include TechRadar
+
 describe WeixinController do
 
   describe :index do
-    it "should return 'world' in xml format" do
-      raw_post :index, {}, Weixin.xml_gen("hello", true)
-      response.body.should include("world")
-    end
 
-    it "should return 4 categories when send 'radar'" do
-      raw_post :index, {}, Weixin.xml_gen("radar", true)
-      message = "1. Techniques\n2. Tools\n3. Platforms\n4. Languages"
-      response.body.should include(message)
+    it "should return message in xml format" do
+      raw_post :index, {}, Weixin.xml_gen("hello", true)
+      response.headers['Content-Type'].should include "application/xml"
     end
   end
 
