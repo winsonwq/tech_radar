@@ -31,14 +31,6 @@ class NodeDescriptor < ActiveRecord::Base
     TechRadar.const_get self.name.to_sym
   end
 
-  private
-
-  def clazz= new_clazz
-    unless TechRadar.local_constant_names.include? self.name
-      TechRadar.const_set self.name, new_clazz
-    end
-  end
-
   def create_model
     descriptor = self
     self.clazz = Class.new do
@@ -62,6 +54,15 @@ class NodeDescriptor < ActiveRecord::Base
       end
     end
   end
+
+  private
+
+  def clazz= new_clazz
+    unless TechRadar.local_constant_names.include? self.name
+      TechRadar.const_set self.name, new_clazz
+    end
+  end
+
 
   def after_add_field(field_descriptor)
     field_get_sym = field_descriptor.name.underscore.to_sym
