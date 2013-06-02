@@ -34,7 +34,9 @@ class NodeDescriptor < ActiveRecord::Base
   private
 
   def clazz= new_clazz
-    TechRadar.const_set self.name, new_clazz
+    unless TechRadar.local_constant_names.include? self.name
+      TechRadar.const_set self.name, new_clazz
+    end
   end
 
   def create_model

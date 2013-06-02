@@ -16,10 +16,6 @@ describe Weixin do
     @languages = Category.new
     @languages.title = "Languages"
   end
-
-  describe :xml_gen do
-
-  end
   
   describe :gen_response_body do
 
