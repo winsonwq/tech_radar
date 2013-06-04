@@ -30,7 +30,7 @@ technology_descriptor.field_descriptors.push content_field_descriptor
 dirname = File.dirname(File.expand_path(__FILE__))
 
 technology_id = 1
-%w{ techniques.yml languages.yml tools.yml platforms.yml }.each_with_index do |file, idx|
+%w{ techniques.yml platforms.yml tools.yml languages.yml }.each_with_index do |file, idx|
   file_path = File.join(dirname, '/models', file)
   source = YAML::load_file(file_path)
 
