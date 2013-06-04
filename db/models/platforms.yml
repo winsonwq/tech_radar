@@ -1,55 +1,63 @@
 Platforms:
-
+  id: C2
   Adopt:
-    - title: Elastic Search
-      content: Over the past year we have seen a gradual uptake in the adoption of Elastic Search as an open source search platform. It is an extensible, multi-tenanted, and horizontally scalable search solution based on Apache Lucene. It allows complex data structures to be indexed and retrieved through a JSON based REST API. It provides an elegant model of operation with automatic discovery of peers in a cluster, failover, and replication. Elastic Search can be extended with a plugin system that allows adding new functionality and changing existing behavior. The community around this tool is quite vibrant as illustrated by the number of client libraries available in languages like Java, C#, Ruby, and JavaScript.
-    - title: MongoDB
-      content: For problems that fit the document database model, MongoDB is now the most popular choice. In addition to ease of use and a solid technical implementation, the community and ecosystem contributed to this success. We are aware of problems where teams were tempted by the popularity of MongoDB when a document database was not a good fit or they did not understand the inherent complexity. When used appropriately, however, MongoDB has proven itself on many projects.
-    - title: Neo4J
-      content:
-    - title: Redis
-      content: Redis has proven a useful tool on multiple ThoughtWorks projects, used as both structured cache and data store distributed across multiple countries.
-    - title: SMS and USSD as a UI
-      content: 58% of all phones sold last year globally were feature phones. In many developing countries, this is an even larger majority. If your market requires you to develop for these areas, you need to develop with this constraint in mind. These phones use SMS and USSD as a user interface. SMS is a long standing technique for sending messages, and USSD allows you to send SMS like messages in a secure session. You should look at USSD and SMS as another UI and UX platform and treat them as first-class citizens.
+    id: A5
+    technologies:
+      - title: Elastic Search
+        content: Over the past year we have seen a gradual uptake in the adoption of Elastic Search as an open source search platform. It is an extensible, multi-tenanted, and horizontally scalable search solution based on Apache Lucene. It allows complex data structures to be indexed and retrieved through a JSON based REST API. It provides an elegant model of operation with automatic discovery of peers in a cluster, failover, and replication. Elastic Search can be extended with a plugin system that allows adding new functionality and changing existing behavior. The community around this tool is quite vibrant as illustrated by the number of client libraries available in languages like Java, C#, Ruby, and JavaScript.
+      - title: MongoDB
+        content: For problems that fit the document database model, MongoDB is now the most popular choice. In addition to ease of use and a solid technical implementation, the community and ecosystem contributed to this success. We are aware of problems where teams were tempted by the popularity of MongoDB when a document database was not a good fit or they did not understand the inherent complexity. When used appropriately, however, MongoDB has proven itself on many projects.
+      - title: Neo4J
+        content:
+      - title: Redis
+        content: Redis has proven a useful tool on multiple ThoughtWorks projects, used as both structured cache and data store distributed across multiple countries.
+      - title: SMS and USSD as a UI
+        content: 58% of all phones sold last year globally were feature phones. In many developing countries, this is an even larger majority. If your market requires you to develop for these areas, you need to develop with this constraint in mind. These phones use SMS and USSD as a user interface. SMS is a long standing technique for sending messages, and USSD allows you to send SMS like messages in a secure session. You should look at USSD and SMS as another UI and UX platform and treat them as first-class citizens.
 
   Trial:
-    - title: BigQuery
-      content: The amount of data that even a relatively low volume website can generate is huge. Once you add in analytics, business metrics, demographics, user profiles and multiple devices, it can become overwhelming. Many organizations use data warehouses as a repository with data being sucked in from all parts of the organization. The challenge here is that these often turn into “Data Fortresses.” Even getting timely business metrics becomes a challenge, let alone running exploratory queries across the entire data set. Technologies like the cloud based BigQuery help. The pay-as-you-go model and the ability to do ad hoc queries lets you gain insight without buying specialist hardware and software. A data-driven business should put data in the hands of the decision makers, not hidden behind technological barriers and bureaucracy.
-    - title: Continuous integration in the cloud
-      content:
-    - title: Couchbase
-      content:
-    - title: Hadoop 2.0
-      content: Hadoop initial architecture was based on the paradigm of scaling data horizontally and metadata vertically. While data storage and processing were handled by the slave nodes reasonably well, the masters that managed metadata were a single point of failure and limiting for web scale usage. Hadoop 2.0 has significantly re-architected both HDFS and the Map Reduce framework to address these issues. The HDFS namespace can be federated now using multiple name nodes on the same cluster and deployed in a HA mode. MapReduce has been replaced with YARN, which decouples cluster resource management from job state management and eliminates the scale/performance issues with the JobTracker. Most importantly, this change encourages deploying new distributed programming paradigms in addition to MapReduce on Hadoop clusters.
-    - title: Node.js
-      content: Node.js is a lightweight web container that is a strong option for development of micro services and as a server to mobile and single-page web applications. Due to the asynchronous nature of node.js, developers are turning to promise libraries to simplify their application code. As the use of promises mature within the node.js community, we expect to see more applications developed for node.js. For those teams that are reluctant to try node.js in production, it is still worthwhile to consider node.js for development tasks like running JavaScript tests outside of the browser or generating static web content from tools like CoffeeScript, SASS, and LESS.
-    - title: OpenStack
-      content: The open source OpenStack project is gathering steam, and in recent months is becoming a more viable platform for deploying your own private clouds. Many issues which made OpenStack hard to get up and running have been addressed, and new features are being added all the time. It is clear that the OpenStack consortium and its members like Rackspace, Redhat, and HP are committed to the project as the basis for their own OpenStack-based cloud services.
-    - title: Rackspace Cloud
-      content: While AWS continues to add more features, Rackspace Cloud has become a viable competition in the storage and compute space. Some users may value the more thorough customer support available for Rackspace, as well as the ability to mix in more traditional hosting models. We are not excited about this just because Rackspace is a client of ours and we have had the pleasure developing the platform. We have successfully used Rackspace Cloud with several other clients, and would look forward to it being offered in more geographical locations.
-    - title: Riak
-      content:
+    id: A6
+    technologies:
+      - title: BigQuery
+        content: The amount of data that even a relatively low volume website can generate is huge. Once you add in analytics, business metrics, demographics, user profiles and multiple devices, it can become overwhelming. Many organizations use data warehouses as a repository with data being sucked in from all parts of the organization. The challenge here is that these often turn into “Data Fortresses.” Even getting timely business metrics becomes a challenge, let alone running exploratory queries across the entire data set. Technologies like the cloud based BigQuery help. The pay-as-you-go model and the ability to do ad hoc queries lets you gain insight without buying specialist hardware and software. A data-driven business should put data in the hands of the decision makers, not hidden behind technological barriers and bureaucracy.
+      - title: Continuous integration in the cloud
+        content:
+      - title: Couchbase
+        content:
+      - title: Hadoop 2.0
+        content: Hadoop initial architecture was based on the paradigm of scaling data horizontally and metadata vertically. While data storage and processing were handled by the slave nodes reasonably well, the masters that managed metadata were a single point of failure and limiting for web scale usage. Hadoop 2.0 has significantly re-architected both HDFS and the Map Reduce framework to address these issues. The HDFS namespace can be federated now using multiple name nodes on the same cluster and deployed in a HA mode. MapReduce has been replaced with YARN, which decouples cluster resource management from job state management and eliminates the scale/performance issues with the JobTracker. Most importantly, this change encourages deploying new distributed programming paradigms in addition to MapReduce on Hadoop clusters.
+      - title: Node.js
+        content: Node.js is a lightweight web container that is a strong option for development of micro services and as a server to mobile and single-page web applications. Due to the asynchronous nature of node.js, developers are turning to promise libraries to simplify their application code. As the use of promises mature within the node.js community, we expect to see more applications developed for node.js. For those teams that are reluctant to try node.js in production, it is still worthwhile to consider node.js for development tasks like running JavaScript tests outside of the browser or generating static web content from tools like CoffeeScript, SASS, and LESS.
+      - title: OpenStack
+        content: The open source OpenStack project is gathering steam, and in recent months is becoming a more viable platform for deploying your own private clouds. Many issues which made OpenStack hard to get up and running have been addressed, and new features are being added all the time. It is clear that the OpenStack consortium and its members like Rackspace, Redhat, and HP are committed to the project as the basis for their own OpenStack-based cloud services.
+      - title: Rackspace Cloud
+        content: While AWS continues to add more features, Rackspace Cloud has become a viable competition in the storage and compute space. Some users may value the more thorough customer support available for Rackspace, as well as the ability to mix in more traditional hosting models. We are not excited about this just because Rackspace is a client of ours and we have had the pleasure developing the platform. We have successfully used Rackspace Cloud with several other clients, and would look forward to it being offered in more geographical locations.
+      - title: Riak
+        content:
 
   Assess:
-    - title: Azure
-      content:
-    - title: Calatrava
-      content:
-    - title: Datomic
-      content:
-    - title: PhoneGap/Apache Cordova
-      content: PhoneGap, now renamed as Apache Cordova, is a platform that lets you develop cross-platform mobile applications using HTML, CSS and JavaScript. It abstracts away platform specific native code through a set JavaScript APIs that remain consistent across different mobile platforms. Cordova is available for a wide array of platforms including iOS, Android, Blackberry, Windows Phone, and WebOS.
-    - title: PostgreSQL for NoSQL
-      content: PostgreSQL is expanding to become the NoSQL choice of SQL databases. Version 9.2 includes the ability to store JSON data with full querying capabilities on the content of the JSON document. Other extensions let the user store and query data in the form of key/value pairs. This lets you take advantage of the underlying storage and transactional capabilities of a time-tested database without being tied to a relational data model. This is ideal for those who want both SQL and NoSQL applications but prefer a single reliable infrastructure that they already know how to support.
-    - title: Vumi
-      content: Vumi is a scalable open source messaging engine driving conversations through frugal methods on mobile devices. Vumi facilitates SMS, IM and USSD interactions between companies and their clients, health services and their patients, governments and citzens, and more. Vumi integrates with telcos and allows you to build apps on top of it easily. You only have to pay for carrier charges.
-    - title: Zepto.js
-      content: Zepto.js is a lightweight JavaScript library that is largely based on JQuery. The API is identical to JQuery although it does not offer full compatibility with it. With a vastly compressed file size, Zepto is a compelling option when building responsive web applications.
+    id: A7
+    technologies:
+      - title: Azure
+        content:
+      - title: Calatrava
+        content:
+      - title: Datomic
+        content:
+      - title: PhoneGap/Apache Cordova
+        content: PhoneGap, now renamed as Apache Cordova, is a platform that lets you develop cross-platform mobile applications using HTML, CSS and JavaScript. It abstracts away platform specific native code through a set JavaScript APIs that remain consistent across different mobile platforms. Cordova is available for a wide array of platforms including iOS, Android, Blackberry, Windows Phone, and WebOS.
+      - title: PostgreSQL for NoSQL
+        content: PostgreSQL is expanding to become the NoSQL choice of SQL databases. Version 9.2 includes the ability to store JSON data with full querying capabilities on the content of the JSON document. Other extensions let the user store and query data in the form of key/value pairs. This lets you take advantage of the underlying storage and transactional capabilities of a time-tested database without being tied to a relational data model. This is ideal for those who want both SQL and NoSQL applications but prefer a single reliable infrastructure that they already know how to support.
+      - title: Vumi
+        content: Vumi is a scalable open source messaging engine driving conversations through frugal methods on mobile devices. Vumi facilitates SMS, IM and USSD interactions between companies and their clients, health services and their patients, governments and citzens, and more. Vumi integrates with telcos and allows you to build apps on top of it easily. You only have to pay for carrier charges.
+      - title: Zepto.js
+        content: Zepto.js is a lightweight JavaScript library that is largely based on JQuery. The API is identical to JQuery although it does not offer full compatibility with it. With a vastly compressed file size, Zepto is a compelling option when building responsive web applications.
 
   Hold:
-    - title: Big enterprise solutions
-      content: The gap between what “enterprise-class” commercial packages provide and what is actually needed is widening. This is especially true for internet facing applications. Innovative solutions that really scale and easily support modern techniques such as continuous delivery are written by practitioners for practitioners. They originate with many internet scale companies and are refined as open source software. Big enterprise solutions often obstruct effective delivery due to their accumulated bloat, cumbersome licensing restrictions, and feature sets that are driven by check-lists and imaginary requirements far removed from the realities of most development teams.
-    - title: Singleton infrastructure
-      content:
-    - title: WS-*
-      content:
+    id: A8
+    technologies:
+      - title: Big enterprise solutions
+        content: The gap between what “enterprise-class” commercial packages provide and what is actually needed is widening. This is especially true for internet facing applications. Innovative solutions that really scale and easily support modern techniques such as continuous delivery are written by practitioners for practitioners. They originate with many internet scale companies and are refined as open source software. Big enterprise solutions often obstruct effective delivery due to their accumulated bloat, cumbersome licensing restrictions, and feature sets that are driven by check-lists and imaginary requirements far removed from the realities of most development teams.
+      - title: Singleton infrastructure
+        content:
+      - title: WS-*
+        content:

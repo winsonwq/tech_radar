@@ -7,18 +7,20 @@ describe "dynamic model" do
   let!(:blog_descriptor) { FactoryGirl.create :node_descriptor, name: "Blog" }
   let!(:comment_descriptor) { FactoryGirl.create :node_descriptor, name: "Comment" }
 
+  let!(:id_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Id" }
   let!(:title_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Title" }
   let!(:content_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Content" }
 
   before :all do
     comment_descriptor.parent_node_descriptors.push blog_descriptor
+
+    blog_descriptor.field_descriptors.push id_field_descriptor
     blog_descriptor.field_descriptors.push title_field_descriptor
     blog_descriptor.field_descriptors.push content_field_descriptor
 
+    comment_descriptor.field_descriptors.push id_field_descriptor
     comment_descriptor.field_descriptors.push content_field_descriptor
-  end
 
-  before :each do
     @blog = Blog.new
     @comment1 = Comment.new
     @comment2 = Comment.new
@@ -26,7 +28,10 @@ describe "dynamic model" do
     @blog.title = "blog title"
     @blog.content = "blog content"
 
+    @comment1.id = '10'
     @comment1.content = "comment1 content"
+
+    @comment2.id = '11'
     @comment2.content = "comment2 content"
   end
 
@@ -38,6 +43,10 @@ describe "dynamic model" do
     it "should return all comments" do
       Comment.all.length.should == 2
       Comment.all.first.content.should == @comment1.content
+    end
+
+    it "should find comment with id 10" do
+      Comment.find('10').content.should == @comment1.content
     end
   end
 

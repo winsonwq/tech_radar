@@ -48,6 +48,8 @@ describe NodeDescriptor do
 
     specify { clazz.singleton_methods.should include(:all) }
 
+    specify { clazz.singleton_methods.should include(:find) }
+
     describe "instance of clazz" do
 
       let!(:instance) {clazz.new}

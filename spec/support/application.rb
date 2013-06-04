@@ -6,6 +6,10 @@ module ReEducation
       @request.env.delete('RAW_POST_DATA')
       response
     end
+
+    def send_content(text)
+      Weixin.gen_response_body(Weixin.xml_gen(text, true))
+    end
   end
 end
 

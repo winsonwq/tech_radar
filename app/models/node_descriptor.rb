@@ -52,6 +52,10 @@ class NodeDescriptor < ActiveRecord::Base
           descriptor.clazz.new node
         end
       end
+
+      define_singleton_method :find do |*args|
+        all.select { |child| child.id === args.first }.first
+      end
     end
   end
 
