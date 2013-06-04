@@ -1,4 +1,4 @@
-if Rails.env.development? or Rails.env.production?
+if ENV['RELOAD'].present? and ENV['RELOAD'].upcase == 'TRUE'
   category_descriptor = NodeDescriptor.select { |nd| nd.name == 'Category' }.first
   category_descriptor.create_model
   assessment_descriptor = NodeDescriptor.select { |nd| nd.name == 'Assessment' }.first
