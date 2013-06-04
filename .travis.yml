@@ -2,8 +2,8 @@ language: ruby
 rvm:
   - "1.9.3"
 env:
-  - DB=mysql
+  - DB=postgres
 # uncomment this line if your project needs to run something other than `rake`:
-script: rake db:reset && rake db:migrate:status && rspec -c
+script: RAILS_ENV=test rake db:setup && rspec -c
 before_script:
   - cp config/database.yml.example config/database.yml
