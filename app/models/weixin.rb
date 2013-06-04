@@ -15,11 +15,11 @@ class Weixin
   end
 
   def self.gen_response_body(xml)
-    response_body = Weixin.xml_gen "world"
+    response_body = Weixin.xml_gen "Tech Radar!"
     return response_body unless TechRadar.local_constant_names.include? "Category"
 
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
-    content_id = parsed_xml["Content"]
+    content_id = parsed_xml["Content"].upcase
 
     response_body = list_main_menu() if search_main_menu?(content_id)
     response_body = list_assessments_by_category_id(content_id) if search_categories?(content_id)
@@ -64,18 +64,18 @@ class Weixin
   end
 
   def self.search_main_menu?(content_id)
-    content_id.upcase == "RADAR"
+    content_id == "RADAR"
   end
 
   def self.search_technology?(content_id)
-    content_id.to_i != 0
+    (/^\d+$/ =~ content_id).present?
   end
 
   def self.search_assessments?(content_id)
-    content_id.upcase.index('A') == 0
+    (/^A\d+$/ =~ content_id).present?
   end
 
-  def self.search_categories?(content_in_xml)
-    content_in_xml.upcase.index('C') == 0
+  def self.search_categories?(content_id)
+    (/^C\d+$/ =~ content_id).present?
   end
 end
