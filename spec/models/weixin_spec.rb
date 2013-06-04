@@ -55,12 +55,12 @@ describe Weixin do
   describe :gen_response_body do
 
     it "should return 2 categories when send 'radar'" do
-      response_body = send_content 'radar'
+      response_body = send_content 'rAdAr'
       response_body.should include("C1: Techniques\nC2: Languages")
     end
 
     it "should return children of assessment when send a category id" do
-      response_body = send_content 'C2'
+      response_body = send_content 'c2'
       response_body.should include("A2: Adopt\nA3: Trial")
     end
 
@@ -72,6 +72,11 @@ describe Weixin do
     it "should return title and content when send a technology id" do
       response_body = send_content '81'
       response_body.should include("Clojure\n\nThis is content of Clojure")
+    end
+
+    it "should return 'Tech Radar!' back when send invalid command" do
+      response_body = send_content 'c'
+      response_body.should include("Tech Radar!")
     end
   end
 end
