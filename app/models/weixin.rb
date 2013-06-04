@@ -34,12 +34,15 @@ class Weixin
 
   def self.details_of_technology(content_id)
     technology = Technology.find content_id
-    "#{technology.title}\n\n#{technology.content}"
+    assessment = technology.assessments.first
+    category = assessment.categories.first
+    "#{category.title} - #{assessment.title} - #{technology.title}\n\n#{technology.content}"
   end
 
   def self.list_technologies_by_assessment_id(content_id)
-    response = ""
     assessment = Assessment.find content_id
+    category = assessment.categories.first
+    response = "#{category.title} - #{assessment.title}\n"
     assessment.technologies.each do |tech|
       response += "#{tech.id}: #{tech.title}\n"
     end
@@ -47,8 +50,8 @@ class Weixin
   end
 
   def self.list_assessments_by_category_id(content_id)
-    response = ""
     category = Category.find content_id
+    response = "#{category.title}\n"
     category.assessments.each do |assess|
       response += "#{assess.id}: #{assess.title}\n"
     end
