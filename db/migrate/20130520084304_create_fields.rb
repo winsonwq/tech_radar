@@ -3,9 +3,7 @@ class CreateFields < ActiveRecord::Migration
     create_table :fields do |t|
       t.integer :node_id
       t.integer :field_descriptor_id
-      t.string :data
-
-      t.timestamps
+      t.text :data
     end
   end
 end

@@ -3,8 +3,6 @@ class CreateNodeRelations < ActiveRecord::Migration
     create_table :node_relations do |t|
       t.integer :parent_node_id
       t.integer :child_node_id
-
-      t.timestamps
     end
   end
 end

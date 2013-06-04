@@ -16,50 +16,36 @@ ActiveRecord::Schema.define(:version => 20130522091323) do
   create_table "field_descriptors", :force => true do |t|
     t.string   "name"
     t.string   "field_type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "field_descriptors_node_descriptors", :force => true do |t|
     t.integer  "node_descriptor_id"
     t.integer  "field_descriptor_id"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
   end
 
   create_table "fields", :force => true do |t|
     t.integer  "node_id"
     t.integer  "field_descriptor_id"
-    t.string   "data"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.text   "data"
   end
 
   create_table "node_descriptors", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "node_relations", :force => true do |t|
     t.integer  "parent_node_id"
     t.integer  "child_node_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
   end
 
   create_table "nodes", :force => true do |t|
     t.integer  "node_descriptor_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
   end
 
   create_table "relation_descriptors", :force => true do |t|
     t.string   "name"
     t.integer  "node_descriptor_id"
     t.integer  "child_node_descriptor_id"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
   end
 
 end
