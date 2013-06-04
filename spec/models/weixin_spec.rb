@@ -78,5 +78,10 @@ describe Weixin do
       response_body = send_content 'c'
       response_body.should include("Tech Radar!")
     end
+
+    it "should return 'Tech Radar!' back when send invalid tech id" do
+      response_body = send_content '1'
+      response_body.should include("Tech Radar!")
+    end
   end
 end

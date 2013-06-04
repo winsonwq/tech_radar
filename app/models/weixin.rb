@@ -71,7 +71,7 @@ class Weixin
   end
 
   def self.search_technology?(content_id)
-    (/^\d+$/ =~ content_id).present?
+    (/^\d+$/ =~ content_id).present? and Technology.find(content_id).present?
   end
 
   def self.search_assessments?(content_id)
