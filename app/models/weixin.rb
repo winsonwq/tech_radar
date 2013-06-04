@@ -19,31 +19,63 @@ class Weixin
     return response_body unless TechRadar.local_constant_names.include? "Category"
 
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
-    content_in_xml = parsed_xml["Content"]
+    content_id = parsed_xml["Content"]
 
-    if content_in_xml == "radar"
-      response_body = ""
-      Category.all.each do |c|
-        response_body += "#{c.id}: #{c.title}\n"
-      end
-    else
-      response_body = ""
-      if content_in_xml.index('C') == 0
-        category = Category.find content_in_xml
-        category.assessments.each do |assess|
-          response_body += "#{assess.id}: #{assess.title}\n"
-        end
-      elsif content_in_xml.index('A') == 0
-        assessment = Assessment.find content_in_xml
-        assessment.technologies.each do |tech|
-          response_body += "#{tech.id}: #{tech.title}\n"
-        end
-      elsif content_in_xml.to_i != 0
-        technology = Technology.find content_in_xml
-        response_body = "#{technology.title}\n\n#{technology.content}"
-      end
-    end
+    response_body = list_main_menu() if search_main_menu?(content_id)
+    response_body = list_assessments_by_category_id(content_id) if search_categories?(content_id)
+    response_body = list_technologies_by_assessment_id(content_id) if search_assessments?(content_id)
+    response_body = details_of_technology(content_id) if search_technology?(content_id)
+
     response_body = Weixin.xml_gen response_body.strip
     response_body
+  end
+
+  private
+
+  def self.details_of_technology(content_id)
+    technology = Technology.find content_id
+    "#{technology.title}\n\n#{technology.content}"
+  end
+
+  def self.list_technologies_by_assessment_id(content_id)
+    response = ""
+    assessment = Assessment.find content_id
+    assessment.technologies.each do |tech|
+      response += "#{tech.id}: #{tech.title}\n"
+    end
+    response
+  end
+
+  def self.list_assessments_by_category_id(content_id)
+    response = ""
+    category = Category.find content_id
+    category.assessments.each do |assess|
+      response += "#{assess.id}: #{assess.title}\n"
+    end
+    response
+  end
+
+  def self.list_main_menu
+    response = ""
+    Category.all.each do |c|
+      response += "#{c.id}: #{c.title}\n"
+    end
+    response
+  end
+
+  def self.search_main_menu?(content_id)
+    content_id.upcase == "RADAR"
+  end
+
+  def self.search_technology?(content_id)
+    content_id.to_i != 0
+  end
+
+  def self.search_assessments?(content_id)
+    content_id.upcase.index('A') == 0
+  end
+
+  def self.search_categories?(content_in_xml)
+    content_in_xml.upcase.index('C') == 0
   end
 end
