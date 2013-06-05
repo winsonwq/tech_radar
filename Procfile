@@ -1,1 +1,1 @@
-web: bundle exec RELOAD=TRUE rails server -p $PORT
+web: RELOAD=TRUE bundle exec rails server -p $PORT
