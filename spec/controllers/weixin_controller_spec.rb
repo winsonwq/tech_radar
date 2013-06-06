@@ -3,8 +3,6 @@ require 'xmlsimple'
 
 include TechRadar
 
-
-
 describe WeixinController do
   let!(:validation) do
     {:signature => "1dd201087b718bc77eb5665ebe0491050934eea5",
