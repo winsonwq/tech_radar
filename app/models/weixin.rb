@@ -3,9 +3,9 @@ include TechRadar
 
 class Weixin
 
-  def self.xml_gen content, send_from_client = false
-    body_obj = { "ToUserName" => send_from_client ? "webot" : "client",
-                 "FromUserName" => send_from_client ? "client" : "webot",
+  def self.xml_gen content, from = "client", to = "webot"
+    body_obj = { "ToUserName" => to,
+                 "FromUserName" => from,
                  "CreateTime" => DateTime.now.to_i.to_s,
                  "MsgType" => "text",
                  "Content" => content,
@@ -15,18 +15,20 @@ class Weixin
   end
 
   def self.gen_response_body(xml)
-    response_body = Weixin.xml_gen "Tech Radar!"
-    return response_body unless TechRadar.local_constant_names.include? "Category"
-
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
     content_id = parsed_xml["Content"].upcase
+    from = parsed_xml["FromUserName"]
+    to = parsed_xml["ToUserName"]
+
+    response_body = Weixin.xml_gen("Tech Radar!", to, from)
+    return response_body unless TechRadar.local_constant_names.include? "Category"
 
     response_body = list_main_menu() if search_main_menu?(content_id)
     response_body = list_assessments_by_category_id(content_id) if search_categories?(content_id)
     response_body = list_technologies_by_assessment_id(content_id) if search_assessments?(content_id)
     response_body = details_of_technology(content_id) if search_technology?(content_id)
 
-    response_body = Weixin.xml_gen response_body.strip
+    response_body = Weixin.xml_gen response_body.strip, to, from
     response_body
   end
 

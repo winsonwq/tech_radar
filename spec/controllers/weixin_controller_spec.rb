@@ -14,7 +14,7 @@ describe WeixinController do
   describe :index do
 
     it "should return message in xml format" do
-      raw_post :index, validation, Weixin.xml_gen("hello", true)
+      raw_post :index, validation, Weixin.xml_gen("hello")
       response.headers['Content-Type'].should include "application/xml"
     end
   end

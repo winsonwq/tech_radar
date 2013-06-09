@@ -8,7 +8,7 @@ module ReEducation
     end
 
     def send_content(text)
-      Weixin.gen_response_body(Weixin.xml_gen(text, true))
+      Weixin.gen_response_body(Weixin.xml_gen(text))
     end
   end
 end
