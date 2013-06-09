@@ -16,7 +16,7 @@ class Weixin
 
   def self.gen_response_body(xml)
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
-    content_id = parsed_xml["Content"].upcase
+    content_id = parsed_xml["Content"].upcase.strip
     from = parsed_xml["FromUserName"]
     to = parsed_xml["ToUserName"]
 
