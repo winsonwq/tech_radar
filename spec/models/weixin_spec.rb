@@ -83,5 +83,11 @@ describe Weixin do
       response_body = send_content '1'
       response_body.should include("Tech Radar!")
     end
+
+    it "should have correct from-user nad to-user" do
+      response_body = send_content '1', 'F', 'T'
+      response_body.should include("<ToUserName>F</ToUserName>")
+      response_body.should include("<FromUserName>T</FromUserName>")
+    end
   end
 end
