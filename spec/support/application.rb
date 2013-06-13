@@ -1,4 +1,4 @@
-module ReEducation
+module TechRadar
   module TestHelpers
     def raw_post(action, params, body)
       @request.env['RAW_POST_DATA'] = body
@@ -14,5 +14,5 @@ module ReEducation
 end
 
 RSpec.configure do |config|
-  config.include ReEducation::TestHelpers
+  config.include TechRadar::TestHelpers
 end
