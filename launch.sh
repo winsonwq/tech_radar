@@ -2,13 +2,13 @@
 
 case $1 in
   test)
-    RAILS_ENV=test rake db:setup && RAILS_ENV=test rspec -c
+    RAILS_ENV=test RELOAD=false rake db:setup && RAILS_ENV=test RELOAD=false rspec -c
     ;;
   server)
     if [ ! -z $2 ]; then
-      RELOAD=true rails server -p $2
+      rails server -p $2
     else
-      RELOAD=true rails server
+      rails server
     fi
     ;;
   *)
