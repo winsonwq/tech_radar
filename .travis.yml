@@ -4,6 +4,6 @@ rvm:
 env:
   - DB=postgres
 # uncomment this line if your project needs to run something other than `rake`:
-script: RAILS_ENV=test rake db:setup && rspec -c
+script: ./launch.sh test
 before_script:
   - cp config/database.yml.example config/database.yml
