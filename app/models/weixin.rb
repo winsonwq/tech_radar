@@ -21,7 +21,7 @@ class Weixin
     to = parsed_xml["ToUserName"]
 
     response_body = "Tech Radar!"
-    return response_body unless TechRadar.local_constant_names.include? "Category"
+    return Weixin.xml_gen(response_body.strip, to, from) unless TechRadar.local_constant_names.include? "Category"
 
     response_body = list_main_menu() if search_main_menu?(content_id)
     response_body = list_assessments_by_category_id(content_id) if search_categories?(content_id)
