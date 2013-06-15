@@ -14,22 +14,30 @@ class Weixin
     body_obj.to_xml root: "xml"
   end
 
-  def self.gen_response_body(xml)
+  def self.gen_response_body(message)
+    content_id = message[:content].upcase.strip
+    body = "Tech Radar!"
+    return Weixin.xml_gen(body.strip, message[:to], message[:from]) unless TechRadar.local_constant_names.include? "Category"
+
+    body = main_menu() if search_main_menu?(content_id)
+    body = assessments_by_category_id(content_id) if search_categories?(content_id)
+    body = technologies_by_assess_id(content_id) if search_assessments?(content_id)
+    body = details_of_technology(content_id) if search_technology?(content_id)
+
+    body = Weixin.xml_gen body.strip, message[:to], message[:from]
+    body
+  end
+
+
+  def self.parse xml
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
-    content_id = parsed_xml["Content"].upcase.strip
-    from = parsed_xml["FromUserName"]
-    to = parsed_xml["ToUserName"]
-
-    response_body = "Tech Radar!"
-    return Weixin.xml_gen(response_body.strip, to, from) unless TechRadar.local_constant_names.include? "Category"
-
-    response_body = list_main_menu() if search_main_menu?(content_id)
-    response_body = list_assessments_by_category_id(content_id) if search_categories?(content_id)
-    response_body = list_technologies_by_assessment_id(content_id) if search_assessments?(content_id)
-    response_body = details_of_technology(content_id) if search_technology?(content_id)
-
-    response_body = Weixin.xml_gen response_body.strip, to, from
-    response_body
+    {
+      to: parsed_xml["ToUserName"],
+      from: parsed_xml["FromUserName"],
+      content: parsed_xml["Content"],
+      type: parsed_xml["MsgType"],
+      created_at: parsed_xml["CreateTime"]
+    }
   end
 
   private
@@ -41,7 +49,7 @@ class Weixin
     "#{category.title} - #{assessment.title} - #{technology.title}\n\n#{technology.content}"
   end
 
-  def self.list_technologies_by_assessment_id(content_id)
+  def self.technologies_by_assess_id(content_id)
     assessment = Assessment.find content_id
     category = assessment.categories.first
     response = "#{category.title} - #{assessment.title}\n"
@@ -51,7 +59,7 @@ class Weixin
     response
   end
 
-  def self.list_assessments_by_category_id(content_id)
+  def self.assessments_by_category_id(content_id)
     category = Category.find content_id
     response = "#{category.title}\n"
     category.assessments.each do |assess|
@@ -60,7 +68,7 @@ class Weixin
     response
   end
 
-  def self.list_main_menu
+  def self.main_menu
     response = ""
     Category.all.each do |c|
       response += "#{c.id}: #{c.title}\n"

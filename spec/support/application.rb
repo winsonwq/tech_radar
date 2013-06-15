@@ -8,7 +8,7 @@ module TechRadar
     end
 
     def send_content(text, from = "webot", to = "client")
-      Weixin.gen_response_body(Weixin.xml_gen(text, from, to))
+      Weixin.gen_response_body Weixin.parse(Weixin.xml_gen(text, from, to))
     end
   end
 end
