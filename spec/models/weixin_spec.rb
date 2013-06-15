@@ -90,4 +90,14 @@ describe Weixin do
       response_body.should include("<FromUserName>T</FromUserName>")
     end
   end
+
+  describe :parse do
+    it "should parse xml message to object" do
+      message = Weixin.parse Weixin.xml_gen("content", "from", "to")
+      message[:from].should == "from"
+      message[:to].should == "to"
+      message[:content].should == "content"
+      message[:type].should == "text"
+    end
+  end
 end
