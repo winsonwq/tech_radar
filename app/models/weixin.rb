@@ -14,18 +14,10 @@ class Weixin
     body_obj.to_xml root: "xml"
   end
 
-  def self.gen_response_body(message)
-    content_id = message[:content].upcase.strip
-    body = "Tech Radar!"
-    return Weixin.xml_gen(body.strip, message[:to], message[:from]) unless TechRadar.local_constant_names.include? "Category"
-
-    body = main_menu() if search_main_menu?(content_id)
-    body = assessments_by_category_id(content_id) if search_categories?(content_id)
-    body = technologies_by_assess_id(content_id) if search_assessments?(content_id)
-    body = details_of_technology(content_id) if search_technology?(content_id)
-
-    body = Weixin.xml_gen body.strip, message[:to], message[:from]
-    body
+  def self.gen_response_body message
+    xml = Weixin.xml_gen(gen_content(message), message[:to], message[:from])
+    update_session message
+    xml
   end
 
 
@@ -34,7 +26,7 @@ class Weixin
     {
       to: parsed_xml["ToUserName"],
       from: parsed_xml["FromUserName"],
-      content: parsed_xml["Content"],
+      content: parsed_xml["Content"].strip,
       type: parsed_xml["MsgType"],
       created_at: parsed_xml["CreateTime"]
     }
@@ -42,15 +34,43 @@ class Weixin
 
   private
 
-  def self.details_of_technology(content_id)
-    technology = Technology.find content_id
+  def self.update_session message
+    Session.safe_get(message[:from])[:latest_message] = message[:content]
+  end
+
+  def self.gen_content(message)
+    msg = message[:content].upcase
+    content = "Tech Radar!"
+    return content.strip unless TechRadar.local_constant_names.include? "Category"
+    content = main_menu() if search_main_menu?(msg)
+    content = assessments_by_category_id(msg) if search_categories?(msg)
+    content = technologies_by_assess_id(msg) if search_assessments?(msg)
+    content = details_of_technology(msg) if search_technology?(msg)
+
+    if search_up_level? msg
+      message[:content] = retrive_up_level Session.safe_get(message[:from])[:latest_message].upcase
+      content = gen_content message
+    end
+    content.strip
+  end
+
+  def self.retrive_up_level msg
+    content = 'radar'
+    content = Technology.find(msg).assessments.first.id if search_technology? msg
+    content = Assessment.find(msg).categories.first.id if search_assessments? msg
+    content = 'radar' if search_categories? msg
+    content
+  end
+
+  def self.details_of_technology(msg)
+    technology = Technology.find msg
     assessment = technology.assessments.first
     category = assessment.categories.first
     "#{category.title} - #{assessment.title} - #{technology.title}\n\n#{technology.content}"
   end
 
-  def self.technologies_by_assess_id(content_id)
-    assessment = Assessment.find content_id
+  def self.technologies_by_assess_id(msg)
+    assessment = Assessment.find msg
     category = assessment.categories.first
     response = "#{category.title} - #{assessment.title}\n"
     assessment.technologies.each do |tech|
@@ -59,9 +79,10 @@ class Weixin
     response
   end
 
-  def self.assessments_by_category_id(content_id)
-    category = Category.find content_id
+  def self.assessments_by_category_id(msg)
+    category = Category.find msg
     response = "#{category.title}\n"
+
     category.assessments.each do |assess|
       response += "#{assess.id}: #{assess.title}\n"
     end
@@ -76,19 +97,23 @@ class Weixin
     response
   end
 
-  def self.search_main_menu?(content_id)
-    content_id == "RADAR"
+  def self.search_main_menu?(msg)
+    msg == "RADAR"
   end
 
-  def self.search_technology?(content_id)
-    (/^\d+$/ =~ content_id).present? and Technology.find(content_id).present?
+  def self.search_technology?(msg)
+    (/^\d+$/i =~ msg).present? and Technology.find(msg).present?
   end
 
-  def self.search_assessments?(content_id)
-    (/^A\d+$/ =~ content_id).present?
+  def self.search_assessments?(msg)
+    (/^A\d+$/i =~ msg).present?
   end
 
-  def self.search_categories?(content_id)
-    (/^C\d+$/ =~ content_id).present?
+  def self.search_categories?(msg)
+    (/^C\d+$/i =~ msg).present?
+  end
+
+  def self.search_up_level?(msg)
+    (/^\*$/i =~ msg).present?
   end
 end
