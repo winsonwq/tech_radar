@@ -5,7 +5,6 @@ class WeixinController < ApplicationController
   layout false
 
   before_filter :validate_weixin_token, :parse_message
-  after_filter :update_session
 
   def index
     render xml: Weixin.gen_response_body(@message)
@@ -19,10 +18,6 @@ class WeixinController < ApplicationController
 
   def parse_message
     @message = Weixin.parse request.body
-  end
-
-  def update_session
-    Session.safe_get(@message[:from])[:latest_message] = @message[:content]
   end
 
   def validate_weixin_token

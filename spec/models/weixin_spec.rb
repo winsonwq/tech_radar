@@ -55,39 +55,45 @@ describe Weixin do
   describe :gen_response_body do
 
     it "should return 2 categories when send 'radar'" do
-      response_body = send_content 'rAdAr'
-      response_body.should include("C1: Techniques\nC2: Languages")
+      body = send_content 'rAdAr'
+      body.should include("C1: Techniques\nC2: Languages")
     end
 
     it "should return children of assessment when send a category id" do
-      response_body = send_content 'c2'
-      response_body.should include("A2: Adopt\nA3: Trial")
+      body = send_content 'c2'
+      body.should include("A2: Adopt\nA3: Trial")
     end
 
     it "should return children of technologies when send a assessment id" do
-      response_body = send_content 'A2'
-      response_body.should include("81: Clojure\n82: CSS Framework")
+      body = send_content 'A2'
+      body.should include("81: Clojure\n82: CSS Framework")
     end
 
     it "should return title and content when send a technology id" do
-      response_body = send_content '81'
-      response_body.should include("Clojure\n\nThis is content of Clojure")
+      body = send_content '81'
+      body.should include("Clojure\n\nThis is content of Clojure")
     end
 
     it "should return 'Tech Radar!' back when send invalid command" do
-      response_body = send_content 'c'
-      response_body.should include("Tech Radar!")
+      body = send_content 'c'
+      body.should include("Tech Radar!")
     end
 
     it "should return 'Tech Radar!' back when send invalid tech id" do
-      response_body = send_content '1'
-      response_body.should include("Tech Radar!")
+      body = send_content '1'
+      body.should include("Tech Radar!")
     end
 
     it "should have correct from-user nad to-user" do
-      response_body = send_content '1', 'F', 'T'
-      response_body.should include("<ToUserName>F</ToUserName>")
-      response_body.should include("<FromUserName>T</FromUserName>")
+      body = send_content '1', 'F', 'T'
+      body.should include("<ToUserName>F</ToUserName>")
+      body.should include("<FromUserName>T</FromUserName>")
+    end
+
+    it "should return up-level when send '*'" do
+      send_content 'a2', 'F', 'T'
+      body = send_content '*', 'F', 'T'
+      body.should include("A2: Adopt\nA3: Trial")
     end
   end
 
