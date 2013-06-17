@@ -5,8 +5,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 gem 'xml-simple'
+
+group :development, :test do
+  gem 'pg'
+end
 
 group :test do
   gem "rspec-rails", '~> 2.12.0'
@@ -25,6 +28,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'mysql2'
+end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
