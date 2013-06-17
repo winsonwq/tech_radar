@@ -60,5 +60,6 @@ module TechRadar
     config.assets.version = '1.0'
 
     config.token = 'areyougoingtoscarboroughfair'
+    #config.encoding = 'utf-8'
   end
 end

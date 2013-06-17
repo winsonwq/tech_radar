@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'xmlsimple'
 include TechRadar
 
@@ -126,6 +127,6 @@ class Weixin
   end
 
   def self.search_help?(msg)
-    (/^\?$/i =~ msg).present?
+    (/^(\?|？)$/i =~ msg).present?
   end
 end
