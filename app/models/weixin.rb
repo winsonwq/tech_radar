@@ -51,7 +51,15 @@ class Weixin
       message[:content] = retrieve_up_level Session.safe_get(message[:from])[:latest_message].upcase
       content = gen_content message
     end
+
+    if search_help? msg
+      content = help_message()
+    end
     content.strip
+  end
+
+  def self.help_message
+    "Available commands:\n\"radar\": Go to main menu of Tech Radar\n\"*\": Return to previous menu\n\"?\": Help"
   end
 
   def self.retrieve_up_level msg
@@ -115,5 +123,9 @@ class Weixin
 
   def self.search_up_level?(msg)
     (/^\*$/i =~ msg).present?
+  end
+
+  def self.search_help?(msg)
+    (/^\?$/i =~ msg).present?
   end
 end

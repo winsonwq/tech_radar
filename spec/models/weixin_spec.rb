@@ -95,6 +95,11 @@ describe Weixin do
       body = send_content '*', 'F', 'T'
       body.should include("A2: Adopt\nA3: Trial")
     end
+
+    it "should return help when send '?'" do
+      body = send_content '?', 'F', 'T'
+      body.should include("Available commands")
+    end
   end
 
   describe :parse do
