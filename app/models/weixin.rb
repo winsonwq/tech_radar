@@ -48,13 +48,13 @@ class Weixin
     content = details_of_technology(msg) if search_technology?(msg)
 
     if search_up_level? msg
-      message[:content] = retrive_up_level Session.safe_get(message[:from])[:latest_message].upcase
+      message[:content] = retrieve_up_level Session.safe_get(message[:from])[:latest_message].upcase
       content = gen_content message
     end
     content.strip
   end
 
-  def self.retrive_up_level msg
+  def self.retrieve_up_level msg
     content = 'radar'
     content = Technology.find(msg).assessments.first.id if search_technology? msg
     content = Assessment.find(msg).categories.first.id if search_assessments? msg
