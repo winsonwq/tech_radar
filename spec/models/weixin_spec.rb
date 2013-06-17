@@ -84,7 +84,7 @@ describe Weixin do
       body.should include("Tech Radar!")
     end
 
-    it "should have correct from-user nad to-user" do
+    it "should have correct from-user and to-user" do
       body = send_content '1', 'F', 'T'
       body.should include("<ToUserName>F</ToUserName>")
       body.should include("<FromUserName>T</FromUserName>")
@@ -94,6 +94,11 @@ describe Weixin do
       send_content 'a2', 'F', 'T'
       body = send_content '*', 'F', 'T'
       body.should include("A2: Adopt\nA3: Trial")
+    end
+
+    it "should return help when send '?'" do
+      body = send_content '?', 'F', 'T'
+      body.should include("Available commands")
     end
   end
 
