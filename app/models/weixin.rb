@@ -37,7 +37,11 @@ class Weixin
   end
 
   def self.gen_response_body message
-    ret = gen_content(message)
+    if message[:event].present?
+      ret = gen_content_from_event message
+    else
+      ret = gen_content(message)
+    end
     xml = Weixin.send ret[:function_name], ret[:content], message[:to], message[:from]
     update_session message
     xml
@@ -45,19 +49,43 @@ class Weixin
 
   def self.parse xml
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
-    {
-      to: parsed_xml["ToUserName"],
-      from: parsed_xml["FromUserName"],
-      content: parsed_xml["Content"].strip,
-      type: parsed_xml["MsgType"],
-      created_at: parsed_xml["CreateTime"]
-    }
+    if parsed_xml["MsgType"] == "event"
+      obj = {
+          to: parsed_xml["ToUserName"],
+          from: parsed_xml["FromUserName"],
+          event: parsed_xml["Event"].strip,
+          type: parsed_xml["MsgType"],
+          created_at: parsed_xml["CreateTime"]
+      }
+    else
+      obj = {
+          to: parsed_xml["ToUserName"],
+          from: parsed_xml["FromUserName"],
+          content: parsed_xml["Content"].strip,
+          type: parsed_xml["MsgType"],
+          created_at: parsed_xml["CreateTime"]
+      }
+    end
+    obj
+  end
+
+  def self.update_session message
+    Session.safe_get(message[:from])[:latest_message] = message[:content]
   end
 
   private
 
-  def self.update_session message
-    Session.safe_get(message[:from])[:latest_message] = message[:content]
+  def self.gen_content_from_event(message)
+    event = message[:event]
+    content, function_name = ["Tech Radar!", :xml_gen]
+    if event == "subscribe"
+      content = welcome_message() + help_message()
+    end
+    { content: content, function_name: function_name }
+  end
+
+  def self.welcome_message
+    "Welcome to subscribe Tech Radar Weixin.\n"
   end
 
   def self.gen_content(message)
@@ -82,7 +110,7 @@ class Weixin
       content = help_message()
     end
 
-    { content:content, function_name:function_name }
+    { content: content, function_name: function_name }
   end
 
   def self.help_message
