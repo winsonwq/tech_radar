@@ -9,6 +9,9 @@ describe Weixin do
   let!(:id_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Id" }
   let!(:title_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Title" }
   let!(:content_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Content" }
+  let!(:pic_url_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Pic_url" }
+  let!(:url_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Url" }
+  let!(:short_description_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Short_Description" }
 
   before :all do
     category_descriptor.field_descriptors.push title_field_descriptor
@@ -21,6 +24,9 @@ describe Weixin do
     technology_descriptor.field_descriptors.push id_field_descriptor
     technology_descriptor.field_descriptors.push title_field_descriptor
     technology_descriptor.field_descriptors.push content_field_descriptor
+    technology_descriptor.field_descriptors.push pic_url_field_descriptor
+    technology_descriptor.field_descriptors.push url_field_descriptor
+    technology_descriptor.field_descriptors.push short_description_field_descriptor
 
     techniques = Category.new
     techniques.title = "Techniques"
@@ -43,7 +49,9 @@ describe Weixin do
     clojure = Technology.new
     clojure.title = "Clojure"
     clojure.id = "81"
-    clojure.content = 'This is content of Clojure'
+    clojure.short_description = 'This is content of Clojure'
+    clojure.pic_url = 'http://coffeescript.org/documentation/images/logo.png'
+    clojure.url = "http://coffeescript.org/"
     adopt.add clojure
 
     css_framework = Technology.new
@@ -69,11 +77,12 @@ describe Weixin do
       body.should include("81: Clojure\n82: CSS Framework")
     end
 
-    it "should return title and content when send a technology id" do
+    it "should return title content url and picUrl when send a technology id" do
       body = send_content '81'
       body.should include "<Description>This is content of Clojure</Description>"
       body.should include("<MsgType>news</MsgType>")
-      body.should include("<PicUrl>")
+      body.should include("<PicUrl>http://coffeescript.org/documentation/images/logo.png</PicUrl>")
+      body.should include("<Url>http://coffeescript.org/</Url>")
     end
 
     it "should return 'Tech Radar!' back when send invalid command" do
