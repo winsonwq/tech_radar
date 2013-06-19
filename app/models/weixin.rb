@@ -54,6 +54,7 @@ class Weixin
           to: parsed_xml["ToUserName"],
           from: parsed_xml["FromUserName"],
           event: parsed_xml["Event"].strip,
+          event_key: parsed_xml["EventKey"],
           type: parsed_xml["MsgType"],
           created_at: parsed_xml["CreateTime"]
       }
@@ -78,14 +79,8 @@ class Weixin
   def self.gen_content_from_event(message)
     event = message[:event]
     content, function_name = ["Tech Radar!", :xml_gen]
-    if event == "subscribe"
-      content = welcome_message() + help_message()
-    end
+    content = welcome_message() + help_message() if is_subscribe_event?(event)
     { content: content, function_name: function_name }
-  end
-
-  def self.welcome_message
-    "Welcome to subscribe Tech Radar Weixin.\n"
   end
 
   def self.gen_content(message)
@@ -115,6 +110,10 @@ class Weixin
 
   def self.help_message
     "Available commands:\n\"radar\": Go to main menu of Tech Radar\n\"*\": Return to previous menu\n\"?\": Help"
+  end
+
+  def self.welcome_message
+    "Welcome to subscribe Tech Radar Weixin.\n"
   end
 
   def self.retrieve_up_level msg
@@ -188,5 +187,9 @@ class Weixin
 
   def self.search_help?(msg)
     (/^(\?|？)$/i =~ msg).present?
+  end
+
+  def self.is_subscribe_event?(event)
+    event == "subscribe"
   end
 end
