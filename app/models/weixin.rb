@@ -70,17 +70,17 @@ class Weixin
     obj
   end
 
-  def self.update_session message
-    Session.safe_get(message[:from])[:latest_message] = message[:content]
-  end
-
-  private
-
   def self.gen_content_from_event(message)
     event = message[:event]
     content, function_name = ["Tech Radar!", :xml_gen]
     content = welcome_message() + help_message() if is_subscribe_event?(event)
     { content: content, function_name: function_name }
+  end
+
+  private
+
+  def self.update_session message
+    Session.safe_get(message[:from])[:latest_message] = message[:content]
   end
 
   def self.gen_content(message)
