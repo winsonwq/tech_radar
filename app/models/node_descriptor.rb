@@ -89,7 +89,7 @@ class NodeDescriptor < ActiveRecord::Base
           target_field = Field.create({ node: self.node, field_descriptor: field_descriptor })
         end
 
-        target_field.data = val
+        target_field.data = val || ''
         target_field.save
       end
 

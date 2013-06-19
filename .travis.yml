@@ -5,5 +5,8 @@ env:
   - DB=mysql
 # uncomment this line if your project needs to run something other than `rake`:
 script: ./launch.sh test
+before_install:
+  - gem install bundler
+
 before_script:
   - cp config/database.yml.example config/database.yml
