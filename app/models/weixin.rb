@@ -15,12 +15,33 @@ class Weixin
     body_obj.to_xml root: "xml"
   end
 
+  def self.xml_gen_graphical_information article, from ="client", to = "webot"
+    article_objects = {
+        "item" => {
+                "Title" => article[:title],
+                "Description" => article[:content],
+                "PicUrl" => "http://121.199.50.6/images/nodejs.png", # article[:pic_url]
+                "Url" => "http://ishouldbeageek.me" #article[:url]
+            }
+    }
+
+    body_obj = {"ToUserName"=>to,
+                "FromUserName" => from,
+                "CreateTime" => DateTime.now.to_i.to_s,
+                "MsgType" => "news",
+                "Content" => "",
+                "ArticleCount" => "1",
+                "Articles" => article_objects
+    }
+    body_obj.to_xml root: "xml"
+  end
+
   def self.gen_response_body message
-    xml = Weixin.xml_gen(gen_content(message), message[:to], message[:from])
+    ret = gen_content(message)
+    xml = Weixin.send ret[:function_name], ret[:content], message[:to], message[:from]
     update_session message
     xml
   end
-
 
   def self.parse xml
     parsed_xml = XmlSimple.xml_in(xml, "ForceArray" => false)
@@ -41,22 +62,27 @@ class Weixin
 
   def self.gen_content(message)
     msg = message[:content].upcase
-    content = "Tech Radar!"
-    return content.strip unless TechRadar.local_constant_names.include? "Category"
+    content, function_name = ["Tech Radar!",:xml_gen]
+
     content = main_menu() if search_main_menu?(msg)
     content = assessments_by_category_id(msg) if search_categories?(msg)
     content = technologies_by_assess_id(msg) if search_assessments?(msg)
-    content = details_of_technology(msg) if search_technology?(msg)
+
+    if search_technology? msg
+      content = details_of_technology(msg)
+      function_name = :xml_gen_graphical_information
+    end
 
     if search_up_level? msg
       message[:content] = retrieve_up_level Session.safe_get(message[:from])[:latest_message].upcase
-      content = gen_content message
+      content = gen_content(message)[:content]
     end
 
     if search_help? msg
       content = help_message()
     end
-    content.strip
+
+    { content:content, function_name:function_name }
   end
 
   def self.help_message
@@ -75,7 +101,13 @@ class Weixin
     technology = Technology.find msg
     assessment = technology.assessments.first
     category = assessment.categories.first
-    "#{category.title} - #{assessment.title} - #{technology.title}\n\n#{technology.content}"
+
+    {
+        title: "#{category.title} - #{assessment.title} - #{technology.title}",
+        content: technology.content,
+        pic_url: "",
+        url: ""
+    }
   end
 
   def self.technologies_by_assess_id(msg)
