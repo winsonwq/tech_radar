@@ -73,7 +73,7 @@ describe Weixin do
       body = send_content '81'
       body.should include "<Description>This is content of Clojure</Description>"
       body.should include("<MsgType>news</MsgType>")
-      body.should include("<PicUrl></PicUrl>")
+      body.should include("<PicUrl>")
     end
 
     it "should return 'Tech Radar!' back when send invalid command" do
