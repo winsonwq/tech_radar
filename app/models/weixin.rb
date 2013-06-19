@@ -19,8 +19,8 @@ class Weixin
         "item" => {
                 "Title" => article[:title],
                 "Description" => article[:content],
-                "PicUrl" => article[:pic_url],
-                "Url" => article[:url]
+                "PicUrl" => "http://121.199.50.6/images/nodejs.png", # article[:pic_url]
+                "Url" => "http://ishouldbeageek.me" #article[:url]
             }
     }
 
