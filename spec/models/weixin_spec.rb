@@ -71,7 +71,9 @@ describe Weixin do
 
     it "should return title and content when send a technology id" do
       body = send_content '81'
-      body.should include("Clojure\n\nThis is content of Clojure")
+      body.should include "<Description>This is content of Clojure</Description>"
+      body.should include("<MsgType>news</MsgType>")
+      body.should include("<PicUrl>")
     end
 
     it "should return 'Tech Radar!' back when send invalid command" do
@@ -99,6 +101,11 @@ describe Weixin do
     it "should return help when send '?'" do
       body = send_content '?', 'F', 'T'
       body.should include("Available commands")
+    end
+
+    it "should return welcome message when subscribe" do
+      body = send_event 'subscribe', 'F', 'T'
+      body.should include("Welcome")
     end
   end
 
