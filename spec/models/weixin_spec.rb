@@ -102,6 +102,11 @@ describe Weixin do
       body = send_content '?', 'F', 'T'
       body.should include("Available commands")
     end
+
+    it "should return welcome message when subscribe" do
+      body = send_event 'subscribe', 'F', 'T'
+      body.should include("Welcome")
+    end
   end
 
   describe :parse do
