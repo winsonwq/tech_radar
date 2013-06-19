@@ -18,9 +18,9 @@ class Weixin
     article_objects = {
         "item" => {
                 "Title" => article[:title],
-                "Description" => article[:content],
-                "PicUrl" => "http://121.199.50.6/images/nodejs.png", # article[:pic_url]
-                "Url" => "http://ishouldbeageek.me" #article[:url]
+                "Description" => article[:short_description],
+                "PicUrl" => article[:pic_url],
+                "Url" => article[:url]
             }
     }
 
@@ -32,6 +32,7 @@ class Weixin
                 "ArticleCount" => "1",
                 "Articles" => article_objects
     }
+
     body_obj.to_xml root: "xml"
   end
 
@@ -104,8 +105,9 @@ class Weixin
     {
         title: "#{category.title} - #{assessment.title} - #{technology.title}",
         content: technology.content,
-        pic_url: "",
-        url: ""
+        pic_url: technology.pic_url,
+        url: technology.url,
+        short_description: technology.short_description
     }
   end
 
