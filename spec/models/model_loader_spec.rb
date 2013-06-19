@@ -1,9 +1,8 @@
 require 'spec_helper'
 
 describe ModelLoader do
-  before(:each) do
 
-  end
+  let(:file_path) { File.expand_path(File.dirname(__FILE__) + '/../fixtures/radar_models.yml') }
 
   describe :new do
 
@@ -29,7 +28,23 @@ describe ModelLoader do
     context "validate success" do
 
       it "should be a string" do
-        expect{ ModelLoader.new "radar.yml" }.not_to raise_error
+        expect{ ModelLoader.new file_path }.not_to raise_error
+      end
+
+    end
+
+  end
+  
+  describe :fields do
+
+    before :each do
+      @model_loader = ModelLoader.new file_path
+    end
+
+    context "load fields successfully" do
+
+      it "should have correct fields" do
+        @model_loader.fields.count.should == 3
       end
 
     end
