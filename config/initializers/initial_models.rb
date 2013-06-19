@@ -10,6 +10,10 @@ if !ENV['RELOAD'].present?
   title_field_descriptor = FieldDescriptor.select { |fd| fd.name == 'Title' && fd.field_type == 'Text' }.first
   content_field_descriptor = FieldDescriptor.select { |fd| fd.name == 'Content' && fd.field_type == 'Long Text' }.first
 
+  pic_field_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Pic_url' && fd.field_type == 'Text' }.first
+  url_field_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Url' && fd.field_type == 'Text' }.first
+  short_description_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Short_Description' && fd.field_type == 'Text'}.first
+
   category_descriptor.child_node_descriptors.push assessment_descriptor
   assessment_descriptor.child_node_descriptors.push technology_descriptor
 
@@ -24,4 +28,8 @@ if !ENV['RELOAD'].present?
   technology_descriptor.field_descriptors.push id_field_descriptor
   technology_descriptor.field_descriptors.push title_field_descriptor
   technology_descriptor.field_descriptors.push content_field_descriptor
+
+  technology_descriptor.field_descriptors.push pic_field_descriptor
+  technology_descriptor.field_descriptors.push url_field_descriptor
+  technology_descriptor.field_descriptors.push short_description_descriptor
 end
