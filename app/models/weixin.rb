@@ -73,7 +73,7 @@ class Weixin
 
   def self.gen_content_from_event(message)
     event = message[:event]
-    content, function_name = ["Tech Radar!", :xml_gen]
+    content, function_name = [fallback_message(), :xml_gen]
     content = welcome_message() + help_message() if is_subscribe_event?(event)
     { content: content, function_name: function_name }
   end
@@ -86,7 +86,7 @@ class Weixin
 
   def self.gen_content(message)
     msg = message[:content].upcase
-    content, function_name = ["Tech Radar!",:xml_gen]
+    content, function_name = [fallback_message(),:xml_gen]
 
     content = main_menu() if search_main_menu?(msg)
     content = assessments_by_category_id(msg) if search_categories?(msg)
@@ -110,11 +110,15 @@ class Weixin
   end
 
   def self.help_message
-    "Available commands:\n\"radar\": Go to main menu of Tech Radar\n\"*\": Return to previous menu\n\"?\": Help"
+    "可用命令：\n“radar”：查询技术雷达\n“*”：返回上级菜单\n“?”:查看帮助"
   end
 
   def self.welcome_message
-    "Welcome to subscribe Tech Radar Weixin.\n"
+    "哈喽极客们，欢迎关注TW技术雷达机器人! 技术雷达针对正在推进下一代软件开发的前沿技术，工具，语言和平台，提供见解和指导。\n回复“radar”获得本期技术雷达信息。\n如果不知道如何使用机器人，请回复“？”获得使用手册。\n"
+  end
+
+  def self.fallback_message
+    "Hi, 机器人无法识别你的输入！输入“？”获得使用手册，输入“*”返回上一级菜单"
   end
 
   def self.retrieve_up_level msg

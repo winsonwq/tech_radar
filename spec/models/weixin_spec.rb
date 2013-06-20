@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'spec_helper'
 
 describe Weixin do
@@ -87,12 +88,12 @@ describe Weixin do
 
     it "should return 'Tech Radar!' back when send invalid command" do
       body = send_content 'c'
-      body.should include("Tech Radar!")
+      body.should include("无法识别")
     end
 
     it "should return 'Tech Radar!' back when send invalid tech id" do
       body = send_content '1'
-      body.should include("Tech Radar!")
+      body.should include("无法识别")
     end
 
     it "should have correct from-user and to-user" do
@@ -109,12 +110,12 @@ describe Weixin do
 
     it "should return help when send '?'" do
       body = send_content '?', 'F', 'T'
-      body.should include("Available commands")
+      body.should include("可用命令")
     end
 
     it "should return welcome message when subscribe" do
       body = send_event 'subscribe', 'F', 'T'
-      body.should include("Welcome")
+      body.should include("欢迎")
     end
   end
 
