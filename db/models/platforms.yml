@@ -1,6 +1,6 @@
-Platforms:
+"平台":
   id: C2
-  Adopt:
+  "采用":
     id: A5
     technologies:
       - title: Elastic Search
@@ -29,7 +29,7 @@ Platforms:
         url:
         description:
 
-  Trial:
+  "尝试":
     id: A6
     technologies:
       - title: BigQuery
@@ -73,7 +73,7 @@ Platforms:
         url:
         description:
 
-  Assess:
+  "接近":
     id: A7
     technologies:
       - title: Azure
@@ -112,7 +112,7 @@ Platforms:
         url:
         description:
 
-  Hold:
+  "保留":
     id: A8
     technologies:
       - title: Big enterprise solutions

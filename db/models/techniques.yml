@@ -1,6 +1,6 @@
-Techniques:
+"技术":
   id: C1
-  Adopt:
+  "采用":
     id: A1
     technologies:
       - title: Aggregates as documents
@@ -44,7 +44,7 @@ Techniques:
         url:
         description:
 
-  Trial:
+  "尝试":
     id: A2
     technologies:
       - title: Analyzing test runs
@@ -113,7 +113,7 @@ Techniques:
         url:
         description:
 
-  Assess:
+  "接近":
     id: A3
     technologies:
       - title: Capturing client-side JavaScript errors
@@ -147,7 +147,7 @@ Techniques:
         url:
         description:
 
-  Hold:
+  "保留":
     id: A4
     technologies:
       - title: Exhaustive browser based testing

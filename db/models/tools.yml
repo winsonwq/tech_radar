@@ -1,6 +1,6 @@
-Tools:
+"工具":
   id: C3
-  Adopt:
+  "采用":
     id: A9
     technologies:
       - title: D3
@@ -44,7 +44,7 @@ Tools:
         url:
         description:
 
-  Trial:
+  "尝试":
     id: A10
     technologies:
       - title: Apache Pig
@@ -88,7 +88,7 @@ Tools:
         url:
         description:
 
-  Assess:
+  "接近":
     id: A11
     technologies:
       - title: Browser-based templating
@@ -142,7 +142,7 @@ Tools:
         url:
         description:
 
-  Hold:
+  "保留":
     id: A12
     technologies:
       - title: Heavyweight test tools

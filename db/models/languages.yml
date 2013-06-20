@@ -1,6 +1,6 @@
-Languages:
+"语言和框架":
   id: C4
-  Adopt:
+  "采用":
     id: A13
     technologies:
       - title: Clojure
@@ -31,7 +31,7 @@ Languages:
         url:
         description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
 
-  Trial:
+  "尝试":
     id: A14
     technologies:
       - title: CoffeeScript
@@ -76,7 +76,7 @@ Languages:
         url:
         description:
 
-  Assess:
+  "接近":
     id: A15
     technologies:
       - title: ClojureScript
@@ -115,7 +115,7 @@ Languages:
         url:
         description: Twitter Bootstrap 是一个流行的 CSS 框架， 它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。基于我们长期的使用经验，我们在此版技术雷达中把 Bootstrap 从试用阶段移到了评估阶段。如果你想要替换或定制应用程序外观，其与 HTML 标记的深度集成将成为你需要面对的挑战。但这并不妨碍你选择Twitter Bootstrap，只是做决定时需要考虑到这些限制.
 
-  Hold:
+  "保留":
     id: A16
     technologies:
       - title: Backbone.js
