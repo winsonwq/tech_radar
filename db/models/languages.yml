@@ -7,27 +7,29 @@ Languages:
         content:
         pic_url:
         url:
-        description:
+        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
       - title: CSS frameworks
         content: Along with JavaScript and HTML, CSS is a core technology for creating websites. Unfortunately, the language itself lacks key features, which leads to a high level of duplication and a lack of meaningful abstractions. While CSS3 aims to rectify some of these issues, it will be years before the modules that make up CSS3 will be properly supported in most browsers. Fortunately, there is a solution today using CSS frameworks like SASS, SCSS, and LESS. Due to their quality and support, we believe that the days of handwritten CSS, for anything apart from trivial work, are over. CSS frameworks simplify the development of large scale CSS codebases without having to start from scratch each time. Because of the abundance of frameworks, it is important to pick one that enables continued enhancement and maintenance of the codebase, rather than something that just helps you get started quickly. Frameworks based on mix-ins, such as Compass, or with a specific focus, such as Susy, are much better suited in this regard.
         pic_url:
         url:
-        description:
+        description: 和 JavaScript、HTML 一样，CSS 是构建网站的核心技术。很不幸，CSS 本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然 CSS3 旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持 CSS3 ，恐怕还需很多年。幸运的是，通过 SASS，SCSS，LESS 这样的 CSS 框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写 CSS 的时代已经一去不复返了。
+                     CSS 框架简化了大规模 CSS 代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于 mix-ins 的框架，或者Susy这种有针对性的框架，将是更合适的选择。
       - title: Jasmine paired with Node.js
         content:
         pic_url:
         url:
-        description:
+        description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流， CoffeeScript 也因其能简化 JavaScript 代码而越来越多地被采用。作为一种将源代码编译成 JavaScript 代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1 引入了 Source Maps 以帮助开发工具生产厂商解决这个问题，同时，像Dropbox 这样的著名技术公司也开始使用CoffeeScript，我们预计它将获得更广泛的应用。
+                     我们在新产品中对node.js的使用越多，对可靠的 JavaScript 包管理工具的需求就越迫切。Node Package Manager (npm) 作为 node.js 应用的打包工具，是其生态系统的重要组成部分。对于要面对大量 JavaScript 或 CoffeeScript 代码的浏览器应用开发人员来说，应考虑使用 Require.js 组织代码结构以及在运行时装载依赖。
       - title: Scala
         content:
         pic_url:
         url:
-        description:
+        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy
       - title: Sinatra
         content: Micro-frameworks are emerging as a way to handle increasing complexity in applications both on client- and server-side. Sinatra was one of the first examples of that trend in the server-side space, exposing a lightweight DSL to build fast services that can be easily composed. Similar offerings are available for other languages, including Spark for Java, Flask for Python, Sclatra for Scala, Compojure for Clojure and Nancy for .NET.
         pic_url:
         url:
-        description:
+        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
 
   Trial:
     id: A14
@@ -36,7 +38,8 @@ Languages:
         content: The expansion of single-page and mobile browser-based applications into mainstream use, along with continued growth of node.js for server-side applications, have led to increased adoption of CoffeeScript to simplify JavaScript codebases. As a language that compiles into JavaScript code for runtime execution, many concerns have been raised about the difficulty of debugging applications written in CoffeeScript. The introduction of Source Maps in CoffeeScript 1.6.1 is helping producers of development tools address this concern. We expect this will lead to further adoption of the language following the lead of highly visible technology firms such as Dropbox.
         pic_url: http://coffeescript.org/documentation/images/logo.png
         url: http://coffeescript.org/
-        description: CoffeeScript
+        description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流， CoffeeScript 也因其能简化 JavaScript 代码而越来越多地被采用。作为一种将源代码编译成 JavaScript 代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1 引入了 Source Maps 以帮助开发工具生产厂商解决这个问题，同时，像Dropbox 这样的著名技术公司也开始使用 CoffeeScript，我们预计它将获得更广泛的应用。
+                     我们在新产品中对node.js的使用越多，对可靠的 JavaScript 包管理工具的需求就越迫切。Node Package Manager (npm) 作为 node.js 应用的打包工具，是其生态系统的重要组成部分。对于要面对大量 JavaScript 或 CoffeeScript 代码的浏览器应用开发人员来说，应考虑使用 Require.js 组织代码结构以及在运行时装载依赖。
       - title: Dropwizard
         content:
         pic_url:
@@ -56,17 +59,17 @@ Languages:
         content: Single-page web application development continues to flourish along with the frameworks supporting data binding, client-side templates, validation, and other capabilities. The JavaScript MV* frameworks in active use on ThoughtWorks projects include AngularJS, Knockout, and Ember.js. Each has advocates and a few detractors. We expect continuing innovative churn in this vibrant space.
         pic_url:
         url:
-        description:
+        description: 随着支持数据绑定、客户端模板和校验等功能的框架的蓬勃发展，单页面Web应用开发继续高歌猛进。在ThoughtWorks， 诸如AngularJS、Knockout和 Ember.js 这样的 JavaScript MV* 框架有着广泛的应用，且各有其倡导者和反对者。我们期望在此充满活力的领域有更多的创新.
       - title: Play Framework 2
         content: The recent release of Play Framework 2.1.1 with support for controller dependency injection, asynchronous, non-blocking I/O, a code-reload workflow, database migrations, asset pipelining, and flexible deployment options has made it more attractive to developers. For this reason Play re-appears on the radar as something for teams to seriously consider when building web applications and services on the JVM. A word of caution however, Play embraces a functional programming style which, when working with the Java language, still translates into a plethora of static methods that may be difficult to unit test outside a running server.
         pic_url:
         url:
-        description:
+        description: 最近发布的Play Framework 2.1.1 支持控制器依赖注入、异步、非阻塞I/O、代码重载工作流、数据库迁移、资源管道以及灵活的部署选项，这些特性对开发者产生了更大的吸引力。基于这个原因，Play重新出现在我们的技术雷达上，我们希望团队在 JVM 上构建 Web 应用程序和服务时，认真考虑选用 Play。然而需要提醒的是，Play 使用了函数式编程风格，在结合使用 Java 时 Play 会产生过多的静态方法，因此很难在运行中的服务器外围进行单元测试.
       - title: Require.js & NPM
         content: Our continued use of node.js on new production applications has re-enforced our need for reliable packaging of JavaScript code and libraries. The Node Package Manager (npm) is an important part of the node.js ecosystem and a useful tool for packaging node.js applications. Developers of browser applications with large amounts of JavaScript or CoffeeScript should consider Require.js to help with structuring their code and loading dependencies at run time.
         pic_url:
         url:
-        description:
+        description: 我们在新产品中对node.js的使用越多，对可靠的JavaScript 包管理工具的需求就越迫切。Node Package Manager (npm) 作为 node.js 应用的打包工具，是其生态系统的重要组成部分。对于要面对大量 JavaScript 或 CoffeeScript 代码的浏览器应用开发人员来说，应考虑使用Require.js 组织代码结构以及在运行时装载依赖
       - title: Scratch, Alice, and Kodu
         content:
         pic_url:
@@ -95,12 +98,12 @@ Languages:
         content: Micro-frameworks are emerging as a way to handle increasing complexity in applications both on client- and server-side. Sinatra was one of the first examples of that trend in the server-side space, exposing a lightweight DSL to build fast services that can be easily composed. Similar offerings are available for other languages, including Spark for Java, Flask for Python, Sclatra for Scala, Compojure for Clojure and Nancy for .NET.
         pic_url:
         url:
-        description:
+        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
       - title: OWIN
         content: One thing that has slowed the evolution of a rich, open source web development ecosystem on the .NET platform has been over-dependence on IIS and the ASP.NET framework. OWIN specifies an open HTTP handling interface that decouples web server from application much like Rack has done for the Ruby community. We are excited about OWIN because it opens up the possibility of new .NET web development tools composed of simple, independently-developed modules. Nancy is the perfect example of this. We also hope it will increase the practice of deploying web applications as standalone, self-hosted services on the .NET platform.
         pic_url:
         url:
-        description:
+        description: 在.NET平台上，构建一个多样的、开源的Web开发生态系统始终步履维艰，原因之一就是对IIS和ASP.NET 框架的过度依赖。OWIN之于.NET平台，正如Rack之于Ruby 社区，它定义了一个开放的HTTP操作接口，从而将Web服务器从应用程序中解耦出来。我们为此激动不已，因为OWIN打开了一扇大门，使得在.NET平台下诞生简单的、可独立开发模块的Web开发工具成为可能。Nancy 正是一个利用这种可能性的完美例子。我们也希望它能促使人们在.NET平台下将web应用程序部署为单独的、自托管服务方面进行更多的实践。
       - title: RubyMotion
         content:
         pic_url:
@@ -110,7 +113,7 @@ Languages:
         content: Twitter Bootstrap is a popular CSS framework which allows you to quickly produce a good looking website with fluid and responsive layouts. In this edition of the radar, Bootstrap moves back from Trial to Assess based on our experiences using it over time. If you wish to replace or extensively customize the look and feel of your application, Bootstrap can present a challenge due to its deep integration with HTML markup. This doesn’t necessarily make it a bad choice but it is worth keeping these limitations in mind when choosing it over available alternatives.
         pic_url:
         url:
-        description:
+        description: Twitter Bootstrap 是一个流行的 CSS 框架， 它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。基于我们长期的使用经验，我们在此版技术雷达中把 Bootstrap 从试用阶段移到了评估阶段。如果你想要替换或定制应用程序外观，其与 HTML 标记的深度集成将成为你需要面对的挑战。但这并不妨碍你选择Twitter Bootstrap，只是做决定时需要考虑到这些限制.
 
   Hold:
     id: A16
