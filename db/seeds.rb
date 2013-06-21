@@ -39,7 +39,8 @@ technology_descriptor.field_descriptors.push short_description_descriptor
 dirname = File.dirname(File.expand_path(__FILE__))
 
 def my_public_ipv4
-  Socket.ip_address_list.detect{|intf| intf.ipv4? and !intf.ipv4_loopback? and !intf.ipv4_multicast? and !intf.ipv4_private?}
+  ip_list = Socket.ip_address_list.detect{|intf| intf.ipv4? and !intf.ipv4_loopback? and !intf.ipv4_multicast? and !intf.ipv4_private?}
+  ip_list.nil? ? "localhost:3000" : ip_list.ip_address.to_s
 end
 
 technology_id = 1
@@ -63,8 +64,8 @@ technology_id = 1
         tech = TechRadar::Technology.new
         tech.title = item["title"]
         tech.content = item["content"]
-        tech.pic_url = item["pic_url"]
-        tech.url = "http://" + my_public_ipv4.ip_address.to_s + "/technology/" + technology_id.to_s  unless my_public_ipv4.nil?
+        tech.pic_url = "http://" + my_public_ipv4 + "/images/" + (item["pic_url"] || "")
+        tech.url = "http://" + my_public_ipv4 + "/technology/" + technology_id.to_s  unless my_public_ipv4.nil?
         tech.short_description = item["description"]
         tech.id = technology_id
         technology_id += 1
