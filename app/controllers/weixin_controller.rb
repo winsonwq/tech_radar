@@ -4,11 +4,21 @@ class WeixinController < ApplicationController
 
   layout false
 
-  before_filter :validate_weixin_token, :parse_message
+  before_filter :validate_weixin_token, :parse_message, :except => :technology
 
   def index
     render xml: Weixin.gen_response_body(@message)
   end
+
+  def technology
+    @technology = Weixin.details_of_technology(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @technology }
+    end
+  end
+
 
   def validate_echostr
     render :text => params[:echostr]
