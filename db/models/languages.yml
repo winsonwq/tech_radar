@@ -36,8 +36,8 @@
     technologies:
       - title: CoffeeScript
         content: The expansion of single-page and mobile browser-based applications into mainstream use, along with continued growth of node.js for server-side applications, have led to increased adoption of CoffeeScript to simplify JavaScript codebases. As a language that compiles into JavaScript code for runtime execution, many concerns have been raised about the difficulty of debugging applications written in CoffeeScript. The introduction of Source Maps in CoffeeScript 1.6.1 is helping producers of development tools address this concern. We expect this will lead to further adoption of the language following the lead of highly visible technology firms such as Dropbox.
-        pic_url: http://coffeescript.org/documentation/images/logo.png
-        url: http://coffeescript.org/
+        pic_url: /nodejs.png
+        url:
         description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流， CoffeeScript 也因其能简化 JavaScript 代码而越来越多地被采用。作为一种将源代码编译成 JavaScript 代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1 引入了 Source Maps 以帮助开发工具生产厂商解决这个问题，同时，像Dropbox 这样的著名技术公司也开始使用 CoffeeScript，我们预计它将获得更广泛的应用。
                      我们在新产品中对node.js的使用越多，对可靠的 JavaScript 包管理工具的需求就越迫切。Node Package Manager (npm) 作为 node.js 应用的打包工具，是其生态系统的重要组成部分。对于要面对大量 JavaScript 或 CoffeeScript 代码的浏览器应用开发人员来说，应考虑使用 Require.js 组织代码结构以及在运行时装载依赖。
       - title: Dropwizard

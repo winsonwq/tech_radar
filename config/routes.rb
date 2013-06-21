@@ -7,6 +7,7 @@ TechRadar::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   match 'weixin' => 'weixin#index', via: :post
   match "weixin" => "weixin#validate_echostr", via: :get
+  match "technology/:id/" => "weixin#technology", via: :get
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
