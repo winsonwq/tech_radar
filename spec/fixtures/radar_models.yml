@@ -1,16 +1,21 @@
 fields:
-  id: text
-  title: text
-  content: long_text
+  id1: text
+  title1: text
+  content1: long_text
 
 nodes:
-  category:
-    fields: [id, title, content]
-    has_many: assessments
+  student:
+    fields:
+      - id1
+      - title1
+      - content1
+    has_many:
+      - courses
 
-  assessment:
-    fields: [id, title, content]
-    has_many: technologies
+  course:
+    fields: [id1, title1, content1]
+    has_many:
+      - rooms
 
-  technology:
-    fields: [id, title, content]
+  room:
+    fields: [id1, title1, content1]
