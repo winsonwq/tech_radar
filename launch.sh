@@ -12,7 +12,7 @@ case $1 in
     fi
     ;;
   deploy)
-    git pull --rebase && RAILS_ENV=production RELOAD=false rake db:reset && touch tmp/restart.txt
+    git pull --rebase && RAILS_ENV=production RELOAD=false rake db:drop && RAILS_ENV=production RELOAD=false rake db:setup && touch tmp/restart.txt
     ;;
   *)
     echo "Invalid command"

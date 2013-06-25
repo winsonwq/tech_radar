@@ -41,14 +41,4 @@ technology_id = 1
       end
     end
   end
-
-
-
-
-
 end
-
-
-# TODO: Init techradar data
-# TODO: Import latest tech radar info
-# TODO: Navigation Logic
