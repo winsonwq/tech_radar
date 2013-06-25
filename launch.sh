@@ -11,6 +11,9 @@ case $1 in
       rails server
     fi
     ;;
+  deploy)
+    git pull --rebase && RAILS_ENV=production RELOAD=false rake db:reset && touch tmp/restart.txt
+    ;;
   *)
     echo "Invalid command"
     ;;

@@ -16,6 +16,10 @@ unless ENV['RELOAD'].present?
   url_field_descriptor = FieldDescriptor.select { |fd| fd.name == 'url' && fd.field_type == 'text' }.first
   short_description_descriptor = FieldDescriptor.select { |fd| fd.name == 'short_description' && fd.field_type == 'text' }.first
 
+  pic_field_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Pic_url' && fd.field_type == 'Text' }.first
+  url_field_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Url' && fd.field_type == 'Text' }.first
+  short_description_descriptor = FieldDescriptor.select{ |fd| fd.name == 'Short_Description' && fd.field_type == 'Text'}.first
+
   category_descriptor.child_node_descriptors.push assessment_descriptor
   assessment_descriptor.child_node_descriptors.push technology_descriptor
 
