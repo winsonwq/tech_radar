@@ -1,0 +1,24 @@
+fields:
+  id: text
+  title: text
+  content: long_text
+  pic_url: text
+  short_description: text
+  url: text
+
+nodes:
+  category:
+    fields:
+      - id
+      - title
+      - content
+    has_many:
+      - assessments
+
+  assessment:
+    fields: [id, title, content]
+    has_many:
+      - technologies
+
+  technology:
+    fields: [id, title, content, pic_url, short_description, url]

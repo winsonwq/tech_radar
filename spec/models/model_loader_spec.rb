@@ -46,7 +46,7 @@ describe ModelLoader do
       specify { @model_loader.fields.count.should == 3 }
 
       it "should have correct fields" do
-        @model_loader.fields.map { |fd| fd.name }.should == ['id1', 'title1', 'content1']
+        @model_loader.fields.keys.should == ['id1', 'title1', 'content1']
       end
 
     end
@@ -56,16 +56,16 @@ describe ModelLoader do
       specify { @model_loader.nodes.count.should == 3 }
 
       it "should have correct nodes" do
-        @model_loader.nodes.map(&:name).should == ['Student', 'Course', 'Room']
+        @model_loader.nodes.keys.should == ['student', 'course', 'room']
       end
 
       it "should have correct fields for each node" do
-        author_descriptor = @model_loader.nodes.first
+        author_descriptor = @model_loader.nodes.values.first
         author_descriptor.field_descriptors.map(&:name).should == ['id1', 'title1', 'content1']
       end
 
       it "should have correct sub-classes relationship" do
-        author_descriptor = @model_loader.nodes.first
+        author_descriptor = @model_loader.nodes.values.first
         author_descriptor.child_node_descriptors.map(&:name).should == ['Course']
       end
 

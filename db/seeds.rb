@@ -1,33 +1,15 @@
 require "yaml"
-
-category_descriptor = NodeDescriptor.create({name: 'Category'})
-assessment_descriptor = NodeDescriptor.create({name: 'Assessment'})
-technology_descriptor = NodeDescriptor.create({name: 'Technology'})
-
-id_field_descriptor = FieldDescriptor.create({name: 'Id', field_type: 'Text'})
-title_field_descriptor = FieldDescriptor.create({name: 'Title', field_type: 'Text'})
-content_field_descriptor = FieldDescriptor.create({name: 'Content', field_type: 'Long Text'})
-
-category_descriptor.child_node_descriptors.push assessment_descriptor
-assessment_descriptor.child_node_descriptors.push technology_descriptor
-
-# TODO: support creating relation like this
-# RelationDescriptor.create({name: 'Contains multiple assessments', parent_node_descriptor: category_descriptor, child_node_descriptor: assessment_descriptor})
-# RelationDescriptor.create({name: 'Contains multiple technologies', parent_node_descriptor: assessment_descriptor, child_node_descriptor: technology_descriptor})
-
-category_descriptor.field_descriptors.push id_field_descriptor
-category_descriptor.field_descriptors.push title_field_descriptor
-category_descriptor.field_descriptors.push content_field_descriptor
-
-assessment_descriptor.field_descriptors.push id_field_descriptor
-assessment_descriptor.field_descriptors.push title_field_descriptor
-assessment_descriptor.field_descriptors.push content_field_descriptor
-
-technology_descriptor.field_descriptors.push id_field_descriptor
-technology_descriptor.field_descriptors.push title_field_descriptor
-technology_descriptor.field_descriptors.push content_field_descriptor
+require 'socket'
 
 dirname = File.dirname(File.expand_path(__FILE__))
+file_path = dirname + ('/models/radar_model.yml')
+
+@model_loader = ModelLoader.new file_path
+
+def my_public_ipv4
+  ip_list = Socket.ip_address_list.detect{|intf| intf.ipv4? and !intf.ipv4_loopback? and !intf.ipv4_multicast? and !intf.ipv4_private?}
+  ip_list.nil? ? "localhost:3000" : ip_list.ip_address.to_s
+end
 
 technology_id = 1
 %w{ techniques.yml platforms.yml tools.yml languages.yml }.each_with_index do |file, idx|
@@ -50,13 +32,22 @@ technology_id = 1
         tech = TechRadar::Technology.new
         tech.title = item["title"]
         tech.content = item["content"]
+        tech.pic_url = "http://" + my_public_ipv4 + "/images/" + "nodejs.png"
+        tech.url = "http://" + my_public_ipv4 + "/technology/" + technology_id.to_s  unless my_public_ipv4.nil?
+        tech.short_description = item["description"]
         tech.id = technology_id
         technology_id += 1
         assess.add tech
       end
     end
   end
+
+
+
+
+
 end
+
 
 # TODO: Init techradar data
 # TODO: Import latest tech radar info
