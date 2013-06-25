@@ -79,7 +79,7 @@
         description:
       - title: HTML5 storage instead of cookies
         content: HTML5 storage, also known as local storage or web storage, is a mechanism for storing client side data in modern browsers, including iOS and Android mobile browsers. We recommend using HTML5 storage instead of cookies in almost all cases. HTML5 Storage can accommodate up to 5MB of data while cookies are limited to 4KB. Cookie data is transmitted in every request, which slows down your application and potentially exposes data over insecure HTTP connections. In contrast, HTML5 storage data remains securely in the browser. Cookies should be reserved for storing small simple pieces of data like a session ID.
-        pic_url:
+        pic_url: html5.png
         url:
         description:
       - title: Logs as data

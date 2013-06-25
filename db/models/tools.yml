@@ -15,7 +15,7 @@
         description:
       - title: Frank
         content: Frank is an open source library that allows functional tests for iOS written in Cucumber and executed on a remote device. This fills an important niche where acceptance test-driven development was previously cumbersome and awkward.
-        pic_url:
+        pic_url: frank.png
         url:
         description:
       - title: Gradle
