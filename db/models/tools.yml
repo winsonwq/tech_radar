@@ -4,25 +4,25 @@
     id: A9
     technologies:
       - title: D3
-        content: D3 continues to gain traction as a library for creating rich visualisations in the browser. Previously, it was somewhat low-level, requiring more work for the creation of commonly used visualisations than less sophisticated, more targeted libraries. Since the last radar, libraries like Rickshaw for charting and Crossfilter for in-browser dataset exploration have helped make D3 even more accessible than before.
+        content: D3作为一个用来在浏览器上创建丰富可视化效果应用的JavaScript库，也在持续获得更多的关注。此前，使用D3多少显得有点底层，比起那些更简单更有针对性的库，它需要更多的工作量完成常用的可视化效果。自从发布了上一次技术雷达，随着诸如用于图表的Rickshaw以及用于在浏览器中进行数据探索的Crossfilter等库的出现，使得D3比以前更容易使用了。
         pic_url:
         url:
-        description:
+        description: D3作为一个用来在浏览器上创建丰富可视化效果应用的JavaScript库，也在持续获得更多的关注。
       - title: Embedded servlet containers
-        content: In previous radars we have talked about embedded servlet containers, and these are now widely adopted on our projects. Tools such as SimpleWeb and Webbit take the simple, embedded approach further and offer raw HTTP server functionality without implementing the Java Servlet specification. At the same time, Tomcat, the most popular Java application server, is increasingly used in embedded setups and Microsoft provides self-hosted servers for the .NET framework, lending further weight to this trend.
+        content: 在上期的技术雷达中，我们谈到的嵌入式servlet容器。如今，这已经在我们的项目中广泛采用。像SimpleWeb和Webbit这样的工具在追求简洁和嵌入式的方向上更进一步，提供了未实现Java Servlet规范的原生HTTP服务器功能。同时，最流行的Java应用服务器Tomcat在嵌入式安装中应用的逐渐增多，以及微软为.NET框架提供的自托管服务器，都加强了这一趋势。
         pic_url:
         url:
-        description:
+        description: 在上期的技术雷达中，我们谈到的嵌入式servlet容器。如今，这已经在我们的项目中广泛采用。
       - title: Frank
-        content: Frank is an open source library that allows functional tests for iOS written in Cucumber and executed on a remote device. This fills an important niche where acceptance test-driven development was previously cumbersome and awkward.
+        content: Frank是一个开源库，可以使用Cucumber编写iOS的功能测试，并在远程设备上执行。以前在iOS上，验收测试驱动开发非常麻烦，该库填补了一项重要的空白。
         pic_url: frank.png
         url:
-        description:
+        description: Frank是一个开源库，可以使用Cucumber编写iOS的功能测试，并在远程设备上执行。
       - title: Gradle
-        content: Language-based build tools like Gradle and Rake continue to offer finer-grained abstractions and more flexibility long term than XML and plug-in based tools like Ant and Maven. This allows them to grow gracefully as projects become more complex.
+        content: 基于语言的构建工具Gradle和Rake继续提供比Ant和Maven等基于XML和插件的构建工具更细粒度的抽象和更灵活的长期解决方案。这使得它们在项目变得更加复杂时，还能保持优雅的增长。
         pic_url:
         url:
-        description:
+        description: 基于语言的构建工具Gradle和Rake继续提供比Ant和Maven等基于XML和插件的构建工具更细粒度的抽象和更灵活的长期解决方案。
       - title: Graphite
         content:
         pic_url:
@@ -34,10 +34,10 @@
         url:
         description:
       - title: NuGet
-        content: Package systems for third-party library management continue to gain acceptance and features across all platforms. We called out NuGet as a recent entry, and the addition of Chocolatey NuGet exemplifies the advances and capabilities springing up around this essential agile engineering practice.
+        content: 针对第三方库的包管理系统继续在所有平台上获得认可，也都在不断添加新的功能。我们最近把NuGet和Chocolatey NuGet列入到技术雷达，也证实了这个重要的敏捷工程实践的先进性。
         pic_url:
         url:
-        description:
+        description: 针对第三方库的包管理系统继续在所有平台上获得认可，也都在不断添加新的功能。
       - title: PSake
         content:
         pic_url:
@@ -53,10 +53,10 @@
         url:
         description:
       - title: Gatling
-        content: Gatling是另一个在自动化性能测试领域的新成员。它和 Locust 类似，都比传统的JMeter和Grinder更轻量级。Gatling的DSL构建在Scala基础上，提供了易配置的数据源和响应断言等广泛的开箱即用功能。在需要个性化配置时，也可以很容易直接使用Scala 来进行扩展。通过 Highcharts 默认生成数据的各种动态视图的功能，更增加了它的吸引力。
+        content: Gatling是另一个在自动化性能测试领域的新成员。它和Locust类似，都比传统的JMeter和Grinder更轻量级。Gatling的DSL构建在Scala基础上，提供了易配置的数据源和响应断言等广泛的开箱即用功能。在需要个性化配置时，也可以很容易直接使用Scala来进行扩展。通过Highcharts默认生成数据的各种动态视图的功能，更增加了它的吸引力。
         pic_url:
         url:
-        description: Gatling是另一个在自动化性能测试领域的新成员。它和Locust 类似，都比传统的 JMeter 和 Grinder 更轻量级。
+        description: Gatling是另一个在自动化性能测试领域的新成员。它和Locust类似，都比传统的JMeter和Grinder更轻量级。
       - title: Jekyll
         content:
         pic_url:
@@ -68,12 +68,12 @@
         url:
         description:
       - title: Logstash & Graylog2
-        content: 随着我们构建的系统比以往涉及越来越多细粒度服务，分布在越来越多的机器上，如何获得集中的信息以便更方便地识别和解决问题，比以往任何时候都更具挑战。Logstash已经成为一种解析和过滤日志再将它们转发到单一聚合节点的简单方法。虽然 Logstash 也提供了一些日志的搜索和过滤功能，但配合Graylog2使用，能提供更全面的日志查询和报告功能。
+        content: 随着我们构建的系统比以往涉及越来越多细粒度服务，分布在越来越多的机器上，如何获得集中的信息以便更方便地识别和解决问题，比以往任何时候都更具挑战。Logstash已经成为一种解析和过滤日志再将它们转发到单一聚合节点的简单方法。虽然Logstash也提供了一些日志的搜索和过滤功能，但配合Graylog2使用，能提供更全面的日志查询和报告功能。
         pic_url:
         url:
         description: 通过Logstash和Graylog2的配合，提供更全面的日志查询和报告功能。
       - title: PhantomJS
-        content: 我们在ThoughtWorks 的项目中看到对PhantomJS 的兴趣，它是一个针对现实目标进行功能测试的headless网络测试工具。
+        content: 我们在ThoughtWorks的项目中看到对PhantomJS的兴趣，它是一个针对现实目标进行功能测试的headless网络测试工具。
         pic_url:
         url:
         description: 我们在ThoughtWorks的项目中看到对PhantomJS的兴趣，它是一个针对现实目标进行功能测试的headless网络测试工具。
@@ -83,7 +83,7 @@
         url:
         description: Puppet-librarian和Chef-librarian通过让你更容易声明自己模块的依赖关系，来避免复制、粘贴脚本到自己代码中，让程序员更享受修正最近的错误和改进的好处。
       - title: TestFlight & HockeyApp
-        content:  不需要应用程序商店，TestFlight和HockeyApp让你能够管理移动应用程序的部署，让用户测试更容易。它们提供了崩溃报告和实际数据分析的能力。HockeyApp支持iOS、Andriod和Windows Phone平台，而TestFlight只支持iOS和Android平台。我们已经成功地使用这两种工具来帮助移动应用程序的发布。这显然是一个快速发展的领域。
+        content: 不需要应用程序商店，TestFlight和HockeyApp让你能够管理移动应用程序的部署，让用户测试更容易。它们提供了崩溃报告和实际数据分析的能力。HockeyApp支持iOS、Andriod和Windows Phone平台，而TestFlight只支持iOS和Android平台。我们已经成功地使用这两种工具来帮助移动应用程序的发布。这显然是一个快速发展的领域。
         pic_url:
         url:
         description: TestFlight和HockeyApp让你能够管理移动应用程序的部署，让用户测试更容易。
@@ -95,7 +95,7 @@
         content: 我们看到一些JavaScript框架正在拥抱基于浏览器的模板化的趋势，它们把更多的布局工作转移到客户端来做。虽然这种方法在很多情况下很有效，但它也会引入一些涉及缓冲、性能和搜索方面的运营问题。我们认为在使用这些工具前，需要仔细对这些工具进行评估，以确保满足目标部署环境的要求。
         pic_url:
         url:
-        description: 在使用javascript框架控制浏览器布局时，需要仔细对这些工具进行评估，确保满足目标部署环境的需求，而不引入缓冲、性能等方面的问题
+        description: 在使用Javascript框架控制浏览器布局时，需要仔细对这些工具进行评估，确保满足目标部署环境的需求，而不引入缓冲、性能等方面的问题。
       - title: Faraday
         content: 一些ThoughtWorks的团队特别提到Ruby的HTTP客户端类库Faraday的实用性。它为各种适配器提供了通用的接口，并且和Rack中间件有良好的集成。
         pic_url:
@@ -107,10 +107,10 @@
         url:
         description: 来自Netflix的Hystrix是一个实现了处理各种下游故障模式的Java类库，它提供连接的实时监控、缓存和批处理机制，以更有效地管理服务间的依赖关系。
       - title: Icon fonts
-        content: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。图标字体利用浏览器对WebFonts和SVG的支持，而不是使用缩放图像或维护不同的图标集，解决了这个问题。但当大量使用 SVG 时，需要注意移动设备的功耗问题和旧设备上的性能问题。
+        content: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。图标字体利用浏览器对WebFonts和SVG的支持，而不是使用缩放图像或维护不同的图标集，解决了这个问题。但当大量使用SVG时，需要注意移动设备的功耗问题和旧设备上的性能问题。
         pic_url:
         url:
-        description: 图标字体为呈现全尺寸高品质图标提供了很好的支持。
+        description: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。
       - title: Light Table
         content:
         pic_url:
@@ -135,12 +135,12 @@
         content: 我们认为Snowplow Analytics在网络数据分析方面具有远大前景。它是一个开源网络分析平台，基于公开数据原则和云存储，并能从常规的网络分析中得出智能信息 。
         pic_url:
         url:
-        description: 一个开源网络分析平台，基于公开数据原则和云存储，并能从常规网站分析中得出智能信息
+        description: Snowplow Analytics一个开源网络分析平台，基于公开数据原则和云存储，并能从常规网站分析中得出智能信息。
       - title: UIAutomator
         content: UIAutomator允许测试时对用户界面组件的细粒度控制，以及为在多个设备上的测试提供帮助，因此被认为是Android用户界面测试方面最有前途的工具。
         pic_url:
         url:
-        description: 允许测试时对用户界面组件的细粒度控制，以及多个设备上的测试帮助
+        description: UIAutomator允许测试时对用户界面组件的细粒度控制，以及为在多个设备上的测试提供帮助。
 
   "保留":
     id: A12
@@ -149,14 +149,14 @@
         content: 许多已经迁移到敏捷工作方式的组织还在继续使用重量级的测试工具。这些工具并不适合快速发展的软件交付。重量级测试工具较陡的学习曲线及对专业技能和培训的要求，使团队很难使用这些工具来进行测试。通常这会导致随着其他团队的加入，对于每一个版本的发布都造成不必要的开销。这些工具昂贵的软件授权费用更加剧了这个问题。一些重量级的测试工具使用“模型驱动”的方法，试图精确地对应用程序的使用模式进行建模，但软件缺陷的误报却导致测试脚本昂贵的的开发和维护代价。其实我们经常看到一些简单的开源解决方案能以少得多的时间、精力和预算，给予对所要求的软件质量的信心。
         pic_url:
         url:
-        description: 重量级测试工具较陡的学习曲线及对专业技能和培训的要求，使团队很难使用这些工具来进行测试
+        description: 重量级测试工具较陡的学习曲线及对专业技能和培训的要求，使团队很难使用这些工具来进行测试。
       - title: Maven
         content: 基于语言的构建工具Gradle和Rake继续提供比Ant和Maven等基于XML和插件的构建工具更细粒度的抽象和更灵活的长期解决方案。这使得它们在项目变得更加复杂时，还能保持优雅的增长。
         pic_url:
         url:
         description: 基于XML和插件的构建工具
       - title: TFS
-        content: 我们继续看到尝试使用TFS作为版本控制系统的那些团队遭遇到生产力下降的问题。那些团队在实践作为持续集成核心部分的频繁代码提交时，发现TFS重量级的方式显著降低了生产效率。这往往导致团队更少地进行代码提交，导致产生诸多问题的代码合并。我们建议使用 Git、Perforce和Subversion。
+        content: 我们继续看到尝试使用TFS作为版本控制系统的那些团队遭遇到生产力下降的问题。那些团队在实践作为持续集成核心部分的频繁代码提交时，发现TFS重量级的方式显著降低了生产效率。这往往导致团队更少地进行代码提交，导致产生诸多问题的代码合并。我们建议使用Git、Perforce和Subversion。
         pic_url:
         url:
-        description: 团队在实践作为持续集成核心部分的频繁代码提交时，TFS重量级方式显著降低了生产效率
+        description: 团队在实践作为持续集成核心部分的频繁代码提交时，TFS重量级方式显著降低了生产效率。

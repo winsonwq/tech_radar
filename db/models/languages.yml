@@ -19,7 +19,7 @@
                  我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
         pic_url: nodejs.png
         url:
-        description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流。我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm) 作为node.js应用的打包工具，是其生态系统的重要组成部分。
+        description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流。我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
       - title: Scala
         content:
         pic_url:
@@ -35,7 +35,7 @@
     id: A14
     technologies:
       - title: CoffeeScript
-        content: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流，CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1 引入了Source Maps以帮助开发工具生产厂商解决这个问题，同时，像Dropbox这样的著名技术公司也开始使用CoffeeScript，我们预计它将获得更广泛的应用。
+        content: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流，CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1引入了Source Maps以帮助开发工具生产厂商解决这个问题，同时，像Dropbox这样的著名技术公司也开始使用CoffeeScript，我们预计它将获得更广泛的应用。
                  我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
         pic_url: coffeescript.png
         url:
@@ -95,10 +95,10 @@
         url:
         description:
       - title: Nancy
-        content: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
+        content: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure和.NET平台下的Nancy.
         pic_url: nancy.png
         url:
-        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure 和 .NET平台下的Nancy.
+        description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure和.NET平台下的Nancy.
       - title: OWIN
         content: 在.NET平台上，构建一个多样的、开源的Web开发生态系统始终步履维艰，原因之一就是对IIS和ASP.NET框架的过度依赖。OWIN之于.NET平台，正如Rack之于Ruby社区，它定义了一个开放的HTTP操作接口，从而将Web服务器从应用程序中解耦出来。我们为此激动不已，因为OWIN打开了一扇大门，使得在.NET平台下诞生简单的、可独立开发模块的Web开发工具成为可能。Nancy正是一个利用这种可能性的完美例子。我们也希望它能促使人们在.NET平台下将web应用程序部署为单独的、自托管服务方面进行更多的实践。
         pic_url: owin.png
@@ -129,11 +129,11 @@
         url:
         description:
       - title: Handwritten CSS
-        content: 和 JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然CSS3旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持CSS3，恐怕还需很多年。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写CSS的时代已经一去不复返了。
-                                      CSS 框架简化了大规模 CSS 代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
+        content: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然CSS3旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持CSS3，恐怕还需很多年。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写CSS的时代已经一去不复返了。
+                 CSS 框架简化了大规模 CSS 代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
         pic_url: css-sass-compass.png
         url:
-        description: 和 JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。
+        description: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。
       - title: Logic in stored procedures
         content:
         pic_url:
