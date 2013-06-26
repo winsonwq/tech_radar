@@ -53,10 +53,10 @@
         url:
         description:
       - title: Gatling
-        content: Gatling is another newer player in the automated performance testing space. It is similar to Locust and is much lighter weight than the older options such as JMeter and Grinder. Built on Scala, the DSL provides extensive functionality out of the box including easily configured data feeds and response assertions. In cases where customization is needed, it is easy to drop into Scala to provide extensions. The default generation of numerous dynamic views of the data via Highcharts adds to its appeal.
+        content: Gatling是另一个在自动化性能测试领域的新成员。它和 Locust 类似，都比传统的JMeter和Grinder更轻量级。Gatling的DSL构建在Scala基础上，提供了易配置的数据源和响应断言等广泛的开箱即用功能。在需要个性化配置时，也可以很容易直接使用Scala 来进行扩展。通过 Highcharts 默认生成数据的各种动态视图的功能，更增加了它的吸引力。
         pic_url:
         url:
-        description:
+        description: Gatling是另一个在自动化性能测试领域的新成员。它和Locust 类似，都比传统的 JMeter 和 Grinder 更轻量级。
       - title: Jekyll
         content:
         pic_url:
@@ -68,95 +68,95 @@
         url:
         description:
       - title: Logstash & Graylog2
-        content: As the systems we build involve more fine-grained services spread across more machines than ever before, the challenge of how to get information aggregated to allow for easy problem identification and resolution is more pressing than ever. Logstash has emerged as an easy way to parse and filter logs at source, and then forward them to a single aggregation point. Although Logstash provides some searching and filtering, Graylog2 is often used in conjunction to provide for more fully-featured querying and reporting.
+        content: 随着我们构建的系统比以往涉及越来越多细粒度服务，分布在越来越多的机器上，如何获得集中的信息以便更方便地识别和解决问题，比以往任何时候都更具挑战。Logstash已经成为一种解析和过滤日志再将它们转发到单一聚合节点的简单方法。虽然 Logstash 也提供了一些日志的搜索和过滤功能，但配合Graylog2使用，能提供更全面的日志查询和报告功能。
         pic_url:
         url:
-        description:
+        description: 通过Logstash和Graylog2的配合，提供更全面的日志查询和报告功能。
       - title: PhantomJS
-        content: We see interest on ThoughtWorks projects around PhantomJS, a headless web testing tool that allows functional testing against a realistic target.
+        content: 我们在ThoughtWorks 的项目中看到对PhantomJS 的兴趣，它是一个针对现实目标进行功能测试的headless网络测试工具。
         pic_url:
         url:
-        description:
+        description: 我们在ThoughtWorks的项目中看到对PhantomJS的兴趣，它是一个针对现实目标进行功能测试的headless网络测试工具。
       - title: Puppet-librarian and Chef-librarian
-        content: Both Puppet and Chef have had to deal with sharing community-contributed modules and manifests for commonly used services and tasks. Both the Puppet Forge and Chef’s Cookbook repository have helped, but people ended up copying and pasting these recipes into their own codebases, preventing them from taking advantage of later bugfixes and improvements. Puppet-librarian and Chef-librarian attempt to solve this by making it easy to declare your module dependencies, including pulling in known versions of code from these community sites.
+        content: Puppet和Chef都需要处理社区针对通用服务和任务而共享的module和manifest。Puppet Forge和Chef的Cookbook资料库能在一定程度上解决这个问题，但结果是人们总是复制和粘贴这些脚本到自己的代码中，这样他们就不能享受到最近的错误修正和改进的好处。Puppet-librarian和Chef-librarian通过让你更容易地声明自己的模块依赖关系，试图解决这个问题。其做法包括从这些社区网站取得已知版本的代码。
         pic_url:
         url:
-        description:
+        description: Puppet-librarian和Chef-librarian通过让你更容易声明自己模块的依赖关系，来避免复制、粘贴脚本到自己代码中，让程序员更享受修正最近的错误和改进的好处。
       - title: TestFlight & HockeyApp
-        content: Both TestFlight and HockeyApp allow you to manage the deployment of mobile applications without an app store, making user testing easier. They offer crash reporting and analytic capabilities to gather data in the field. HockeyApp supports IOS, Android, & Windows Phone, while TestFlight supports iOS and Android. We have used both tools successfully to help deliver mobile applications. This is clearly a fast evolving space.
+        content:  不需要应用程序商店，TestFlight和HockeyApp让你能够管理移动应用程序的部署，让用户测试更容易。它们提供了崩溃报告和实际数据分析的能力。HockeyApp支持iOS、Andriod和Windows Phone平台，而TestFlight只支持iOS和Android平台。我们已经成功地使用这两种工具来帮助移动应用程序的发布。这显然是一个快速发展的领域。
         pic_url:
         url:
-        description:
+        description: TestFlight和HockeyApp让你能够管理移动应用程序的部署，让用户测试更容易。
 
   "接近":
     id: A11
     technologies:
       - title: Browser-based templating
-        content: We see several JavaScript frameworks embrace browser-based templating, moving more layout work to the client. While this approach is useful in many cases, it does introduce operational issues involving caching, performance, and search. We believe these tools should be assessed carefully to ensure suitability for the target deployment environment.
+        content: 我们看到一些JavaScript框架正在拥抱基于浏览器的模板化的趋势，它们把更多的布局工作转移到客户端来做。虽然这种方法在很多情况下很有效，但它也会引入一些涉及缓冲、性能和搜索方面的运营问题。我们认为在使用这些工具前，需要仔细对这些工具进行评估，以确保满足目标部署环境的要求。
         pic_url:
         url:
-        description:
+        description: 在使用javascript框架控制浏览器布局时，需要仔细对这些工具进行评估，确保满足目标部署环境的需求，而不引入缓冲、性能等方面的问题
       - title: Faraday
-        content: Several ThoughtWorks teams called out the usefulness of Faraday, a Ruby HTTP client library that provides a common interface over a variety of adapters and integrates nicely with Rack middleware.
+        content: 一些ThoughtWorks的团队特别提到Ruby的HTTP客户端类库Faraday的实用性。它为各种适配器提供了通用的接口，并且和Rack中间件有良好的集成。
         pic_url:
         url:
-        description:
+        description: Ruby HTTP客户端类库Faraday
       - title: Hystrix
-        content: Managing dependencies in distributed systems can become complicated, and is a problem more people are facing with the move to finer-grained micro services. Hystrix is a library for the JVM from Netflix that implements patterns for dealing with downstream failure, offers real-time monitoring of connections, and caching and batching mechanisms to make inter-service dependencies more effic
+        content: 在分布式系统上的依赖关系管理非常复杂，这也是越来越多人在迁移到细粒度的微服务(micro-services)时所需要面对的问题。来自Netflix的Hystrix是一个实现了处理各种下游故障模式的Java类库，它提供连接的实时监控、缓存和批处理机制，以更有效地管理服务间的依赖关系。
         pic_url:
         url:
-        description:
+        description: 来自Netflix的Hystrix是一个实现了处理各种下游故障模式的Java类库，它提供连接的实时监控、缓存和批处理机制，以更有效地管理服务间的依赖关系。
       - title: Icon fonts
-        content:
+        content: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。图标字体利用浏览器对WebFonts和SVG的支持，而不是使用缩放图像或维护不同的图标集，解决了这个问题。但当大量使用 SVG 时，需要注意移动设备的功耗问题和旧设备上的性能问题。
         pic_url:
         url:
-        description:
+        description: 图标字体为呈现全尺寸高品质图标提供了很好的支持。
       - title: Light Table
         content:
         pic_url:
         url:
         description:
       - title: Octopus
-        content: Windows infrastructure automation should be adopted, however it still remains more difficult than automation on a Unix platform. Tools like Chef and Puppet are increasing their support, but there are also Windows specific solutions being developed like Octopus. Octopus allows automated deployment of your ASP.NET applications and Windows services and decreases dependency on PowerShell. It can be used with both NuGet using Octopak and TeamCity to create a full build, package, and deployment pipeline.
+        content: 基于Windows的基础自动化应该采用，然而仍然要比在Unix上进行基础设施自动化要困难得多。Chef和Puppet正在增加对Windows基础设施自动化的支持，同时也有正在研发中的像Octopus这种专门针对Windows的解决方案。Octopus可以在自动部署ASP.NET应用程序和Windows服务时减少对PowerShell的依赖。它也可以与NuGet和TeamCity一起使用，以此创建一个完整的构建、打包、部署管道。
         pic_url:
         url:
-        description:
+        description: Octopus可以在自动部署ASP.NET应用程序和windwos服务时减少对PowerShell的依赖，并通过与NuGet和TeamCity一起工作，创建一个完整的构建、打包、部署管道。
       - title: Reactive Extensions for .Net
-        content: By putting IObservables and IObservers on an equal footing with IEnumerables and IEnumerators, Rx for .NET allows developers to use their existing knowledge of LINQ (Language INtegrated Query) operators to query and compose asynchronous operations and event-based code using a common underlying abstraction of observable event streams. Microsoft has also released RxJS to bring the benefits of reactive programming to JavaScript. They open sourced the entire Rx framework, making it useful for Windows rich client applications and single-page JavaScript applications.
+        content: 通过把IObservables和IObservers放到与IEnumerables和IEnumerators同等的地位上，.NET上的响应式编程框架Rx允许开发者通过observable事件流的通用底层抽象，使用已有的LINQ（Language INtegrated Query) 操作符，来查询和编写异步操作和基于事件的代码。微软也发布了RxJS库把响应式编程的好处带到JavaScript中。整个Rx框架的开源，也使其在Windows富客户端应用和单页面JavaScript应用中发挥更大的作用。
         pic_url:
         url:
-        description:
+        description: .NET上的响应式编程框架Rx
       - title: Riemann
         content:
         pic_url:
         url:
         description:
       - title: Snowplow Analytics
-        content: We see great promise in Snowplow Analytics, an open source web analytics platform that derives intelligent information from regular web analytics, based on open data principles and cloud storage.
+        content: 我们认为Snowplow Analytics在网络数据分析方面具有远大前景。它是一个开源网络分析平台，基于公开数据原则和云存储，并能从常规的网络分析中得出智能信息 。
         pic_url:
         url:
-        description:
+        description: 一个开源网络分析平台，基于公开数据原则和云存储，并能从常规网站分析中得出智能信息
       - title: UIAutomator
-        content: UIAutomator looks like the most promising tool for testing Android user interfaces by allowing fine-grained control over components during test and facilitating testing on multiple devices. With the rise of devices with multiple form factors and pixel densities, the issue of presenting high quality icons at all scales has become important. Icon fonts solve this problem by using browser support for WebFonts and SVG instead of scaled images or maintaining different icon sets. As always, when making extensive use of SVG, pay attention to power consumption on mobile devices and performance on older devices.
+        content: UIAutomator允许测试时对用户界面组件的细粒度控制，以及为在多个设备上的测试提供帮助，因此被认为是Android用户界面测试方面最有前途的工具。
         pic_url:
         url:
-        description:
+        description: 允许测试时对用户界面组件的细粒度控制，以及多个设备上的测试帮助
 
   "保留":
     id: A12
     technologies:
       - title: Heavyweight test tools
-        content: Many organizations that have moved to more agile ways of working continue to use heavyweight testing tools. These tools have problems that make them unsuitable for fast moving software delivery. Large complex tools have high learning curves and require specialist skills and training, making it hard for the team themselves to test. Often this results in an unnecessary overhead for every release as other teams get involved. Expensive and limiting software licenses makes this problem even worse. Some heavyweight tools use a “model driven” approach where an attempt is made to accurately model the usage patterns of the application, which leads to costly test script maintenance and development time being lost to “false positives.” We have seen few situations where simple open source solutions cannot give the required level of confidence for much less time, effort and money.
+        content: 许多已经迁移到敏捷工作方式的组织还在继续使用重量级的测试工具。这些工具并不适合快速发展的软件交付。重量级测试工具较陡的学习曲线及对专业技能和培训的要求，使团队很难使用这些工具来进行测试。通常这会导致随着其他团队的加入，对于每一个版本的发布都造成不必要的开销。这些工具昂贵的软件授权费用更加剧了这个问题。一些重量级的测试工具使用“模型驱动”的方法，试图精确地对应用程序的使用模式进行建模，但软件缺陷的误报却导致测试脚本昂贵的的开发和维护代价。其实我们经常看到一些简单的开源解决方案能以少得多的时间、精力和预算，给予对所要求的软件质量的信心。
         pic_url:
         url:
-        description:
+        description: 重量级测试工具较陡的学习曲线及对专业技能和培训的要求，使团队很难使用这些工具来进行测试
       - title: Maven
-        content: Language-based build tools like Gradle and Rake continue to offer finer-grained abstractions and more flexibility long term than XML and plug-in based tools like Ant and Maven. This allows them to grow gracefully as projects become more complex.
+        content: 基于语言的构建工具Gradle和Rake继续提供比Ant和Maven等基于XML和插件的构建工具更细粒度的抽象和更灵活的长期解决方案。这使得它们在项目变得更加复杂时，还能保持优雅的增长。
         pic_url:
         url:
-        description:
+        description: 基于XML和插件的构建工具
       - title: TFS
-        content: We continue to see teams run into productivity problems attempting to use TFS as a version control system. Teams that want to practice frequent code checkins, a core part of continuous integration, have found its heavyweight approach significantly drains productivity. This often leads to teams checking in less frequently, causing more problematic merges. We recommend tools such as Git, Perforce, and Subversion instead.
+        content: 我们继续看到尝试使用TFS作为版本控制系统的那些团队遭遇到生产力下降的问题。那些团队在实践作为持续集成核心部分的频繁代码提交时，发现TFS重量级的方式显著降低了生产效率。这往往导致团队更少地进行代码提交，导致产生诸多问题的代码合并。我们建议使用 Git、Perforce和Subversion。
         pic_url:
         url:
-        description:
+        description: 团队在实践作为持续集成核心部分的频繁代码提交时，TFS重量级方式显著降低了生产效率

@@ -29,6 +29,13 @@ section {
 section p {
     font-size: 1.2em;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
     text-align: justify;
+}
+
+footer {
+    font-size: 1.0em;
+    text-align: right;
+    border-top: 1px solid #eeeeee;
+    padding: 10px 0;
 }
