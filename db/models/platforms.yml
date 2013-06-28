@@ -15,7 +15,7 @@
         description: 对于适用文档数据库模型的问题来说，MongoDB是当下最流行的选择。除了易于使用和提供高可靠性的技术实现之外，开发社区及整个生态系统对其成功也贡献良多。
       - title: Neo4J
         content:
-        pic_url:
+        pic_url: neo4j.png
         url:
         description:
       - title: Redis
@@ -39,12 +39,12 @@
         description: 网站的访问量即使再低，其产生的数据量也可能是巨大的。基于BigQuery之类的云技术对此会有帮助。
       - title: Continuous integration in the cloud
         content:
-        pic_url:
+        pic_url: travis.png
         url:
         description:
       - title: Couchbase
         content:
-        pic_url:
+        pic_url: couchbase.png
         url:
         description:
       - title: Hadoop 2.0
@@ -69,7 +69,7 @@
         description: 在云存储和云计算领域，尽管AWS还在持续的增加功能，Rackspace Cloud却悄悄发展为一名不可忽视的竞争者。
       - title: Riak
         content:
-        pic_url:
+        pic_url: riak.png
         url:
         description:
 
@@ -78,17 +78,17 @@
     technologies:
       - title: Azure
         content:
-        pic_url:
+        pic_url: azure.png
         url:
         description:
       - title: Calatrava
         content:
-        pic_url:
+        pic_url: calatrava.png
         url:
         description:
       - title: Datomic
         content:
-        pic_url:
+        pic_url: datomic.png
         url:
         description:
       - title: PhoneGap/Apache Cordova

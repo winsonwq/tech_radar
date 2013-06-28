@@ -5,7 +5,7 @@
     technologies:
       - title: Clojure
         content:
-        pic_url:
+        pic_url: clojure.png
         url:
         description:
       - title: CSS frameworks
@@ -22,7 +22,7 @@
         description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流。我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
       - title: Scala
         content:
-        pic_url:
+        pic_url: scala.png
         url:
         description:
       - title: Sinatra
@@ -42,17 +42,17 @@
         description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流， CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。
       - title: Dropwizard
         content:
-        pic_url:
+        pic_url: dropwizard.png
         url:
         description:
       - title: HTML5 for offline applications
         content:
-        pic_url:
+        pic_url: html5.png
         url:
         description:
       - title: JavaScript as a platform
         content:
-        pic_url:
+        pic_url: nodejs.png
         url:
         description:
       - title: JavaScript MV* frameworks
@@ -72,7 +72,7 @@
         description: 我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
       - title: Scratch, Alice, and Kodu
         content:
-        pic_url:
+        pic_url: kodu.png
         url:
         description:
 
@@ -81,17 +81,17 @@
     technologies:
       - title: ClojureScript
         content:
-        pic_url:
+        pic_url: clojure.png
         url:
         description:
       - title: Gremlin
         content:
-        pic_url:
+        pic_url: gremlin.png
         url:
         description:
       - title: Lua
         content:
-        pic_url:
+        pic_url: lua.png
         url:
         description:
       - title: Nancy
@@ -106,7 +106,7 @@
         description: OWIN之于.NET平台，正如Rack之于Ruby社区，它定义了一个开放的HTTP操作接口，从而将Web服务器从应用程序中解耦出来。我们也希望它能促使人们在.NET平台下将web应用程序部署为单独的、自托管服务方面进行更多的实践。
       - title: RubyMotion
         content:
-        pic_url:
+        pic_url: rubymotion.png
         url:
         description:
       - title: Twitter Bootstrap
@@ -120,7 +120,7 @@
     technologies:
       - title: Backbone.js
         content:
-        pic_url:
+        pic_url: backbone.png
         url:
         description:
       - title: Component-based frameworks

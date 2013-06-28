@@ -15,7 +15,7 @@
         description:
       - title: Guerrilla testing
         content:
-        pic_url:
+        pic_url: guerrilla.png
         url:
         description:
       - title: In-process acceptance testing
@@ -40,7 +40,7 @@
         description: 随着JavaScript在客户端和服务器端的广泛使用，Promise——一项古老的异步编程的技术又再次得到了关注。
       - title: Windows infrastructure automation
         content: 以前，像Chef和Puppet这样的工具都缺乏对Windows的支持，导致构建简单的基础设施自动化任务都需要大量的Powershell脚本。所以，想要使Windows到达和Unix一样的自动化水平可谓困难重重。不过在过去的一年里，Chef和Puppet对Windows的支持得到了很大改善。这种支持与强大的PowerShell相结合，使得Windows基础设施自动化极为可行。
-        pic_url:
+        pic_url: puppet.png
         url:
         description: 在过去的一年里，Chef和Puppet对Windows的支持得到了很大改善。这种支持与强大的PowerShell相结合，使得Windows基础设施自动化极为可行。
 

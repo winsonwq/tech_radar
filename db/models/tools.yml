@@ -49,7 +49,7 @@
     technologies:
       - title: Apache Pig
         content:
-        pic_url:
+        pic_url: pig.png
         url:
         description:
       - title: Gatling
@@ -59,12 +59,12 @@
         description: Gatling是另一个在自动化性能测试领域的新成员。它和Locust类似，都比传统的JMeter和Grinder更轻量级。
       - title: Jekyll
         content:
-        pic_url:
+        pic_url: jekyll.png
         url:
         description:
       - title: Locust
         content:
-        pic_url:
+        pic_url: locust.png
         url:
         description:
       - title: Logstash & Graylog2
@@ -108,7 +108,7 @@
         description: 来自Netflix的Hystrix是一个实现了处理各种下游故障模式的Java类库，它提供连接的实时监控、缓存和批处理机制，以更有效地管理服务间的依赖关系。
       - title: Icon fonts
         content: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。图标字体利用浏览器对WebFonts和SVG的支持，而不是使用缩放图像或维护不同的图标集，解决了这个问题。但当大量使用SVG时，需要注意移动设备的功耗问题和旧设备上的性能问题。
-        pic_url:
+        pic_url: icon-font.png
         url:
         description: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。
       - title: Light Table
@@ -157,6 +157,6 @@
         description: 基于XML和插件的构建工具
       - title: TFS
         content: 我们继续看到尝试使用TFS作为版本控制系统的那些团队遭遇到生产力下降的问题。那些团队在实践作为持续集成核心部分的频繁代码提交时，发现TFS重量级的方式显著降低了生产效率。这往往导致团队更少地进行代码提交，导致产生诸多问题的代码合并。我们建议使用Git、Perforce和Subversion。
-        pic_url:
+        pic_url: tfs.png
         url:
         description: 团队在实践作为持续集成核心部分的频繁代码提交时，TFS重量级方式显著降低了生产效率。
