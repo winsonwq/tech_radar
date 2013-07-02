@@ -14,10 +14,10 @@
         url:
         description: 对于适用文档数据库模型的问题来说，MongoDB是当下最流行的选择。除了易于使用和提供高可靠性的技术实现之外，开发社区及整个生态系统对其成功也贡献良多。
       - title: Neo4J
-        content:
+        content: Neo4j是一个用Java实现、完全兼容ACID的图形数据库。数据以一种针对图形网络进行过优化的格式保存在磁盘上。Neo4j的内核是一种极快的图形引擎，具有数据库产品期望的所有特性，如恢复、两阶段提交、符合XA等。自2003年起，Neo4j就已经被作为24/7的产品使用。Neo4j的典型数据特征：数据结构不是必须的，甚至可以完全没有，这可以简化模式变更和延迟数据迁移；可以方便建模常见的复杂领域数据集，如CMS里的访问控制可被建模成细粒度的访问控制表，类对象数据库的用例、TripleStores以及其他例子典型使用的领域如语义网和RDF、LinkedData、GIS、基因分析、社交网络数据建模、深度推荐算法以及其他领域。
         pic_url: neo4j.png
         url:
-        description:
+        description: Neo4j是一个用Java实现、完全兼容ACID的图形数据库。
       - title: Redis
         content: Redis已经在多个ThoughtWorks项目中被证明是有用的工具。它被用作结构化的缓存或者跨越多个国家的分布式数据存储。
         pic_url: redis.png
@@ -38,15 +38,15 @@
         url:
         description: 网站的访问量即使再低，其产生的数据量也可能是巨大的。基于BigQuery之类的云技术对此会有帮助。
       - title: Continuous integration in the cloud
-        content:
+        content: 大部分持续集成产品是将代码下载到本地并在本地环境下运行，而云端持续集成（Continuous integration in the cloud）在CI服务托管平台上创建了一个新的产品，是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。随着产品的成熟，开发人员没有理由不采用这个重要的实践。
         pic_url: travis.png
         url:
-        description:
+        description: Continuous integration in the cloud是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。
       - title: Couchbase
-        content:
+        content: Couchbase是一个NoSQL文档导向的数据库，主要用于交互式网络应用。Couchbase不受固定的数据库架构的约束，可以简化应用修改；高通量的读取和写入可保持持续的高效性能；Couchbase数据库容易扩展，并支持24*7的拓扑变化。
         pic_url: couchbase.png
         url:
-        description:
+        description: Couchbase是一个NoSQL文档导向的数据库，主要用于交互式网络应用。
       - title: Hadoop 2.0
         content: Hadoop最初的架构基于水平扩展数据，垂直扩展元数据的模式。尽管slave节点可以从容的进行数据的存储和处理，管理元数据的master却是瓶颈，同时也限制了规模化网络的使用。Hadoop 2.0重新设计了HDFS和Map Reduce框架的架构，以此来解决这些问题。现在，HDFS的命名空间可以通过使用同一个集群的多个name nodes来联合在一起，并且部署为高可用性(HA)模式。MapReduce也被YARN取代了。YARN解耦了集群的资源管理和任务的状态管理，并且通过JobTracker消除了伸缩性和性能问题。 最重要的是，这些变化鼓励在Hadoop集群上开发除了MapReduce之外的分布式计算模型。
         pic_url: hadoop.png
@@ -68,29 +68,29 @@
         url:
         description: 在云存储和云计算领域，尽管AWS还在持续的增加功能，Rackspace Cloud却悄悄发展为一名不可忽视的竞争者。
       - title: Riak
-        content:
+        content: Riak是一个开源的分布式数据库，可复制和智能检索数据，即使在故障条件下，仍可读取和写入数据；当网络或硬件故障时，数据仍不会丢失；在riak中添加新机器并不会导致运营负担加重；riak在集群中自动分配数据，伴随着容量的增加，riak的性能将线性提升。
         pic_url: riak.png
         url:
-        description:
+        description: Raik是一个开源的分布式数据库，具备容错机制强大，操作简单，可扩展等优点。
 
   "接近":
     id: A7
     technologies:
       - title: Azure
-        content:
+        content: Azure是一个开放灵活可变的云平台，在Azure云平台上可通过微软管理的数据中心全球网络快速构建、部署和管理应用;可以使用任何语言、任何工具或框架;并且可以使用集成你的公开云应用。
         pic_url: azure.png
         url:
-        description:
+        description: Azure是一个开放灵活可变的云平台。
       - title: Calatrava
-        content:
+        content: Calatrava是一个跨平台的移动框架，你可使用此框架通过IOS、Andiroid和移动网络分享你的应用的核心逻辑，与其他XP工具箱不同，Calatrava可使你写出最高质量的原生UI。Calatrave适合于包含重要客户端的域逻辑的应用程序，特别当应用程序是您的产品的向导而非产品本身；但是它不适合大部分代码是前端代码的或者提供良好用户体验的web应用程序；它是增量式发布策略的最佳选择。
         pic_url: calatrava.png
         url:
-        description:
+        description: Calatrava是一个跨平台的移动框架，可用于基于IOS、Andiroid和移动网络的应用核心逻辑分享。
       - title: Datomic
-        content:
+        content: Datomic是一种以简单服务组合为设计目标的新数据库，它试图在传统RDBMS的功能与新一代冗余分布式存储系统的弹性方面找到一种平衡。Datomic力图完成以下目标：提供可靠的信息模型，而避免原地更新；充分利用冗余的可伸缩存储系统；提供ACID事务和一致性；在应用中支持声明性数据编程。
         pic_url: datomic.png
         url:
-        description:
+        description: Datomic是一种以简单服务组合为设计目标的新数据库，它试图在传统RDBMS的功能与新一代冗余分布式存储系统的弹性方面找到一种平衡。
       - title: PhoneGap/Apache Cordova
         content: PhoneGap，现在叫Apache Cordova，允许你使用HTML，CSS和JavaScript来开发跨平台的移动应用。它通过一组JavaScript API对平台特定的本地代码做了抽象，同时还保持了不同移动平台之间的一致性。Cordova支持非常多的平台，包括iOS、Android、Blackberry、Windows Phone以及WebOS。
         pic_url: cordova.png
@@ -121,12 +121,12 @@
         url:
         description: “企业级”商业软件包提供的功能，和实际需要的功能之间的差距正在拉大。这对面向互联网的应用来说更是如此。
       - title: Singleton infrastructure
-        content:
+        content: 有时，架构上的决定导致你将基础设施包含在内，而通常我们只能承受一个基础设施，例如大型机或者搜索设备;这是个很糟糕的想法，它严重限制了测试和部署的灵活性;我们强烈支持可以容易设置和拆除的基础设施。Singleton infrastructure属于过去被误导的供应商驱动的架构。
         pic_url:
         url:
-        description:
+        description: Singleton infrastructure属于过去被误导的供应商驱动的架构。
       - title: WS-*
-        content:
+        content: 广大供应商在标准和可靠互操作性方面的协议，使得Web服务不同于以往的任何集成技术。在互操作性和标准化的推进过程中，Microsoft在创建水平及行业特定Web服务标准方面付出了不懈的努力。由于 Web Service市场的快速扩张，管理Web Service安全性、可靠性和事务的高级标准需求也随之而生。Microsoft和业内其他供应商针对这一需求编写了一套规范，统称为WS-*体系结构。这些规范的目的是在保留基本Web Service简单性的同时，提供高级功能的远景蓝图。WS-*体系结构最重要的属性是可组合性。协议可组合性使得Web服务解决方案可随个人要求（如安全性、可靠的消息传送、附件、发现等）所需，随时完善开发。在隔离状态下，每项要求可满足一个基本需求。组合之后，他们就可以满足分布式应用程序通常要求的更高级别功能。因此，WS-*规范即可单独使用，又可相互之间结合使用。这样就消除了在规范试图定义多个功能，或与其他规范紧密耦合所带来的复杂性以及相关开支。还可使开发人员只应用解决直接需求的特定功能即可。而在新的应用程序要求产生之后，无需牺牲后向兼容性即可编写新的规范。
         pic_url:
         url:
-        description:
+        description: 由于 Web Service市场的快速扩张，管理Web Service安全性、可靠性和事务的高级标准需求也随之而生。Microsoft和业内其他供应商针对这一需求编写了一套规范，统称为WS-*体系结构。

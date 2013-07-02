@@ -9,15 +9,15 @@
         url:
         description:
       - title: Automated deployment pipeline
-        content:
+        content: 采纳持续交付意味着很多团队正在建立一个自动部署管道（automated deployment pipeline），用以把他们的代码一直送到产品环境。管道给其他复杂的构建、部署活动链条提供可视化。此外，针对通往产品环境的每一阶段的构建产物，管道为其提供了可靠的跟踪能力。现在，许多厂商都在建立持续集成（CI）服务器，并以管道做为其首要的功能，而不是仅仅提供可视化模块。
         pic_url:
         url:
-        description:
+        description: 自动部署管道（automated deployment pipeline）将团队的代码一直送到产品环境，为复杂的构建、部署活动链条提供可视化。
       - title: Guerrilla testing
-        content:
+        content: Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的高效程度，以是否可以期望的方式工作，商标和提议是否明确。可被用于服务链中，建立简易，执行和反馈频繁，可频繁使用。
         pic_url: guerrilla.png
         url:
-        description:
+        description:  Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的可行性和效率。
       - title: In-process acceptance testing
         content:
         pic_url:
@@ -73,40 +73,40 @@
         url:
         description: NoSQL数据存储正继续成为主流，但团队需要充分认识到对迁移数据库到NoSQL的需求。
       - title: Edge Side Includes for page composition
-        content:
+        content: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。ESI标识语言提供了一种内容管理机制，这些内容包括应用程序服务器解决方案、内容管理系统，以及内容传送网络。因此，ESI让公司能够进行网站应用的一次性开发，并在安装应用程序时，选择好内容管理系统、应用服务器或内容分发网络的配置时间，这样就可降低复杂性、开发时间和配置成本。
         pic_url:
         url:
-        description:
+        description: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。
       - title: HTML5 storage instead of cookies
         content: HTML5存储，也被称为本地存储或Web存储，是一种在现代浏览器里存储客户端数据的机制，其中也包括iOS和Android移动浏览器。在几乎所有情况下，我们都建议使用HTML5存储，而不是cookie。HTML5存储，最多可容纳5MB的数据，而cookie则被限制在4KB。Cookie的数据在每一次请求中都会被发送，这会拖慢你的应用程序，并且有可能将数据暴露于不安全的HTTP连接中。与此相反，HTML5存储只需要由浏览器来保证数据安全。Cookie则只应该用来保存像session id这样的简单数据。
         pic_url: html5.png
         url:
         description: HTML5存储，也被称为本地存储或Web存储，是一种在现代浏览器里存储客户端数据的机制，其中也包括iOS和Android移动浏览器。
       - title: Logs as data
-        content:
+        content: Logs as data是通过STDOUT将半结构化数据写入你的应用日志，之后Logs可被用作向导，长期趋势分析，自动缩放，异常检测和阈值报警。Logs as data作为数据向导较直接仪表的好处在于：您的应用无需依赖任何额外的数据库；No CPU cost to your dyno by in-app instrumentation；可直接读取Logs，具有自我检测机制；无需改变应用代码，Metrics backends can be swapped out；支持多分支的日志流发送到多个后端，得到对一个日志数据的不同评判和提醒。
         pic_url:
         url:
-        description:
+        description: Logs as data是通过STDOUT将半结构化数据写入你的应用日志，之后Logs可被用作向导，长期趋势分析，自动缩放，异常检测和阈值报警。
       - title: Micro-services
-        content:
+        content: Micro-services 是一种小的，明确的，执行特定任务的程序/函数，Micro-services由系统程序员和应用程序员开发并编译成iRODS服务器代码，用户和管理员可以链接这些Micro-services实现更大的功能，提供给其他人。这些大功能被成为行为，一个行为与Micro-services的多个链接可使系统采用多种方法执行行为，系统需选取最好的Micro-service链执行。
         pic_url:
         url:
-        description:
+        description: Micro-services 是一种小的，明确的，执行特定任务的程序/函数，用户和管理员可以链接Micro-services实现更大的功能，提供给其他人。
       - title: Mobile first
-        content:
+        content: Mobile first是网站应用应该先在移动设备上开发的理念，网站应用只包含用户使用最频繁的功能，随着屏幕的增大，根据用户需求的优先级增加应用。Mobile first的理念与使用W3C CCS3 media queries的响应式网页设计的理念相关。
         pic_url:
         url:
-        description:
+        description: Mobile first是网站应用先在移动设备上开发的理念，网站应用只包含用户使用最频繁的功能。
       - title: Perimeterless enterprise
         content: 技术趋势已经冲破了原本保护着企业IT网络的围墙，成为没有边界的企业。员工们频繁使用自己的消费设备通过云服务和web api访问企业数据，而企业往往对此并不知情。随着设备不断扩散以及更多的应用程序迁移到云端，迫使企业重新考虑数据访问和网络安全的基本假设。
         pic_url:
         url:
         description: 随着设备不断扩散以及更多的应用程序迁移到云端，迫使企业重新考虑数据访问和网络安全的基本假设。
       - title: Responsive web design
-        content:
+        content: 响应式网页设计（Responsive web design）是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，同时减少缩放、平移和滚动，采用RWD设计的网站采用CSS3 Media queries,即一种对 @media 规则的扩展，以及流式的基于比例的网格和自适应大小的图像以适应不同大小的设备,所有的图片字体模块都会根据你的变化而变化。
         pic_url:
         url:
-        description:
+        description: 响应式网页设计（Responsive web design）是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，所有的图片字体模块都会根据你的变化而变化。
       - title: Semantic monitoring
         content: 在以前的雷达中，我们曾经建议延长自动化验收测试的周期，在我们称之为语义监控(semantic monitoring)的阶段，不断在产品环境中运行这些测试。现在我们仍然相信，这是一项使团队可以提前预测情况的重要技术。但现在，尤其是在初创公司中，我们还看到这种方法的一个变体，就是在减少测试次数的同时，增加监控与自动报警。这使关注点从避免可预见的问题转移到对所有问题减少平均的恢复时间。
         pic_url:

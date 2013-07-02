@@ -24,49 +24,49 @@
         url:
         description: 基于语言的构建工具Gradle和Rake继续提供比Ant和Maven等基于XML和插件的构建工具更细粒度的抽象和更灵活的长期解决方案。
       - title: Graphite
-        content:
+        content:  Graphite 是一个用于采集网站实时信息并进行统计的开源项目，可用于采集多种网站服务运行状态信息。Graphite服务平均每分钟有4800次更新操作。实践已经证实要监测网站发发生什么是非常有用的，它的简单文本协议和绘图功能可以方便地即插即用的方式用于任何需要监控的系统上。
         pic_url:
         url:
-        description:
+        description: Graphite是一个企业级的监控工具，在廉价的硬盘上可良好运行。
       - title: Immutable servers
-        content:
+        content: 当我们升级系统时，我们创建新的服务器，销毁旧的，而非在同一区域更新它们，这是phoenix服务器的逻辑延伸。而immutable服务器的产生灵感来自于在Google数据中心的物理服务器是被拉出机架并丢弃，而非固定不变的。Immutable服务器使我们在设置服务器后即可肯定它的状态。
         pic_url:
         url:
-        description:
+        description: Immutable服务器使我们在设置服务器参数后即可肯定它的状态。
       - title: NuGet
         content: 针对第三方库的包管理系统继续在所有平台上获得认可，也都在不断添加新的功能。我们最近把NuGet和Chocolatey NuGet列入到技术雷达，也证实了这个重要的敏捷工程实践的先进性。
         pic_url: nuget.png
         url:
         description: 针对第三方库的包管理系统继续在所有平台上获得认可，也都在不断添加新的功能。
       - title: PSake
-        content:
+        content:  Psake通过使用构建脚本中的PowerShell语法，避免了与可执行的XML文件相关的尖括号标识(<>)。psake借鉴了rake(即Ruby中的make)和bake(即Boo中的make)的语法结构，但它更容易用来编写脚本，因为它还利用了使用者已知的命令行编程知识。PSake所创建编译的脚本不需要知道psake安装在哪里，它们只需要调用Invoke-psake方法就可以执行了；不再需要全局变量，因为除了显示地导出之外，对于某个模块来说它们可以被视为私有的；如果需要的话，可以卸载模块来除去内存中所有的代码和变量。
         pic_url:
         url:
-        description:
+        description: PSake是一种构建脚本方法，借鉴了rake，bake的语法结构和一直命令行编程知识，更容易编写脚本。
 
   "尝试":
     id: A10
     technologies:
       - title: Apache Pig
-        content:
+        content: Pig是一个基于Hadoop的大规模数据分析平台，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算。Pig为复杂的海量数据并行计算提供了一个简单的操作和编程接口。Pig中的Streaming主要分为4个组件: Pig Latin、逻辑层(Logical Layer)、物理层(Physical Layer)、Streaming具体实现(Implementation)，Streaming会创建一个Map/Reduce作业，并把它发送给合适的集群，同时监视这个作业的在集群环境中的整个执行过程。
         pic_url: pig.png
         url:
-        description:
+        description: Pig是一个基于Hadoop的大规模数据分析平台，它提供的语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算。
       - title: Gatling
         content: Gatling是另一个在自动化性能测试领域的新成员。它和Locust类似，都比传统的JMeter和Grinder更轻量级。Gatling的DSL构建在Scala基础上，提供了易配置的数据源和响应断言等广泛的开箱即用功能。在需要个性化配置时，也可以很容易直接使用Scala来进行扩展。通过Highcharts默认生成数据的各种动态视图的功能，更增加了它的吸引力。
         pic_url: gatling.png
         url:
         description: Gatling是另一个在自动化性能测试领域的新成员。它和Locust类似，都比传统的JMeter和Grinder更轻量级。
       - title: Jekyll
-        content:
+        content: Jekyll是一个简单的静态网站生成器。它通过Markdown（或Textile）和Liquid运行包含各种格式的原始文本文件的模板目录，生成一个完整的、可发布的静态网站，发布于任何您喜爱的Web服务器。哲基尔也恰好是GitHub的网页背后的引擎，这意味着你可以通过GitHub服务器免费使用Jekyll部署你的项目网页，博客或网站。
         pic_url: jekyll.png
         url:
-        description:
+        description: Jekyll是一个简单的静态网站生成器。它可将各种格式的原始文本文件的模板目录生成一个完整的、可发布的静态网站，发布于任何您喜爱的Web服务器。
       - title: Locust
-        content:
+        content: Locust是一种易于使用的，分布式的，用户负载测试工具。 用于负载测试网站（或其它系统），并找出一个系统可以处理多少个并发用户。Locust是完全基于事件的，因此它可以在一台机器上支持数千个并发用户，相对于许多其他的基于事件的应用程序，它不使用回调。 相反，它使用轻量进程，通过GEVENT。每个locust蜂拥您的网站实际上是它在自己的进程内运行（或greenlet，是正确的）。这可以让你在Python写极富表现力的场景，而无需使用回调使你的代码复杂化。
         pic_url: locust.png
         url:
-        description:
+        description: Locust是一种易于使用的，分布式的，用户负载测试工具。
       - title: Logstash & Graylog2
         content: 随着我们构建的系统比以往涉及越来越多细粒度服务，分布在越来越多的机器上，如何获得集中的信息以便更方便地识别和解决问题，比以往任何时候都更具挑战。Logstash已经成为一种解析和过滤日志再将它们转发到单一聚合节点的简单方法。虽然Logstash也提供了一些日志的搜索和过滤功能，但配合Graylog2使用，能提供更全面的日志查询和报告功能。
         pic_url: logstash.png
@@ -112,10 +112,10 @@
         url:
         description: 随着具有多种外形因素和像素密度的设备的兴起，呈现全尺寸高品质图标的问题已经变得非常重要。
       - title: Light Table
-        content:
+        content: Light Table是一个新的互动IDE，可以让你修改正在运行的程序（从网站到游戏），并加入任何元素。它提供实时反馈，我们不仅需要回答我们的代码问题，并且了解我们的项目如何真正的工作。
         pic_url:
         url:
-        description:
+        description: Light Table是一个新的互动IDE，可以让你修改正在运行的程序。
       - title: Octopus
         content: 基于Windows的基础自动化应该采用，然而仍然要比在Unix上进行基础设施自动化要困难得多。Chef和Puppet正在增加对Windows基础设施自动化的支持，同时也有正在研发中的像Octopus这种专门针对Windows的解决方案。Octopus可以在自动部署ASP.NET应用程序和Windows服务时减少对PowerShell的依赖。它也可以与NuGet和TeamCity一起使用，以此创建一个完整的构建、打包、部署管道。
         pic_url: octopus.png
@@ -127,10 +127,10 @@
         url:
         description: .NET上的响应式编程框架Rx
       - title: Riemann
-        content:
+        content: Riemann使用强大的流处理语言来从你的服务器和应用程序聚集事件。对代码的每个异常都会发送一封邮件，追踪web应用的延迟分布，查看任意服务器的最顶端进程，集合集群每个Riak节点的统计数据，转发到Graphite，关键进程切入错误时发送警报。
         pic_url:
         url:
-        description:
+        description: Riemann使用强大的流处理语言来从你的服务器和应用程序聚集事件。
       - title: Snowplow Analytics
         content: 我们认为Snowplow Analytics在网络数据分析方面具有远大前景。它是一个开源网络分析平台，基于公开数据原则和云存储，并能从常规的网络分析中得出智能信息 。
         pic_url: snowplow.png
