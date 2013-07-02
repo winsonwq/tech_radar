@@ -66,7 +66,7 @@
         url:
         description: 最近发布的Play Framework 2.1.1支持控制器依赖注入、异步、非阻塞I/O、代码重载工作流、数据库迁移、资源管道以及灵活的部署选项，这些特性对开发者产生了更大的吸引力。基于这个原因，Play重新出现在我们的技术雷达上.
       - title: Require.js & NPM
-        content: 我们在新产品中对node.js的使用越多，对可靠的JavaScript 包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
+        content: 我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
         pic_url: npm.png
         url:
         description: 我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
@@ -110,10 +110,10 @@
         url:
         description:
       - title: Twitter Bootstrap
-        content: Twitter Bootstrap 是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。基于我们长期的使用经验，我们在此版技术雷达中把Bootstrap从试用阶段移到了评估阶段。如果你想要替换或定制应用程序外观，其与HTML标记的深度集成将成为你需要面对的挑战。但这并不妨碍你选择Twitter Bootstrap，只是做决定时需要考虑到这些限制.
+        content: Twitter Bootstrap是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。基于我们长期的使用经验，我们在此版技术雷达中把Bootstrap从试用阶段移到了评估阶段。如果你想要替换或定制应用程序外观，其与HTML标记的深度集成将成为你需要面对的挑战。但这并不妨碍你选择Twitter Bootstrap，只是做决定时需要考虑到这些限制.
         pic_url: twitter-bootstrap.png
         url:
-        description: Twitter Bootstrap 是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。
+        description: Twitter Bootstrap是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。
 
   "保留":
     id: A16
@@ -130,7 +130,7 @@
         description:
       - title: Handwritten CSS
         content: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然CSS3旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持CSS3，恐怕还需很多年。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写CSS的时代已经一去不复返了。
-                 CSS 框架简化了大规模 CSS 代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
+                 CSS框架简化了大规模 CSS代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
         pic_url: css-sass-compass.png
         url:
         description: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。

@@ -4,10 +4,10 @@
     id: A5
     technologies:
       - title: Elastic Search
-        content: 在过去的一年中，我们发现采用Elastic Search（弹性搜索）作为开源的搜索平台呈逐步上升趋势。Elastic Search基于Apache Lucene，是一个可扩展的，多租户的，支持水平伸缩的搜索解决方案。它允许索引复杂数据，并可通过JSON获取。它支持从集群，故障转移及备份中自动恢复各节点。Elastic Search可以通过基于插件系统的REST API来扩展，它提供了一个优雅的操作模型，允许添加新功能，或者改变现有行为。围绕着Elastic Search的社区是非常活跃的。一个证据就是已经开发出了包括Java、 C#、 Ruby和JavaScript在内的多个客户端类库。
+        content: 在过去的一年中，我们发现采用Elastic Search(弹性搜索)作为开源的搜索平台呈逐步上升趋势。Elastic Search基于Apache Lucene，是一个可扩展的，多租户的，支持水平伸缩的搜索解决方案。它允许索引复杂数据，并可通过JSON获取。它支持从集群，故障转移及备份中自动恢复各节点。Elastic Search可以通过基于插件系统的REST API来扩展，它提供了一个优雅的操作模型，允许添加新功能，或者改变现有行为。围绕着Elastic Search的社区是非常活跃的。一个证据就是已经开发出了包括Java、 C#、 Ruby和JavaScript在内的多个客户端类库。
         pic_url: elastic-search.png
         url:
-        description: 在过去的一年中，我们发现采用Elastic Search（弹性搜索）作为开源的搜索平台呈逐步上升趋势。
+        description: 在过去的一年中，我们发现采用Elastic Search(弹性搜索)作为开源的搜索平台呈逐步上升趋势。
       - title: MongoDB
         content: 对于适用文档数据库模型的问题来说，MongoDB是当下最流行的选择。除了易于使用和提供高可靠性的技术实现之外，开发社区及整个生态系统对其成功也贡献良多。我们也听说了一些团队抵受不住MongoDB流行的诱惑而产生了问题，比如并不适用文档数据库的应用，又或者团队没有充分理解其内在的复杂性。然而若能用对，MongoDB已经在很多项目中证明了自己。
         pic_url: mongodb.png
@@ -38,7 +38,7 @@
         url:
         description: 网站的访问量即使再低，其产生的数据量也可能是巨大的。基于BigQuery之类的云技术对此会有帮助。
       - title: Continuous integration in the cloud
-        content: 大部分持续集成产品是将代码下载到本地并在本地环境下运行，而云端持续集成（Continuous integration in the cloud）在CI服务托管平台上创建了一个新的产品，是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。随着产品的成熟，开发人员没有理由不采用这个重要的实践。
+        content: 大部分持续集成产品是将代码下载到本地并在本地环境下运行，而云端持续集成(Continuous integration in the cloud)在CI服务托管平台上创建了一个新的产品，是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。随着产品的成熟，开发人员没有理由不采用这个重要的实践。
         pic_url: travis.png
         url:
         description: Continuous integration in the cloud是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。
@@ -97,7 +97,7 @@
         url:
         description: PhoneGap，现在叫Apache Cordova，允许你使用HTML，CSS和JavaScript来开发跨平台的移动应用。
       - title: PostgreSQL for NoSQL
-        content: PostgreSQL正在逐渐成为SQL数据库中的NoSQL选择。版本9.2支持存储JSON格式的数据，并在其之上提供完备的查询功能。另外，PostgreSQL还提供了允许用户以键值对（key/value pair）的形式存储和查询数据的扩展。该扩展让你可以直接利用稳定的数据库底层存储和事务的能力，而无需绑定在关系数据模型上。对于那些希望同时开发SQL和NoSQL应用，却又倾向于使用一套他们熟知的可靠基础设施的开发者而言，提供这一特性就再理想不过了。
+        content: PostgreSQL正在逐渐成为SQL数据库中的NoSQL选择。版本9.2支持存储JSON格式的数据，并在其之上提供完备的查询功能。另外，PostgreSQL还提供了允许用户以键值对(key/value pair)的形式存储和查询数据的扩展。该扩展让你可以直接利用稳定的数据库底层存储和事务的能力，而无需绑定在关系数据模型上。对于那些希望同时开发SQL和NoSQL应用，却又倾向于使用一套他们熟知的可靠基础设施的开发者而言，提供这一特性就再理想不过了。
         pic_url: postgresql.png
         url:
         description: PostgreSQL正在逐渐成为SQL数据库中的NoSQL选择。
@@ -126,7 +126,7 @@
         url:
         description: Singleton infrastructure属于过去被误导的供应商驱动的架构。
       - title: WS-*
-        content: 广大供应商在标准和可靠互操作性方面的协议，使得Web服务不同于以往的任何集成技术。在互操作性和标准化的推进过程中，Microsoft在创建水平及行业特定Web服务标准方面付出了不懈的努力。由于 Web Service市场的快速扩张，管理Web Service安全性、可靠性和事务的高级标准需求也随之而生。Microsoft和业内其他供应商针对这一需求编写了一套规范，统称为WS-*体系结构。这些规范的目的是在保留基本Web Service简单性的同时，提供高级功能的远景蓝图。WS-*体系结构最重要的属性是可组合性。协议可组合性使得Web服务解决方案可随个人要求（如安全性、可靠的消息传送、附件、发现等）所需，随时完善开发。在隔离状态下，每项要求可满足一个基本需求。组合之后，他们就可以满足分布式应用程序通常要求的更高级别功能。因此，WS-*规范即可单独使用，又可相互之间结合使用。这样就消除了在规范试图定义多个功能，或与其他规范紧密耦合所带来的复杂性以及相关开支。还可使开发人员只应用解决直接需求的特定功能即可。而在新的应用程序要求产生之后，无需牺牲后向兼容性即可编写新的规范。
+        content: 广大供应商在标准和可靠互操作性方面的协议，使得Web服务不同于以往的任何集成技术。在互操作性和标准化的推进过程中，Microsoft在创建水平及行业特定Web服务标准方面付出了不懈的努力。由于 Web Service市场的快速扩张，管理Web Service安全性、可靠性和事务的高级标准需求也随之而生。Microsoft和业内其他供应商针对这一需求编写了一套规范，统称为WS-*体系结构。这些规范的目的是在保留基本Web Service简单性的同时，提供高级功能的远景蓝图。WS-*体系结构最重要的属性是可组合性。协议可组合性使得Web服务解决方案可随个人要求(如安全性、可靠的消息传送、附件、发现等)所需，随时完善开发。在隔离状态下，每项要求可满足一个基本需求。组合之后，他们就可以满足分布式应用程序通常要求的更高级别功能。因此，WS-*规范即可单独使用，又可相互之间结合使用。这样就消除了在规范试图定义多个功能，或与其他规范紧密耦合所带来的复杂性以及相关开支。还可使开发人员只应用解决直接需求的特定功能即可。而在新的应用程序要求产生之后，无需牺牲后向兼容性即可编写新的规范。
         pic_url:
         url:
         description: 由于 Web Service市场的快速扩张，管理Web Service安全性、可靠性和事务的高级标准需求也随之而生。Microsoft和业内其他供应商针对这一需求编写了一套规范，统称为WS-*体系结构。
