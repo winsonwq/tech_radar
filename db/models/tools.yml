@@ -48,7 +48,7 @@
     id: A10
     technologies:
       - title: Apache Pig
-        content: Pig是一个基于Hadoop的大规模数据分析平台，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算。Pig为复杂的海量数据并行计算提供了一个简单的操作和编程接口。Pig中的Streaming主要分为4个组件: Pig Latin、逻辑层(Logical Layer)、物理层(Physical Layer)、Streaming具体实现(Implementation)，Streaming会创建一个Map/Reduce作业，并把它发送给合适的集群，同时监视这个作业的在集群环境中的整个执行过程。
+        content: "Pig是一个基于Hadoop的大规模数据分析平台，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算。Pig为复杂的海量数据并行计算提供了一个简单的操作和编程接口。Pig中的Streaming主要分为4个组件: Pig Latin、逻辑层(Logical Layer)、物理层(Physical Layer)、Streaming具体实现(Implementation)，Streaming会创建一个Map/Reduce作业，并把它发送给合适的集群，同时监视这个作业的在集群环境中的整个执行过程。"
         pic_url: pig.png
         url:
         description: Pig是一个基于Hadoop的大规模数据分析平台，它提供的语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算。
