@@ -110,7 +110,7 @@ class Weixin
   end
 
   def self.help_message
-    "可用命令：\n“radar”：查询技术雷达\n“*”：返回上级菜单\n“?”:查看帮助"
+    "可用命令：\n“radar”：查询技术雷达\n“*”：返回上级菜单\n“?”：查看帮助"
   end
 
   def self.welcome_message
