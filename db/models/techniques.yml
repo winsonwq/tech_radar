@@ -9,10 +9,10 @@
         url:
         description:
       - title: Automated deployment pipeline
-        content: 采纳持续交付意味着很多团队正在建立一个自动部署管道（automated deployment pipeline），用以把他们的代码一直送到产品环境。管道给其他复杂的构建、部署活动链条提供可视化。此外，针对通往产品环境的每一阶段的构建产物，管道为其提供了可靠的跟踪能力。现在，许多厂商都在建立持续集成（CI）服务器，并以管道做为其首要的功能，而不是仅仅提供可视化模块。
+        content: 采纳持续交付意味着很多团队正在建立一个自动部署管道(automated deployment pipeline)，用以把他们的代码一直送到产品环境。管道给其他复杂的构建、部署活动链条提供可视化。此外，针对通往产品环境的每一阶段的构建产物，管道为其提供了可靠的跟踪能力。现在，许多厂商都在建立持续集成(CI)服务器，并以管道做为其首要的功能，而不是仅仅提供可视化模块。
         pic_url:
         url:
-        description: 自动部署管道（automated deployment pipeline）将团队的代码一直送到产品环境，为复杂的构建、部署活动链条提供可视化。
+        description: 自动部署管道(automated deployment pipeline)将团队的代码一直送到产品环境，为复杂的构建、部署活动链条提供可视化。
       - title: Guerrilla testing
         content: Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的高效程度，以是否可以期望的方式工作，商标和提议是否明确。可被用于服务链中，建立简易，执行和反馈频繁，可频繁使用。
         pic_url: guerrilla.png
@@ -24,10 +24,10 @@
         url:
         description:
       - title: Mobile testing on mobile networks
-        content: 我们越来越多的看到移动应用在开发和测试过程中工作良好，但在发布出去后却问题多多。移动网络的移动测试（Mobile testing on mobile networks）揭示了应用是如何在不同条件下运行的。你可能需要测试3G，LTE，或者故意使用一个访问超载的糟糕的WiFi网络。先获取目标环境下的网络性能，然后用延迟和丢包诱导工具去模拟相同的环境。此外，使用像Wireshark这样的工具去检测你的设备和软件到底如何使用网络，有时也是必要的。
+        content: 我们越来越多的看到移动应用在开发和测试过程中工作良好，但在发布出去后却问题多多。移动网络的移动测试(Mobile testing on mobile networks)揭示了应用是如何在不同条件下运行的。你可能需要测试3G，LTE，或者故意使用一个访问超载的糟糕的WiFi网络。先获取目标环境下的网络性能，然后用延迟和丢包诱导工具去模拟相同的环境。此外，使用像Wireshark这样的工具去检测你的设备和软件到底如何使用网络，有时也是必要的。
         pic_url:
         url:
-        description: 面对移动应用发布开发、测试过程中工作良好，发布后问题诸多答现象，移动网络的移动测试（Mobile testing on mobile networks）揭示了应用是如何在不同条件下运行的。
+        description: 面对移动应用发布开发、测试过程中工作良好，发布后问题诸多答现象，移动网络的移动测试(Mobile testing on mobile networks)揭示了应用是如何在不同条件下运行的。
       - title: Performance testing as a first-class citizen
         content: 虽然单元测试和验收测试被广泛接受并作为标准的开发实践，但这一趋势还没有延伸到性能测试领域。目前，常用的测试工具促使测试人员养成编写一次性代码，对点击进行脚本化的心态。给予性能测试一等公民待遇，可以创造更好的测试，涵盖了更多的功能，引导出更好的工具来创建和运行性能测试，从而使得测试套件可以被维护，并能自我测试。
         pic_url:
@@ -53,12 +53,12 @@
         url:
         description: 失败的测试揭示了产品代码中的bug，针对其他属性的分析性测试更揭示了一些有趣的信息。
       - title: Blue-green deployment
-        content: 蓝绿部署（Blue-green deployment）是一种执行软件升级的模式。首先，将最新版本的应用部署到一个和当前产品环境完全一样的应用栈副本中。这样，当新版本的应用通过了相应的测试并得到了业务上的许可后，访问就可以被瞬间切换这个新版本的应用上。尽管这不是一项新技术，但基础设施自动化和云端资源使它值得被重新考虑。
+        content: 蓝绿部署(Blue-green deployment)是一种执行软件升级的模式。首先，将最新版本的应用部署到一个和当前产品环境完全一样的应用栈副本中。这样，当新版本的应用通过了相应的测试并得到了业务上的许可后，访问就可以被瞬间切换这个新版本的应用上。尽管这不是一项新技术，但基础设施自动化和云端资源使它值得被重新考虑。
         pic_url:
         url:
-        description: 蓝绿部署（Blue-green deployment）是一种执行软件升级的模式。基础设施自动化和云端资源使它值得被重新考虑。
+        description: 蓝绿部署(Blue-green deployment)是一种执行软件升级的模式。基础设施自动化和云端资源使它值得被重新考虑。
       - title: Co-location by telepresence
-        content: 廉价或免费的视频会议工具，质量正在不断改善，选择也越来越多，让分布式团队有了一种全新的工作方式。即便团队分散在各地，全天候（Always-on）视频连通也可以帮助建立一种虚拟的临场感。事实上，这已经成为我们部分离岸交付中心的标配。我们还看到像ScreenHero这样的屏幕共享工具已经开始被广泛用于远程结对编程。但我们也必须警惕寻找银弹消除物理上同处一地的需求，毕竟没有什么可以替代面对面沟通时所产生的相互理解和情感交流。
+        content: 廉价或免费的视频会议工具，质量正在不断改善，选择也越来越多，让分布式团队有了一种全新的工作方式。即便团队分散在各地，全天候(Always-on)视频连通也可以帮助建立一种虚拟的临场感。事实上，这已经成为我们部分离岸交付中心的标配。我们还看到像ScreenHero这样的屏幕共享工具已经开始被广泛用于远程结对编程。但我们也必须警惕寻找银弹消除物理上同处一地的需求，毕竟没有什么可以替代面对面沟通时所产生的相互理解和情感交流。
         pic_url:
         url:
         description: 廉价或免费的视频会议工具，质量正在不断改善，选择也越来越多，让分布式团队有了一种全新的工作方式。
@@ -88,10 +88,10 @@
         url:
         description: Logs as data是通过STDOUT将半结构化数据写入你的应用日志，之后Logs可被用作向导，长期趋势分析，自动缩放，异常检测和阈值报警。
       - title: Micro-services
-        content: Micro-services 是一种小的，明确的，执行特定任务的程序/函数，Micro-services由系统程序员和应用程序员开发并编译成iRODS服务器代码，用户和管理员可以链接这些Micro-services实现更大的功能，提供给其他人。这些大功能被成为行为，一个行为与Micro-services的多个链接可使系统采用多种方法执行行为，系统需选取最好的Micro-service链执行。
+        content: Micro-services是一种小的，明确的，执行特定任务的程序/函数，Micro-services由系统程序员和应用程序员开发并编译成iRODS服务器代码，用户和管理员可以链接这些Micro-services实现更大的功能，提供给其他人。这些大功能被成为行为，一个行为与Micro-services的多个链接可使系统采用多种方法执行行为，系统需选取最好的Micro-service链执行。
         pic_url:
         url:
-        description: Micro-services 是一种小的，明确的，执行特定任务的程序/函数，用户和管理员可以链接Micro-services实现更大的功能，提供给其他人。
+        description: Micro-services是一种小的，明确的，执行特定任务的程序/函数，用户和管理员可以链接Micro-services实现更大的功能，提供给其他人。
       - title: Mobile first
         content: Mobile first是网站应用应该先在移动设备上开发的理念，网站应用只包含用户使用最频繁的功能，随着屏幕的增大，根据用户需求的优先级增加应用。Mobile first的理念与使用W3C CCS3 media queries的响应式网页设计的理念相关。
         pic_url:
@@ -103,10 +103,10 @@
         url:
         description: 随着设备不断扩散以及更多的应用程序迁移到云端，迫使企业重新考虑数据访问和网络安全的基本假设。
       - title: Responsive web design
-        content: 响应式网页设计（Responsive web design）是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，同时减少缩放、平移和滚动，采用RWD设计的网站采用CSS3 Media queries,即一种对 @media 规则的扩展，以及流式的基于比例的网格和自适应大小的图像以适应不同大小的设备,所有的图片字体模块都会根据你的变化而变化。
+        content: 响应式网页设计(Responsive web design)是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，同时减少缩放、平移和滚动，采用RWD设计的网站采用CSS3 Media queries,即一种对@media规则的扩展，以及流式的基于比例的网格和自适应大小的图像以适应不同大小的设备,所有的图片字体模块都会根据你的变化而变化。
         pic_url:
         url:
-        description: 响应式网页设计（Responsive web design）是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，所有的图片字体模块都会根据你的变化而变化。
+        description: 响应式网页设计(Responsive web design)是一种网页网页设计技术做法，该设计可使网站在多种浏览设备上阅读和导航，所有的图片字体模块都会根据你的变化而变化。
       - title: Semantic monitoring
         content: 在以前的雷达中，我们曾经建议延长自动化验收测试的周期，在我们称之为语义监控(semantic monitoring)的阶段，不断在产品环境中运行这些测试。现在我们仍然相信，这是一项使团队可以提前预测情况的重要技术。但现在，尤其是在初创公司中，我们还看到这种方法的一个变体，就是在减少测试次数的同时，增加监控与自动报警。这使关注点从避免可预见的问题转移到对所有问题减少平均的恢复时间。
         pic_url:
@@ -137,7 +137,7 @@
         url:
         description: 在减少测试次数的同时，增加监控与自动报警，使关注点从避免可预见的问题转移到对所有问题减少平均的恢复时间。
       - title: Machine image as a build artifact
-        content: 多数虚拟化技术都提供了通过加载镜像启动虚拟机的方法。在构建管道中要尽早创建虚拟机镜像作为构建产物，随着它通过后续的测试套件对其进行提升，如此就能实现从测试环境到产品环境机器上的可靠部署。此技术剔除了导致snowflake server*（注释）反模式的多数原因。
+        content: 多数虚拟化技术都提供了通过加载镜像启动虚拟机的方法。在构建管道中要尽早创建虚拟机镜像作为构建产物，随着它通过后续的测试套件对其进行提升，如此就能实现从测试环境到产品环境机器上的可靠部署。此技术剔除了导致snowflake server*(注释)反模式的多数原因。
         pic_url:
         url:
         description: 多数虚拟化技术都提供了通过加载镜像启动虚拟机的方法。
