@@ -168,7 +168,7 @@ class Weixin
   def self.main_menu
     response = ""
     Category.all.each do |c|
-      response += "#{c.id}: #{c.title}\n"
+      response += "#{c.id}: #{c.title}\n" unless c.id.nil?
     end
     response += "\n输入ID查看类别"
     response
