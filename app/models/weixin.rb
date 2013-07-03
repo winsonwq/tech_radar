@@ -20,7 +20,7 @@ class Weixin
         "item" => {
                 "Title" => article[:title],
                 "Description" => article[:short_description],
-                "PicUrl" => article[:pic_url],
+                "PicUrl" => article[:pic_url] + "?timestamp=" + DateTime.now.to_i.to_s,
                 "Url" => article[:url]
             }
     }
@@ -74,7 +74,7 @@ class Weixin
   def self.gen_content_from_event(message)
     event = message[:event]
     content, function_name = [fallback_message(), :xml_gen]
-    content = welcome_message() + help_message() if is_subscribe_event?(event)
+    content = welcome_message() if is_subscribe_event?(event)
     { content: content, function_name: function_name }
   end
 
@@ -114,7 +114,7 @@ class Weixin
   end
 
   def self.welcome_message
-    "哈喽极客们，欢迎关注TW技术雷达机器人! 技术雷达针对正在推进下一代软件开发的前沿技术，工具，语言和平台，提供见解和指导。\n回复“radar”获得本期技术雷达信息。\n如果不知道如何使用机器人，请回复“？”获得使用手册。\n"
+    "哈喽极客们，欢迎关注TW技术雷达机器人! 技术雷达针对正在推进下一代软件开发的前沿技术，工具，语言和平台，提供见解和指导。\n回复“radar”获得本期技术雷达信息。\n如果不知道如何使用机器人，请回复“？”获得使用手册。"
   end
 
   def self.fallback_message
@@ -139,7 +139,7 @@ class Weixin
         content: technology.content,
         pic_url: technology.pic_url,
         url: technology.url,
-        short_description: technology.short_description
+        short_description: technology.short_description + "\n输入“*”返回上一级菜单"
     }
   end
 
@@ -150,6 +150,7 @@ class Weixin
     assessment.technologies.each do |tech|
       response += "#{tech.id}: #{tech.title}\n"
     end
+    response += "输入ID查看技术详情，输入“*”返回上一级菜单"
     response
   end
 
@@ -160,6 +161,7 @@ class Weixin
     category.assessments.each do |assess|
       response += "#{assess.id}: #{assess.title}\n"
     end
+    response += "输入ID查看评估范围，输入“*”返回上一级菜单"
     response
   end
 
@@ -168,6 +170,7 @@ class Weixin
     Category.all.each do |c|
       response += "#{c.id}: #{c.title}\n"
     end
+    response += "输入ID查看类别，输入“*”返回上一级菜单"
     response
   end
 
