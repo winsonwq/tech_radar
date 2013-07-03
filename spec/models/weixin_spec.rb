@@ -80,7 +80,7 @@ describe Weixin do
 
     it "should return title content url and picUrl when send a technology id" do
       body = send_content '81'
-      body.should include "<Description>This is content of Clojure</Description>"
+      body.should include "<Description>This is content of Clojure"
       body.should include("<MsgType>news</MsgType>")
       body.should include("<PicUrl>http://coffeescript.org/documentation/images/logo.png</PicUrl>")
       body.should include("<Url>http://coffeescript.org/</Url>")
