@@ -139,7 +139,7 @@ class Weixin
         content: technology.content,
         pic_url: technology.pic_url,
         url: technology.url,
-        short_description: technology.short_description + "\n输入“*”返回上一级菜单"
+        short_description: technology.short_description + "\n\n输入“*”返回上一级菜单"
     }
   end
 
@@ -150,7 +150,7 @@ class Weixin
     assessment.technologies.each do |tech|
       response += "#{tech.id}: #{tech.title}\n"
     end
-    response += "输入ID查看技术详情，输入“*”返回上一级菜单"
+    response += "\n输入ID查看技术详情，输入“*”返回上一级菜单"
     response
   end
 
@@ -161,7 +161,7 @@ class Weixin
     category.assessments.each do |assess|
       response += "#{assess.id}: #{assess.title}\n"
     end
-    response += "输入ID查看评估范围，输入“*”返回上一级菜单"
+    response += "\n输入ID查看评估范围，输入“*”返回上一级菜单"
     response
   end
 
@@ -170,7 +170,7 @@ class Weixin
     Category.all.each do |c|
       response += "#{c.id}: #{c.title}\n"
     end
-    response += "输入ID查看类别，输入“*”返回上一级菜单"
+    response += "\n输入ID查看类别"
     response
   end
 
