@@ -82,7 +82,7 @@ describe Weixin do
       body = send_content '81'
       body.should include "<Description>This is content of Clojure"
       body.should include("<MsgType>news</MsgType>")
-      body.should include("<PicUrl>http://coffeescript.org/documentation/images/logo.png</PicUrl>")
+      body.should include("<PicUrl>http://coffeescript.org/documentation/images/logo.png")
       body.should include("<Url>http://coffeescript.org/</Url>")
     end
 
