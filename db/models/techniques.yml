@@ -4,10 +4,10 @@
     id: A1
     technologies:
       - title: Aggregates as documents
-        content:
+        content: 当设计域模型时，aggregate模式辅助增加结构和模块；映射到关系数据库的aggregate是不可见的；数据库文件，例如MongoDB，支持aggregate as documents模式。1：1的映射意味着从集合中加载的对象应该是aggregate root。
         pic_url:
         url:
-        description:
+        description: 当设计域模型时，aggregate模式辅助增加结构和模块。
       - title: Automated deployment pipeline
         content: 采纳持续交付意味着很多团队正在建立一个自动部署管道(automated deployment pipeline)，用以把他们的代码一直送到产品环境。管道给其他复杂的构建、部署活动链条提供可视化。此外，针对通往产品环境的每一阶段的构建产物，管道为其提供了可靠的跟踪能力。现在，许多厂商都在建立持续集成(CI)服务器，并以管道做为其首要的功能，而不是仅仅提供可视化模块。
         pic_url:
@@ -19,10 +19,10 @@
         url:
         description:  Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的可行性和效率。
       - title: In-process acceptance testing
-        content:
+        content: 验收测试一般从外部对系统进行测试，为了整个系统的安全测试遍历整个网络堆栈。进程内验收测试改变了为了达到上述目的，测试代码和应用程序需要在不同的进程中运行的观念。当使用嵌入式容器时，很容易搭建系统，通过HTTP跑测试，并对最终状态进行验证，而省掉了与部署以及同单一容器交流的相关setup cost。
         pic_url:
         url:
-        description:
+        description: 进程内验收测试通过使用嵌入式容器，改变了传统验收测试为了系统安全，测试代码和应用程序在不同的进程中运行的方式。
       - title: Mobile testing on mobile networks
         content: 我们越来越多的看到移动应用在开发和测试过程中工作良好，但在发布出去后却问题多多。移动网络的移动测试(Mobile testing on mobile networks)揭示了应用是如何在不同条件下运行的。你可能需要测试3G，LTE，或者故意使用一个访问超载的糟糕的WiFi网络。先获取目标环境下的网络性能，然后用延迟和丢包诱导工具去模拟相同的环境。此外，使用像Wireshark这样的工具去检测你的设备和软件到底如何使用网络，有时也是必要的。
         pic_url:
@@ -73,7 +73,7 @@
         url:
         description: NoSQL数据存储正继续成为主流，但团队需要充分认识到对迁移数据库到NoSQL的需求。
       - title: Edge Side Includes for page composition
-        content: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。ESI标识语言提供了一种内容管理机制，这些内容包括应用程序服务器解决方案、内容管理系统，以及内容传送网络。因此，ESI让公司能够进行网站应用的一次性开发，并在安装应用程序时，选择好内容管理系统、应用服务器或内容分发网络的配置时间，这样就可降低复杂性、开发时间和配置成本。
+        content: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。ESI标识语言提供了一种内容管理机制，这些内容包括应用程序服务器解决方案、内容管理系统，以及内容传送网络。因此，ESI让公司能够进行网站应用的一次性开发，并在安装应用程序时，选择好内容管理系统、应用服务器或内容分发网络的配置时间，这样就可降低复杂性、开发时间和配置成本。从micro-service上打破单一应用和building系统，需要一个坚实的策略来将不同单一系统的输出整合到一个连贯的终端用户体验。使用Edge Side Includes表示页面组成，是一种实用而优雅的解决方案。使用类似Varnish的反向代理或更贴近用户的CDN即可实现。
         pic_url:
         url:
         description: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。
@@ -151,7 +151,7 @@
     id: A4
     technologies:
       - title: Exhaustive browser based testing
-        content:
+        content: 我们之前谈过在应用程序层执行自动化测试，在此tech-radar中，我们明确不推荐详尽的浏览器测试。浏览器自动化测试工具，比如Selenium，鼓励广泛的浏览器自动化测试。虽然这些测试在测试领域仍占有一席之地，但是，大部分团队发现，通过浏览器执行散乱测试会造成缓慢而脆弱的测试套件。
         pic_url:
         url:
-        description:
+        description: 在此tech-radar中，我们明确不推荐详尽的浏览器测试。

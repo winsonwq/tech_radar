@@ -134,7 +134,7 @@
         url:
         description: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。
       - title: Logic in stored procedures
-        content:
+        content: 我们意识到2011年仍有许多新系统将重要的业务逻辑写在存储过程中。用于实现存储过程的编程语言缺乏表现力，难以测试，并且与clean modular design的思想不符。只有当确实存在性能问题时，才应到考虑在数据库引擎中执行存储过程。
         pic_url:
         url:
-        description:
+        description: 我们建议除非代码确实存在效率问题，否则不推荐业务逻辑写在存储过程中。
