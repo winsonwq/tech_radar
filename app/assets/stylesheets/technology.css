@@ -24,7 +24,7 @@ img {
 }
 
 section {
-    margin: 0 20px;
+    margin: 20px;
 }
 
 section p {
@@ -36,7 +36,7 @@ section p {
 
 footer {
     font-size: 1.0em;
-    text-align: right;
+    text-align: center;
     border-top: 1px solid #eeeeee;
-    padding: 10px 20px;
+    padding: 20px;
 }
