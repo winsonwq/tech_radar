@@ -15,7 +15,7 @@
         description: 自动部署管道(automated deployment pipeline)将团队的代码一直送到产品环境，为复杂的构建、部署活动链条提供可视化。
       - title: Guerrilla testing
         content: Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的高效程度，以是否可以期望的方式工作，商标和提议是否明确。可被用于服务链中，建立简易，执行和反馈频繁，可频繁使用。
-        pic_url: guerrilla.png
+        pic_url: guerrilla.jpg
         url:
         description:  Guerrilla testing是一种低成本的测试方法，它可基于目标群众快速验证一个设计的可行性和效率。
       - title: In-process acceptance testing
@@ -40,7 +40,7 @@
         description: 随着JavaScript在客户端和服务器端的广泛使用，Promise——一项古老的异步编程的技术又再次得到了关注。
       - title: Windows infrastructure automation
         content: 以前，像Chef和Puppet这样的工具都缺乏对Windows的支持，导致构建简单的基础设施自动化任务都需要大量的Powershell脚本。所以，想要使Windows到达和Unix一样的自动化水平可谓困难重重。不过在过去的一年里，Chef和Puppet对Windows的支持得到了很大改善。这种支持与强大的PowerShell相结合，使得Windows基础设施自动化极为可行。
-        pic_url: puppet.png
+        pic_url: puppet.jpg
         url:
         description: 在过去的一年里，Chef和Puppet对Windows的支持得到了很大改善。这种支持与强大的PowerShell相结合，使得Windows基础设施自动化极为可行。
 
@@ -79,7 +79,7 @@
         description: Edge Side Includes是一种简单标记语言，用于定义动态内容网页的构成成分以及互联网边缘的网站应用程序的分发。
       - title: HTML5 storage instead of cookies
         content: HTML5存储，也被称为本地存储或Web存储，是一种在现代浏览器里存储客户端数据的机制，其中也包括iOS和Android移动浏览器。在几乎所有情况下，我们都建议使用HTML5存储，而不是cookie。HTML5存储，最多可容纳5MB的数据，而cookie则被限制在4KB。Cookie的数据在每一次请求中都会被发送，这会拖慢你的应用程序，并且有可能将数据暴露于不安全的HTTP连接中。与此相反，HTML5存储只需要由浏览器来保证数据安全。Cookie则只应该用来保存像session id这样的简单数据。
-        pic_url: html5.png
+        pic_url: html5.jpg
         url:
         description: HTML5存储，也被称为本地存储或Web存储，是一种在现代浏览器里存储客户端数据的机制，其中也包括iOS和Android移动浏览器。
       - title: Logs as data

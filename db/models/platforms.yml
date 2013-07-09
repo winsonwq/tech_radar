@@ -5,22 +5,22 @@
     technologies:
       - title: Elastic Search
         content: 在过去的一年中，我们发现采用Elastic Search(弹性搜索)作为开源的搜索平台呈逐步上升趋势。Elastic Search基于Apache Lucene，是一个可扩展的，多租户的，支持水平伸缩的搜索解决方案。它允许索引复杂数据，并可通过JSON获取。它支持从集群，故障转移及备份中自动恢复各节点。Elastic Search可以通过基于插件系统的REST API来扩展，它提供了一个优雅的操作模型，允许添加新功能，或者改变现有行为。围绕着Elastic Search的社区是非常活跃的。一个证据就是已经开发出了包括Java、 C#、 Ruby和JavaScript在内的多个客户端类库。
-        pic_url: elastic-search.png
+        pic_url: elastic-search.jpg
         url:
         description: 在过去的一年中，我们发现采用Elastic Search(弹性搜索)作为开源的搜索平台呈逐步上升趋势。
       - title: MongoDB
         content: 对于适用文档数据库模型的问题来说，MongoDB是当下最流行的选择。除了易于使用和提供高可靠性的技术实现之外，开发社区及整个生态系统对其成功也贡献良多。我们也听说了一些团队抵受不住MongoDB流行的诱惑而产生了问题，比如并不适用文档数据库的应用，又或者团队没有充分理解其内在的复杂性。然而若能用对，MongoDB已经在很多项目中证明了自己。
-        pic_url: mongodb.png
+        pic_url: mongodb.jpg
         url:
         description: 对于适用文档数据库模型的问题来说，MongoDB是当下最流行的选择。除了易于使用和提供高可靠性的技术实现之外，开发社区及整个生态系统对其成功也贡献良多。
       - title: Neo4J
         content: Neo4j是一个用Java实现、完全兼容ACID的图形数据库。数据以一种针对图形网络进行过优化的格式保存在磁盘上。Neo4j的内核是一种极快的图形引擎，具有数据库产品期望的所有特性，如恢复、两阶段提交、符合XA等。自2003年起，Neo4j就已经被作为24/7的产品使用。Neo4j的典型数据特征：数据结构不是必须的，甚至可以完全没有，这可以简化模式变更和延迟数据迁移；可以方便建模常见的复杂领域数据集，如CMS里的访问控制可被建模成细粒度的访问控制表，类对象数据库的用例、TripleStores以及其他例子典型使用的领域如语义网和RDF、LinkedData、GIS、基因分析、社交网络数据建模、深度推荐算法以及其他领域。
-        pic_url: neo4j.png
+        pic_url: neo4j.jpg
         url:
         description: Neo4j是一个用Java实现、完全兼容ACID的图形数据库。
       - title: Redis
         content: Redis已经在多个ThoughtWorks项目中被证明是有用的工具。它被用作结构化的缓存或者跨越多个国家的分布式数据存储。
-        pic_url: redis.png
+        pic_url: redis.jpg
         url:
         description: Redis已经在多个ThoughtWorks项目中被证明是有用的工具。
       - title: SMS and USSD as a UI
@@ -39,37 +39,37 @@
         description: 网站的访问量即使再低，其产生的数据量也可能是巨大的。基于BigQuery之类的云技术对此会有帮助。
       - title: Continuous integration in the cloud
         content: 大部分持续集成产品是将代码下载到本地并在本地环境下运行，而云端持续集成(Continuous integration in the cloud)在CI服务托管平台上创建了一个新的产品，是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。随着产品的成熟，开发人员没有理由不采用这个重要的实践。
-        pic_url: travis.png
+        pic_url: travis.jpg
         url:
         description: Continuous integration in the cloud是支持敏捷开发且事后显而易见的基础设施解决方案之一。没有本地软件，只有最少配置就可以工作。
       - title: Couchbase
         content: Couchbase是一个NoSQL文档导向的数据库，主要用于交互式网络应用。Couchbase不受固定的数据库架构的约束，可以简化应用修改；高通量的读取和写入可保持持续的高效性能；Couchbase数据库容易扩展，并支持24*7的拓扑变化。
-        pic_url: couchbase.png
+        pic_url: couchbase.jpg
         url:
         description: Couchbase是一个NoSQL文档导向的数据库，主要用于交互式网络应用。
       - title: Hadoop 2.0
         content: Hadoop最初的架构基于水平扩展数据，垂直扩展元数据的模式。尽管slave节点可以从容的进行数据的存储和处理，管理元数据的master却是瓶颈，同时也限制了规模化网络的使用。Hadoop 2.0重新设计了HDFS和Map Reduce框架的架构，以此来解决这些问题。现在，HDFS的命名空间可以通过使用同一个集群的多个name nodes来联合在一起，并且部署为高可用性(HA)模式。MapReduce也被YARN取代了。YARN解耦了集群的资源管理和任务的状态管理，并且通过JobTracker消除了伸缩性和性能问题。 最重要的是，这些变化鼓励在Hadoop集群上开发除了MapReduce之外的分布式计算模型。
-        pic_url: hadoop.png
+        pic_url: hadoop.jpg
         url:
         description: Hadoop 2.0重新设计了HDFS和Map Reduce框架的架构。
       - title: Node.js
         content: Node.js是一个轻量级web容器。它在开发微服务，移动服务端以及单页面web应用方面都是极好的选择。因为其天然的异步特性，开发人员可以通过使用promise类库来简化应用代码。随着在node.js社区promise应用的成熟，我们期望看到更多为node.js开发的应用。对那些不愿在产品环境中尝试node.js的团队，用node.js来实现一些开发任务仍然值得考虑，比如在浏览器之外运行JavaScript测试，或者从类似CoffeeScript，SASS和LESS之类的工具中生成静态web内容。
-        pic_url: nodejs.png
+        pic_url: nodejs.jpg
         url:
         description: Node.js是一个轻量级web容器。它在开发微服务，移动服务端以及单页面web应用方面都是极好的选择。
       - title: OpenStack
         content: 开源OpenStack项目的发展可谓蒸蒸日上，在最近几个月，它已经逐渐成为部署私有云的不二选择。许多原来导致OpenStack难以使用以及运行不稳定的问题都得到了解决。 新功能也一直都在增加。显然，OpenStack联盟包括它的成员如Rackspace，Redhat，HP等都在不断为其添砖加瓦，并以此作为自有的基于OpenStack的云服务基础。
-        pic_url: openstack.png
+        pic_url: openstack.jpg
         url:
         description: 开源OpenStack项目的发展可谓蒸蒸日上，在最近几个月，它已经逐渐成为部署私有云的不二选择。
       - title: Rackspace Cloud
         content: 在云存储和云计算领域，尽管AWS还在持续的增加功能，Rackspace Cloud却悄悄发展为一名不可忽视的竞争者。部分用户会非常看重Rackspace更加周到的客户支持，以及混合多种传统托管模型的能力。我们并不为之而感到激动人心，因为Rackspace是我们的客户，我们在参与该平台的开发过程中已经收获了许多乐趣。我们在另外多个客户的项目中已经成功地应用了Rackspace Cloud，目前正期待着它能辐射到更多的地区。
-        pic_url: rackspace.png
+        pic_url: rackspace.jpg
         url:
         description: 在云存储和云计算领域，尽管AWS还在持续的增加功能，Rackspace Cloud却悄悄发展为一名不可忽视的竞争者。
       - title: Riak
         content: Riak是一个开源的分布式数据库，可复制和智能检索数据，即使在故障条件下，仍可读取和写入数据；当网络或硬件故障时，数据仍不会丢失；在riak中添加新机器并不会导致运营负担加重；riak在集群中自动分配数据，伴随着容量的增加，riak的性能将线性提升。
-        pic_url: riak.png
+        pic_url: riak.jpg
         url:
         description: Raik是一个开源的分布式数据库，具备容错机制强大，操作简单，可扩展等优点。
 
@@ -78,37 +78,37 @@
     technologies:
       - title: Azure
         content: Azure是一个开放灵活可变的云平台，在Azure云平台上可通过微软管理的数据中心全球网络快速构建、部署和管理应用;可以使用任何语言、任何工具或框架;并且可以使用集成你的公开云应用。
-        pic_url: azure.png
+        pic_url: azure.jpg
         url:
         description: Azure是一个开放灵活可变的云平台。
       - title: Calatrava
         content: Calatrava是一个跨平台的移动框架，你可使用此框架通过IOS、Andiroid和移动网络分享你的应用的核心逻辑，与其他XP工具箱不同，Calatrava可使你写出最高质量的原生UI。Calatrave适合于包含重要客户端的域逻辑的应用程序，特别当应用程序是您的产品的向导而非产品本身；但是它不适合大部分代码是前端代码的或者提供良好用户体验的web应用程序；它是增量式发布策略的最佳选择。
-        pic_url: calatrava.png
+        pic_url: calatrava.jpg
         url:
         description: Calatrava是一个跨平台的移动框架，可用于基于IOS、Andiroid和移动网络的应用核心逻辑分享。
       - title: Datomic
         content: Datomic是一种以简单服务组合为设计目标的新数据库，它试图在传统RDBMS的功能与新一代冗余分布式存储系统的弹性方面找到一种平衡。Datomic力图完成以下目标：提供可靠的信息模型，而避免原地更新；充分利用冗余的可伸缩存储系统；提供ACID事务和一致性；在应用中支持声明性数据编程。
-        pic_url: datomic.png
+        pic_url: datomic.jpg
         url:
         description: Datomic是一种以简单服务组合为设计目标的新数据库，它试图在传统RDBMS的功能与新一代冗余分布式存储系统的弹性方面找到一种平衡。
       - title: PhoneGap/Apache Cordova
         content: PhoneGap，现在叫Apache Cordova，允许你使用HTML，CSS和JavaScript来开发跨平台的移动应用。它通过一组JavaScript API对平台特定的本地代码做了抽象，同时还保持了不同移动平台之间的一致性。Cordova支持非常多的平台，包括iOS、Android、Blackberry、Windows Phone以及WebOS。
-        pic_url: cordova.png
+        pic_url: cordova.jpg
         url:
         description: PhoneGap，现在叫Apache Cordova，允许你使用HTML，CSS和JavaScript来开发跨平台的移动应用。
       - title: PostgreSQL for NoSQL
         content: PostgreSQL正在逐渐成为SQL数据库中的NoSQL选择。版本9.2支持存储JSON格式的数据，并在其之上提供完备的查询功能。另外，PostgreSQL还提供了允许用户以键值对(key/value pair)的形式存储和查询数据的扩展。该扩展让你可以直接利用稳定的数据库底层存储和事务的能力，而无需绑定在关系数据模型上。对于那些希望同时开发SQL和NoSQL应用，却又倾向于使用一套他们熟知的可靠基础设施的开发者而言，提供这一特性就再理想不过了。
-        pic_url: postgresql.png
+        pic_url: postgresql.jpg
         url:
         description: PostgreSQL正在逐渐成为SQL数据库中的NoSQL选择。
       - title: Vumi
         content: Vumi是一个可伸缩的开源的消息引擎。它在移动设备上通过一些廉价的方式来完成通信。Vumi帮助公司和它们的客户，医疗服务机构和它们的病人，政府和市民，以及更多的团队之间通过SMS，IM和 USSD进行交互。 Vumi与电信公司进行了集成，使你能够很容易的基于它构建应用，而你只需要向运营商支付通信费。
-        pic_url: vumi.png
+        pic_url: vumi.jpg
         url:
         description: Vumi是一个可伸缩的开源的消息引擎。它在移动设备上通过一些廉价的方式来完成通信。
       - title: Zepto.js
         content: Zepto.js是一个轻量级的JavaScript类库。它的API与JQuery相同，但并非100%兼容。因其压缩显著的文件大小，Zepto在开发响应式web应用方面颇有竞争力。
-        pic_url: zeptojs.png
+        pic_url: zeptojs.jpg
         url:
         description: Zepto.js是一个轻量级的JavaScript类库。它的API与JQuery相同，但并非100%兼容。
 

@@ -5,29 +5,29 @@
     technologies:
       - title: Clojure
         content: Clojure是一种针对Java虚拟机（包括CLR、JavaScript）动态编程语言，易用性和互动性良好结合的通用脚本语言，具有高效率和强大的多线程编程支撑。Clojure是一个已编译的语言，它直接编译成JVM字节码，但仍然是完全动态的每个Clojure支持的功能都是运行时支持的。
-        pic_url: clojure.png
+        pic_url: clojure.jpg
         url:
         description: Clojure是一种针对Java虚拟机的动态编程语言，易用性和互动性良好结合的通用脚本语言，是已编译的语言。
       - title: CSS frameworks
         content: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然CSS3旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持CSS3，恐怕还需很多年。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写CSS的时代已经一去不复返了。
                  CSS框架简化了大规模CSS代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
-        pic_url: sass.png
+        pic_url: sass.jpg
         url:
         description: CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。
       - title: Jasmine paired with Node.js
         content: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流，CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1引入了Source Maps以帮助开发工具生产厂商解决这个问题，同时，像Dropbox这样的著名技术公司也开始使用CoffeeScript，我们预计它将获得更广泛的应用。
                  我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
-        pic_url: nodejs.png
+        pic_url: nodejs.jpg
         url:
         description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流。我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
       - title: Scala
         content: Scala是一种多范式的编程语言，设计初衷是要整合面向对象编程和函数式编程的各种特性。Scala是一种纯面向对象的语言，每一个值都是对象。对象的数据类型以及行为由类和特质描述。类抽象机制的扩展有两种途径。一种途径是子类继承，另一种途径是灵活的混入机制。这两种途径能避免多重继承的种种问题。Scala也是一种函数式语言，其函数也能当成值来使用。Scala提供了轻量级的语法用以定义匿名函数，支持高阶函数，允许嵌套多层函数，并支持柯里化。Scala的case class及其内置的模式匹配相当于函数式编程语言中常用的代数类型。更进一步，程序员可以利用Scala的模式匹配，编写类似正则表达式的代码处理XML数据。
-        pic_url: scala.png
+        pic_url: scala.jpg
         url:
         description: Scala是一种纯面向对象的多范式编程语言，整合面向对象编程和函数式编程的各种特性。
       - title: Sinatra
         content: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure和.NET平台下的Nancy.
-        pic_url: sinatra.png
+        pic_url: sinatra.jpg
         url:
         description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。
 
@@ -37,42 +37,42 @@
       - title: CoffeeScript
         content: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流，CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。CoffeeScript 1.6.1引入了Source Maps以帮助开发工具生产厂商解决这个问题，同时，像Dropbox这样的著名技术公司也开始使用CoffeeScript，我们预计它将获得更广泛的应用。
                  我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
-        pic_url: coffeescript.png
+        pic_url: coffeescript.jpg
         url:
         description: 随着基于Node.js的服务器端应用程序的持续增长，单页面应用和基于移动浏览器的应用渐渐融入主流， CoffeeScript也因其能简化JavaScript代码而越来越多地被采用。作为一种将源代码编译成JavaScript代码以供运行时执行的语言，CoffeeScript应用程序的调试难度备受人们关注。
       - title: Dropwizard
         content: Dropwizard是一个用于开发ops友好，高性能，RESTful web服务的Java框架。Dropwizard将成熟、稳定的java library转化为简单、轻量级的包，使开发人员只专注于问题的解决。Dropwizard对复杂配置，应用metrics，日志，业务工具等的out-of-the-box 支持，使你和你的团队可以在最短的事件内发布一个产品质量的HTTP+JSON的网络服务。
-        pic_url: dropwizard.png
+        pic_url: dropwizard.jpg
         url:
         description: Dropwizard是一个用于开发ops友好，高性能，RESTful web服务的Java框架。
       - title: HTML5 for offline applications
         content: 有一种趋势认为离线功能的需求和开发一个应用的需求等同。尽管标准化流程缓慢，大部分HMTL5的功能已经在主流浏览器上被应用。本地存储能力，跨手机和平板浏览器支持能力，这些使得使用HMTL5开发离线应用（HTML5 for offline applications)一个非常合适的选择。简单来说，offline web application就是一个URL的列表——包括HTML，CSS，JavaScript，图片等类似的资源。offline web application的首页指向这个列表（这个列表亦被称为manifest file，这个文件就是一个放在服务器上的普通文本文件）。一个实现了HTML5 offline application 机制的浏览器，会从manifest file中读取URLs的列表，下载相关资源，在本地缓存，并在内容变化的时候自动更新。当你在没有网络的情况下浏览相关网页时，你的浏览器会自动切换到网页的本地副本。
-        pic_url: html5.png
+        pic_url: html5.jpg
         url:
         description: html5支持的offline web application联网时下载相关资源到本地缓存，当你在没有网络的情况下浏览相关网页时，你的浏览器会自动切换到网页的本地副本。
       - title: JavaScript as a platform
         content: JavaScript已经超出了浏览器，作为跨平台开发的一个重要技术新兴而起。它在如Node.js，Meteor.js，以及如Calatrava的移动框架的代码重用的方式中，是一个前端和中间件。随着近来其他编译成JavaScript的语言的扩散，我们考虑是否应该将JavaScript作为一个平台(JavaScript as a platform)而不是一种语言。
-        pic_url: nodejs.png
+        pic_url: nodejs.jpg
         url:
         description: JavaScript作为跨平台的开发语言，可以被考虑作为平台。
       - title: JavaScript MV* frameworks
         content: 随着支持数据绑定、客户端模板和校验等功能的框架的蓬勃发展，单页面Web应用开发继续高歌猛进。在ThoughtWorks，诸如AngularJS、Knockout和Ember.js这样的JavaScript MV*框架有着广泛的应用，且各有其倡导者和反对者。我们期望在此充满活力的领域有更多的创新.
-        pic_url: angularjs.png
+        pic_url: angularjs.jpg
         url:
         description: 在ThoughtWorks，诸如AngularJS、Knockout和Ember.js这样的JavaScript MV*框架有着广泛的应用，且各有其倡导者和反对者。
       - title: Play Framework 2
         content: 最近发布的Play Framework 2.1.1支持控制器依赖注入、异步、非阻塞I/O、代码重载工作流、数据库迁移、资源管道以及灵活的部署选项，这些特性对开发者产生了更大的吸引力。基于这个原因，Play重新出现在我们的技术雷达上，我们希望团队在JVM上构建Web应用程序和服务时，认真考虑选用Play。然而需要提醒的是，Play使用了函数式编程风格，在结合使用Java时Play会产生过多的静态方法，因此很难在运行中的服务器外围进行单元测试.
-        pic_url: play.png
+        pic_url: play.jpg
         url:
         description: 最近发布的Play Framework 2.1.1支持控制器依赖注入、异步、非阻塞I/O、代码重载工作流、数据库迁移、资源管道以及灵活的部署选项，这些特性对开发者产生了更大的吸引力。基于这个原因，Play重新出现在我们的技术雷达上.
       - title: Require.js & NPM
         content: 我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。对于要面对大量JavaScript或CoffeeScript代码的浏览器应用开发人员来说，应考虑使用Require.js组织代码结构以及在运行时装载依赖。
-        pic_url: npm.png
+        pic_url: npm.jpg
         url:
         description: 我们在新产品中对node.js的使用越多，对可靠的JavaScript包管理工具的需求就越迫切。Node Package Manager(npm)作为node.js应用的打包工具，是其生态系统的重要组成部分。
       - title: Scratch, Alice, and Kodu
         content: Scratch是MIT大学的 Lifelong Kindergarten Research小组开发的一款二维开发平台，资源紧张性小于Alice和Kodu，Scratch的共享和交流功能提高了Scratch平台的价值；Alice是Carnegie Mellon大学开发的一个3D环境，Alice的资源紧张，但创建3D世界的能力极具优势，因此非常受APCS教师的欢迎；Kodu是Microsoft Research最初为Xbox 360开发的代码环境,现在也适用于Windows PC，它是一个简单的高度图形化的编程模型。
-        pic_url: kodu.png
+        pic_url: kodu.jpg
         url:
         description: Scratch是一个二位环境开发平台，Alice是一个3D环境开发平台，Kodu是一个简单的高度图形化的编程模型。
   "接近":
@@ -80,37 +80,37 @@
     technologies:
       - title: ClojureScript
         content: ClojureScript是一个新的使用Coljure编写的JavaScript编译器。借助于ClojureScript，可以将Clojure用于GUI客户端编程、包括移动平台（带有强大的HTML组件与Javascript VM）。ClojureScript与Clojure语言非常像，但其标准库是Clojure的一个子集。目前，ClojureScript的标准库有clojure.string、clojure.set、clojure.walk、clojure.zip等，同时更多的库将会被添加进来。
-        pic_url: clojure.png
+        pic_url: clojure.jpg
         url:
         description: ClojureScript是一个新的使用Coljure编写的JavaScript编译器。
       - title: Gremlin
         content: Gremlin是急需的一种由多种图形数据库支持的图形遍历语言。图存在边缘（如直线，圆弧等）和点（如顶点，节点等）的数据结构。Gremlin被设计用来处理属性图。通过Gremlin，可以使用REPL（命令行／控制台）以交互的方式遍历图。其简洁的结构可以在数据库的原生语言中被应用，可以更快的开发，有些情况下，更快的运行。我们推荐它作为简单场景的一个选择。
-        pic_url: gremlin.png
+        pic_url: gremlin.jpg
         url:
         description: Gremlin是急需的一种由多种图形数据库支持的图形遍历语言。
       - title: Lua
         content: Lua是一个强大的、快速的、轻量级的、可嵌入脚本语言。Lua动态的在寄存器虚拟机上运行解释字节码，具有垃圾回收站可增大的动态寄存器管理机制使它的配置、脚本和快速原型创建达到理想状态。
-        pic_url: lua.png
+        pic_url: lua.jpg
         url:
         description: Lua是一个强大的、快速的、轻量级的、可嵌入脚本语言。
       - title: Nancy
         content: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。Sinatra正是这一领域的先驱，它能够使用轻量级DSL在服务器端构建快速的、易于组合的服务。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure和.NET平台下的Nancy.
-        pic_url: nancy.png
+        pic_url: nancy.jpg
         url:
         description: 在客户端和服务器端，微框架正成为解决应用程序复杂度日益增加问题的新兴方式。其他语言也有类似的框架，例如Java平台下的Spark、Python语言的Flask、面向Scala的Sclatra、基于Clojure的Compojure和.NET平台下的Nancy.
       - title: OWIN
         content: 在.NET平台上，构建一个多样的、开源的Web开发生态系统始终步履维艰，原因之一就是对IIS和ASP.NET框架的过度依赖。OWIN之于.NET平台，正如Rack之于Ruby社区，它定义了一个开放的HTTP操作接口，从而将Web服务器从应用程序中解耦出来。我们为此激动不已，因为OWIN打开了一扇大门，使得在.NET平台下诞生简单的、可独立开发模块的Web开发工具成为可能。Nancy正是一个利用这种可能性的完美例子。我们也希望它能促使人们在.NET平台下将web应用程序部署为单独的、自托管服务方面进行更多的实践。
-        pic_url: owin.png
+        pic_url: owin.jpg
         url:
         description: OWIN之于.NET平台，正如Rack之于Ruby社区，它定义了一个开放的HTTP操作接口，从而将Web服务器从应用程序中解耦出来。我们也希望它能促使人们在.NET平台下将web应用程序部署为单独的、自托管服务方面进行更多的实践。
       - title: RubyMotion
         content: 作为Ruby编译器以及iOS应用开发的工具，RubyMotion（RubyMotion）在ThoughtWorks开发社区中不出意外地引起了不小的轰动。开发应用时理解底层的iOS APIs和一些Objective-C的需求依然存在，但RubyMotion对于更习惯于Ruby语言和工具的人来说还是很有帮助。
-        pic_url: rubymotion.png
+        pic_url: rubymotion.jpg
         url:
         description: RubyMotion是Ruby编译器以及iOS应用开发的工具。
       - title: Twitter Bootstrap
         content: Twitter Bootstrap是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。基于我们长期的使用经验，我们在此版技术雷达中把Bootstrap从试用阶段移到了评估阶段。如果你想要替换或定制应用程序外观，其与HTML标记的深度集成将成为你需要面对的挑战。但这并不妨碍你选择Twitter Bootstrap，只是做决定时需要考虑到这些限制.
-        pic_url: twitter-bootstrap.png
+        pic_url: twitter-bootstrap.jpg
         url:
         description: Twitter Bootstrap是一个流行的CSS框架，它可以帮助你快速构建流畅的、具有响应式布局(responsive layouts)的精美网站。
 
@@ -119,7 +119,7 @@
     technologies:
       - title: Backbone.js
         content: Backbone.js(Backbone.js)是一个抽象较弱的例子。我们喜欢开始很容易的搭建，但实际上它和所有从WebForms到客户端/服务端工具的数据绑定框架有同样的问题。我们发现它让框架和模型太过模糊，从而容易造成要么产生出不佳的架构设计,要么只能通过精妙的框架修改来保持概念的完整性。
-        pic_url: backbone.png
+        pic_url: backbone.jpg
         url:
         description: Backbone.js搭建容易，但让框架和模型太过模糊。
       - title: Component-based frameworks
@@ -130,7 +130,7 @@
       - title: Handwritten CSS
         content: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。虽然CSS3旨在纠正其中的一些问题，但要等到大多数浏览器都正确支持CSS3，恐怕还需很多年。幸运的是，通过SASS，SCSS，LESS这样的CSS框架可以帮助解决这个问题。基于这些框架的质量和相应支持，我们相信，除非需要细微的样式调整，手写CSS的时代已经一去不复返了。
                  CSS框架简化了大规模CSS代码的开发，而无需每次都从头开始。面对琳琅满目的各种框架，选择一个能够持续增强、维护而不是仅能快速上手的框架就显得尤为重要。就这一点而言，Compass之类基于mix-ins的框架，或者Susy这种有针对性的框架，将是更合适的选择。
-        pic_url: css-sass-compass.png
+        pic_url: css-sass-compass.jpg
         url:
         description: 和JavaScript、HTML一样，CSS是构建网站的核心技术。很不幸，CSS本身缺乏一些关键特性，这导致代码具有高度重复性并且缺乏有意义的抽象。
       - title: Logic in stored procedures
