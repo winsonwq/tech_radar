@@ -4,7 +4,8 @@ class WeixinController < ApplicationController
 
   layout false
 
-  before_filter :validate_weixin_token, :parse_message, :except => :technology
+  before_filter :validate_weixin_token, :except => :technology
+  before_filter :parse_message, :except => [:technology, :validate_echostr]
 
   def index
     response.headers['Access-Control-Allow-Origin'] = '*'
