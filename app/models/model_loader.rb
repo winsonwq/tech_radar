@@ -9,11 +9,16 @@ class ModelLoader
     raw_model = YAML::load_file file_path
     @fields = init_fields raw_model
     @nodes = init_nodes raw_model
-
-
     @isolate = init_isolate raw_model
     init_relations raw_model
-    @nodes.each { |nd| nd.create_model @isolate }
+
+p "@nodes=================="
+p @nodes
+
+    @nodes.each { |key, nd| nd.create_model @isolate }
+
+    p "ModelLoader========================="
+    p @nodes.parent_node_descriptors
   end
 
   private
@@ -46,7 +51,7 @@ class ModelLoader
     nodes = {}
     unless raw_model["nodes"].nil?
       raw_model["nodes"].to_a.each do |name, node_config|
-        node_descriptor = NodeDescriptor.create({ name: name.capitalize})
+        node_descriptor = NodeDescriptor.create({ name: name.capitalize, isolate: @isolate})
 
         node_config["fields"].each do |name|
           node_descriptor.field_descriptors << @fields[name] unless @fields[name].nil?

@@ -1,9 +1,6 @@
 require 'active_support/inflector'
 
 class NodeDescriptor < ActiveRecord::Base
-
-  p "node_descriptor=================================="
-
   has_and_belongs_to_many :field_descriptors #, after_add: :after_add_field
   has_many :child_relation_descriptors,
            foreign_key: :node_descriptor_id,
@@ -27,9 +24,8 @@ class NodeDescriptor < ActiveRecord::Base
 
   has_many :nodes
 
-  attr_accessible :name
+  attr_accessible :name, :isolate
   # after_create :create_model
-
 
   def clazz isolate
       custom_module = TechRadar.const_get isolate.to_sym
@@ -37,16 +33,16 @@ class NodeDescriptor < ActiveRecord::Base
   end
 
   def create_model isolate
-
-p "create_model========================================"
-
     descriptor = self
 
-    self.get_clazz isolate, Class.new do
+    new_clazz = Class.new do
       attr :node
-
+p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       define_method :initialize do |*args|
         @node = args.first || Node.create({ node_descriptor: descriptor })
+
+        p "==================node in class"
+        p @node
       end
 
       # TODO: should use ActiveRecord:Relation class
@@ -67,17 +63,21 @@ p "create_model========================================"
       end
     end
 
+    self.get_clazz isolate, new_clazz
+
     self.parent_node_descriptors.each do |pn|
-      pn.complete_node_descriptor_relation self
-      self.complete_node_descriptor_relation pn
+      pn.complete_node_descriptor_relation isolate, self
+      self.complete_node_descriptor_relation isolate, pn
     end
     
+    p "333333333333333333"
+    p self.field_descriptors
     self.field_descriptors.each do |f|
-      self.after_add_field f
+      self.after_add_field isolate, f
     end
   end
 
-  private
+  # private
 
   def get_clazz isolate, new_clazz  
     if TechRadar.local_constant_names.include? isolate 
@@ -88,11 +88,11 @@ p "create_model========================================"
     custom_module.const_set self.name, new_clazz
   end
 
-  def after_add_field field_descriptor
+  def after_add_field isolate, field_descriptor
     field_get_sym = field_descriptor.name.underscore.to_sym
     field_set_sym = (field_descriptor.name.underscore + '=').to_sym
 
-    self.clazz.class_eval do
+    self.clazz(isolate).class_eval do
 
       attr_accessor field_get_sym
 
@@ -122,10 +122,10 @@ p "create_model========================================"
   end
 
 
-  def after_add_node_descriptor descriptor
+  def after_add_node_descriptor isolate, descriptor
     relations_sym = descriptor.name.pluralize.underscore.to_sym
 
-    self.clazz.class_eval do
+    self.clazz(isolate).class_eval do
 
       attr relations_sym
 
@@ -146,12 +146,13 @@ p "create_model========================================"
     end
   end
 
-  def complete_node_descriptor_relation descriptor
+  def complete_node_descriptor_relation isolate, descriptor
+    custom_module = TechRadar.const_get isolate.to_sym
     clazz_name = descriptor.name
-    clazz = TechRadar.const_get(clazz_name)
+    clazz = custom_module.const_get clazz_name
 
     if clazz.instance_methods.index(self.name.pluralize.underscore.to_sym).nil?
-      descriptor.send(:after_add_node_descriptor, self)
+      descriptor.send(:after_add_node_descriptor, isolate, self)
     end
   end
 
