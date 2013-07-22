@@ -4,6 +4,8 @@ require 'socket'
 dirname = File.dirname(File.expand_path(__FILE__))
 file_path = dirname + ('/models/radar_model.yml')
 
+p "seeds=============================="
+
 @model_loader = ModelLoader.new file_path
 
 def my_public_ipv4
@@ -16,20 +18,20 @@ technology_id = 1
   file_path = File.join(dirname, '/models', file)
   source = YAML::load_file(file_path)
 
-  category = TechRadar::Category.new
+  category = TechRadar::ThoughtWorks::Category.new
   category_name = source.keys.first
   category.title = category_name
   category.id = source[category_name]["id"]
 
   source[category_name].each do |key, obj|
     if key != 'id'
-      assess = TechRadar::Assessment.new
+      assess = TechRadar::ThoughtWorks::Assessment.new 
       assess.id = obj['id']
       assess.title = key
       category.add assess
 
       obj['technologies'].each do |item|
-        tech = TechRadar::Technology.new
+        tech = TechRadar::ThoughtWorks::Technology.new
         tech.title = item["title"]
         tech.content = item["content"]
         tech.pic_url = "http://" + my_public_ipv4 + "/images/" + (item["pic_url"] || "default.jpg")

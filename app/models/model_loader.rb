@@ -2,14 +2,18 @@ require "yaml"
 
 class ModelLoader
 
-  attr :fields, :nodes
+  attr :fields, :nodes, :isolate
 
   def initialize file_path
     validate_path(file_path)
     raw_model = YAML::load_file file_path
     @fields = init_fields raw_model
     @nodes = init_nodes raw_model
+
+
+    @isolate = init_isolate raw_model
     init_relations raw_model
+    @nodes.each { |nd| nd.create_model @isolate }
   end
 
   private
@@ -32,12 +36,17 @@ class ModelLoader
     fields
   end
 
+  def init_isolate raw_model
+    unless raw_model["isolate"].nil?
+      isolate = raw_model["isolate"]
+    end
+  end
+
   def init_nodes raw_model
     nodes = {}
-
     unless raw_model["nodes"].nil?
       raw_model["nodes"].to_a.each do |name, node_config|
-        node_descriptor = NodeDescriptor.create({ name: name.capitalize })
+        node_descriptor = NodeDescriptor.create({ name: name.capitalize})
 
         node_config["fields"].each do |name|
           node_descriptor.field_descriptors << @fields[name] unless @fields[name].nil?

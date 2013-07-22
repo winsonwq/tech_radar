@@ -1,4 +1,8 @@
 unless ENV['RELOAD'].present?
+
+p "initial model"
+p NodeDescriptor.select { |nd| nd.name == 'Category' }.first  
+
   category_descriptor = NodeDescriptor.select { |nd| nd.name == 'Category' }.first
   category_descriptor.create_model
 
@@ -34,4 +38,7 @@ unless ENV['RELOAD'].present?
   technology_descriptor.field_descriptors.push pic_field_descriptor
   technology_descriptor.field_descriptors.push url_field_descriptor
   technology_descriptor.field_descriptors.push short_description_descriptor
+
+p "initial model"
+  
 end

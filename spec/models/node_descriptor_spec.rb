@@ -1,21 +1,28 @@
 require 'spec_helper'
 
 describe NodeDescriptor do
-  let!(:parent_node_descriptor){ FactoryGirl.create :node_descriptor }
-  let!(:child_node_descriptor_1){ FactoryGirl.create :node_descriptor }
-  let!(:child_node_descriptor_2){ FactoryGirl.create :node_descriptor }
-  let!(:super_node_descriptor){ FactoryGirl.create :node_descriptor }
+  let!(:parent_node_descriptor){ FactoryGirl.create :node_descriptor, name: "parent"}
+  let!(:child_node_descriptor_1){ FactoryGirl.create :node_descriptor, name: "child1" }
+  let!(:child_node_descriptor_2){ FactoryGirl.create :node_descriptor, name: "child2" }
+  let!(:super_node_descriptor){ FactoryGirl.create :node_descriptor, name: "super"}
 
   let!(:field_descriptor_1){ FactoryGirl.create :field_descriptor }
   let!(:field_descriptor_2){ FactoryGirl.create :field_descriptor }
 
   before(:all) do
+
+    p "begin test============================"
+
     parent_node_descriptor.child_node_descriptors.push child_node_descriptor_1
     parent_node_descriptor.child_node_descriptors.push child_node_descriptor_2
     parent_node_descriptor.parent_node_descriptors.push super_node_descriptor
 
     parent_node_descriptor.field_descriptors.push field_descriptor_1
     parent_node_descriptor.field_descriptors.push field_descriptor_2
+
+    parent_node_descriptor.create_model "ThoughtWorks"
+    child_node_descriptor1.create_model "ThoughtWorks"
+    child_node_descriptor_2.create_model "ThoughtWorks"
   end
 
   describe "relations between node descriptors" do
