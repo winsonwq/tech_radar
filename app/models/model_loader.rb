@@ -12,13 +12,10 @@ class ModelLoader
     @isolate = init_isolate raw_model
     init_relations raw_model
 
-p "@nodes=================="
-p @nodes
+    p "=======================ModelLoader"
+    p @isolate
 
-    @nodes.each { |key, nd| nd.create_model @isolate }
-
-    p "ModelLoader========================="
-    p @nodes.parent_node_descriptors
+    @nodes.each { |key, nd| nd.create_model}
   end
 
   private
@@ -51,7 +48,7 @@ p @nodes
     nodes = {}
     unless raw_model["nodes"].nil?
       raw_model["nodes"].to_a.each do |name, node_config|
-        node_descriptor = NodeDescriptor.create({ name: name.capitalize, isolate: @isolate})
+        node_descriptor = NodeDescriptor.create({ name: name.capitalize, isolate: isolate})
 
         node_config["fields"].each do |name|
           node_descriptor.field_descriptors << @fields[name] unless @fields[name].nil?

@@ -4,8 +4,6 @@ require 'socket'
 dirname = File.dirname(File.expand_path(__FILE__))
 file_path = dirname + ('/models/radar_model.yml')
 
-p "seeds=============================="
-
 @model_loader = ModelLoader.new file_path
 
 def my_public_ipv4

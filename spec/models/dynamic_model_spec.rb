@@ -14,30 +14,17 @@ describe "dynamic model" do
   before :all do
 
     comment_descriptor.parent_node_descriptors.push blog_descriptor
-    # blog_descriptor.complete_node_descriptor_relation "ThoughtWorks", comment_descriptor
-    # comment_descriptor.complete_node_descriptor_relation "ThoughtWorks", blog_descriptor
 
     blog_descriptor.field_descriptors.push id_field_descriptor
-    # blog_descriptor.after_add_field "ThoughtWorks", id_field_descriptor
-
     blog_descriptor.field_descriptors.push title_field_descriptor
-    # blog_descriptor.after_add_field "ThoughtWorks", title_field_descriptor
-
     blog_descriptor.field_descriptors.push content_field_descriptor
-    # blog_descriptor.after_add_field "ThoughtWorks", content_field_descriptor
-
     comment_descriptor.field_descriptors.push id_field_descriptor
-    # comment_descriptor.after_add_field "ThoughtWorks", id_field_descriptor
-
     comment_descriptor.field_descriptors.push content_field_descriptor
-    # comment_descriptor.after_add_field "ThoughtWorks", content_field_descriptor
 
-    blog_descriptor.create_model "ThoughtWorks"
-    comment_descriptor.create_model "ThoughtWorks"
-    
+    blog_descriptor.create_model
+    comment_descriptor.create_model
+
     @blog = TechRadar::ThoughtWorks::Blog.new
-    p "@@@@@@@@@@@@@@@@@@@@@@@@@blog"
-    p @blog
 
     @comment1 = TechRadar::ThoughtWorks::Comment.new
     @comment2 = TechRadar::ThoughtWorks::Comment.new
@@ -56,51 +43,51 @@ describe "dynamic model" do
   specify { @blog.node.node_descriptor.should == blog_descriptor }
   specify { @blog.comments.length.should == 0 }
 
-  # describe "Comment Class" do
-  #   it "should return all comments" do
-  #     Comment.all.length.should == 2
-  #     Comment.all.first.content.should == @comment1.content
-  #   end
+  describe "Comment Class" do
+    it "should return all comments" do
+      Comment.all.length.should == 2
+      Comment.all.first.content.should == @comment1.content
+    end
 
-  #   it "should find comment with id 10" do
-  #     Comment.find('10').content.should == @comment1.content
-  #   end
-  # end
+    it "should find comment with id 10" do
+      Comment.find('10').content.should == @comment1.content
+    end
+  end
 
-  # describe "fields" do
-  #   it "should have correct count of fields" do
-  #     @blog.node.fields.count.should == 2
-  #   end
+  describe "fields" do
+    it "should have correct count of fields" do
+      @blog.node.fields.count.should == 2
+    end
 
-  #   it "should have correct value" do
-  #     @blog.title.should == "blog title"
-  #     @blog.content.should == "blog content"
+    it "should have correct value" do
+      @blog.title.should == "blog title"
+      @blog.content.should == "blog content"
 
-  #     @blog.title = "blog title1"
-  #     @blog.title.should == "blog title1"
-  #   end
-  # end
+      @blog.title = "blog title1"
+      @blog.title.should == "blog title1"
+    end
+  end
 
-  # describe "relations" do
+  describe "relations" do
 
-  #   it "should have correct children relations" do
-  #     @blog.add @comment1
-  #     @blog.add @comment2
-  #     @blog.comments.length.should == 2
-  #     @blog.comments.first.content.should == @comment1.content
-  #     @blog.comments.last.content.should == @comment2.content
-  #   end
+    it "should have correct children relations" do
+      @blog.add @comment1
+      @blog.add @comment2
+      @blog.comments.length.should == 2
+      @blog.comments.first.content.should == @comment1.content
+      @blog.comments.last.content.should == @comment2.content
+    end
 
-  #   it "should have correct parents relations" do
-  #     @comment1.add @blog
-  #     @comment2.add @blog
+    it "should have correct parents relations" do
+      @comment1.add @blog
+      @comment2.add @blog
 
-  #     @comment1.blogs.length.should == 1
-  #     @comment1.blogs.first.title.should == @blog.title
-  #     @comment1.blogs.first.content.should == @blog.content
-  #   end
+      @comment1.blogs.length.should == 1
+      @comment1.blogs.first.title.should == @blog.title
+      @comment1.blogs.first.content.should == @blog.content
+    end
 
-  # end
+  end
 
 
 end

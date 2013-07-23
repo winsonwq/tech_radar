@@ -27,22 +27,22 @@ class NodeDescriptor < ActiveRecord::Base
   attr_accessible :name, :isolate
   # after_create :create_model
 
-  def clazz isolate
-      custom_module = TechRadar.const_get isolate.to_sym
+  def clazz
+      custom_module = TechRadar.const_get self.isolate.to_sym
       custom_module.const_get self.name.to_sym
   end
 
-  def create_model isolate
+  def create_model
     descriptor = self
 
-    new_clazz = Class.new do
-      attr :node
-p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      define_method :initialize do |*args|
-        @node = args.first || Node.create({ node_descriptor: descriptor })
+    p "==================self.isolate"
+    p self.isolate
+    p self.name
 
-        p "==================node in class"
-        p @node
+    self.clazz= Class.new do
+      attr :node
+      define_method :initialize do |*args|
+        @node = args.first || Node.create({ node_descriptor: descriptor})
       end
 
       # TODO: should use ActiveRecord:Relation class
@@ -54,7 +54,7 @@ p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       define_singleton_method :all do |*args|
         force_load = args.first
         descriptor.nodes(force_load).map do |node|
-          descriptor.clazz(isolate).new node
+          descriptor.clazz.new node
         end
       end
 
@@ -63,36 +63,32 @@ p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       end
     end
 
-    self.get_clazz isolate, new_clazz
-
     self.parent_node_descriptors.each do |pn|
-      pn.complete_node_descriptor_relation isolate, self
-      self.complete_node_descriptor_relation isolate, pn
+      pn.complete_node_descriptor_relation self
+      self.complete_node_descriptor_relation pn
     end
     
-    p "333333333333333333"
-    p self.field_descriptors
     self.field_descriptors.each do |f|
-      self.after_add_field isolate, f
+      self.after_add_field f
     end
   end
 
   # private
 
-  def get_clazz isolate, new_clazz  
-    if TechRadar.local_constant_names.include? isolate 
-      custom_module = TechRadar.const_get isolate.to_sym
+  def clazz= new_clazz  
+    if TechRadar.local_constant_names.include? self.isolate 
+      custom_module = TechRadar.const_get self.isolate.to_sym
     else
-      custom_module = TechRadar.const_set isolate, Module.new
+      custom_module = TechRadar.const_set self.isolate, Module.new
     end   
     custom_module.const_set self.name, new_clazz
   end
 
-  def after_add_field isolate, field_descriptor
+  def after_add_field field_descriptor
     field_get_sym = field_descriptor.name.underscore.to_sym
     field_set_sym = (field_descriptor.name.underscore + '=').to_sym
 
-    self.clazz(isolate).class_eval do
+    self.clazz.class_eval do
 
       attr_accessor field_get_sym
 
@@ -122,10 +118,10 @@ p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
   end
 
 
-  def after_add_node_descriptor isolate, descriptor
+  def after_add_node_descriptor descriptor
     relations_sym = descriptor.name.pluralize.underscore.to_sym
 
-    self.clazz(isolate).class_eval do
+    self.clazz.class_eval do
 
       attr relations_sym
 
@@ -146,13 +142,13 @@ p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     end
   end
 
-  def complete_node_descriptor_relation isolate, descriptor
-    custom_module = TechRadar.const_get isolate.to_sym
+  def complete_node_descriptor_relation descriptor
+    custom_module = TechRadar.const_get self.isolate.to_sym
     clazz_name = descriptor.name
     clazz = custom_module.const_get clazz_name
 
     if clazz.instance_methods.index(self.name.pluralize.underscore.to_sym).nil?
-      descriptor.send(:after_add_node_descriptor, isolate, self)
+      descriptor.send(:after_add_node_descriptor, self)
     end
   end
 

@@ -3,3 +3,4 @@ class AddIsolateToNodeDescriptors < ActiveRecord::Migration
   	add_column :node_descriptors, :isolate, :string
   end
 end
+ 	
