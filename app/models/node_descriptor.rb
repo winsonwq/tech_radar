@@ -34,11 +34,6 @@ class NodeDescriptor < ActiveRecord::Base
 
   def create_model
     descriptor = self
-
-    p "==================self.isolate"
-    p self.isolate
-    p self.name
-
     self.clazz= Class.new do
       attr :node
       define_method :initialize do |*args|
@@ -75,13 +70,16 @@ class NodeDescriptor < ActiveRecord::Base
 
   # private
 
-  def clazz= new_clazz  
-    if TechRadar.local_constant_names.include? self.isolate 
+  def clazz= new_clazz 
+      get_custom_module.const_set self.name, new_clazz unless get_custom_module.local_constant_names.include? self.name
+  end
+
+  def get_custom_module
+    if TechRadar.local_constant_names.include? self.isolate.to_s 
       custom_module = TechRadar.const_get self.isolate.to_sym
     else
       custom_module = TechRadar.const_set self.isolate, Module.new
-    end   
-    custom_module.const_set self.name, new_clazz
+    end
   end
 
   def after_add_field field_descriptor
@@ -131,7 +129,8 @@ class NodeDescriptor < ActiveRecord::Base
         end
 
         relations = relations.map do |node|
-          clazz = TechRadar.const_get(node.node_descriptor.name)
+          custom_module = TechRadar.const_get descriptor.isolate.to_sym
+          clazz = custom_module.const_get node.node_descriptor.name
           elem = clazz.new
           elem.instance_variable_set("@node", node)
           elem
@@ -143,9 +142,8 @@ class NodeDescriptor < ActiveRecord::Base
   end
 
   def complete_node_descriptor_relation descriptor
-    custom_module = TechRadar.const_get self.isolate.to_sym
     clazz_name = descriptor.name
-    clazz = custom_module.const_get clazz_name
+    clazz = get_custom_module.const_get clazz_name
 
     if clazz.instance_methods.index(self.name.pluralize.underscore.to_sym).nil?
       descriptor.send(:after_add_node_descriptor, self)

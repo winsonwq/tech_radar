@@ -4,8 +4,8 @@ include TechRadar
 
 describe "dynamic model" do
 
-  let!(:blog_descriptor) { FactoryGirl.create :node_descriptor, name: "Blog" }
-  let!(:comment_descriptor) { FactoryGirl.create :node_descriptor, name: "Comment" }
+  let!(:blog_descriptor) { FactoryGirl.create :node_descriptor, name: "Blog", isolate: "ThoughtWorks"}
+  let!(:comment_descriptor) { FactoryGirl.create :node_descriptor, name: "Comment", isolate: "ThoughtWorks"}
 
   let!(:id_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Id" }
   let!(:title_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Title" }
@@ -45,12 +45,12 @@ describe "dynamic model" do
 
   describe "Comment Class" do
     it "should return all comments" do
-      Comment.all.length.should == 2
-      Comment.all.first.content.should == @comment1.content
+      TechRadar::ThoughtWorks::Comment.all.length.should == 2
+      TechRadar::ThoughtWorks::Comment.all.first.content.should == @comment1.content
     end
 
     it "should find comment with id 10" do
-      Comment.find('10').content.should == @comment1.content
+      TechRadar::ThoughtWorks::Comment.find('10').content.should == @comment1.content
     end
   end
 
