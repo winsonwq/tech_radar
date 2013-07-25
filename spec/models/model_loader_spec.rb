@@ -26,11 +26,9 @@ describe ModelLoader do
     end
 
     context "validate success" do
-
       it "should be a string" do
         expect{ ModelLoader.new file_path }.not_to raise_error
       end
-
     end
 
   end

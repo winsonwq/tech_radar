@@ -3,9 +3,9 @@ require 'spec_helper'
 
 describe Weixin do
 
-  let!(:category_descriptor) { FactoryGirl.create :node_descriptor, name: "Category" }
-  let!(:assessment_descriptor) { FactoryGirl.create :node_descriptor, name: "Assessment" }
-  let!(:technology_descriptor) { FactoryGirl.create :node_descriptor, name: "Technology" }
+  let!(:category_descriptor) { FactoryGirl.create :node_descriptor, name: "Category", isolate:"ThoughtWorks" }
+  let!(:assessment_descriptor) { FactoryGirl.create :node_descriptor, name: "Assessment", isolate:"ThoughtWorks" }
+  let!(:technology_descriptor) { FactoryGirl.create :node_descriptor, name: "Technology", isolate:"ThoughtWorks" }
 
   let!(:id_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Id" }
   let!(:title_field_descriptor) { FactoryGirl.create :field_descriptor, name: "Title" }
@@ -29,25 +29,29 @@ describe Weixin do
     technology_descriptor.field_descriptors.push url_field_descriptor
     technology_descriptor.field_descriptors.push short_description_field_descriptor
 
-    techniques = Category.new
+    category_descriptor.create_model
+    assessment_descriptor.create_model
+    technology_descriptor.create_model
+
+    techniques = TechRadar::ThoughtWorks::Category.new
     techniques.title = "Techniques"
     techniques.id = "C1"
 
-    languages = Category.new
+    languages = TechRadar::ThoughtWorks::Category.new
     languages.title = "Languages"
     languages.id = "C2"
 
-    adopt = Assessment.new
+    adopt = TechRadar::ThoughtWorks::Assessment.new
     adopt.title = "Adopt"
     adopt.id = "A2"
     languages.add adopt
 
-    trial = Assessment.new
+    trial = TechRadar::ThoughtWorks::Assessment.new
     trial.title = "Trial"
     trial.id = "A3"
     languages.add trial
 
-    clojure = Technology.new
+    clojure = TechRadar::ThoughtWorks::Technology.new
     clojure.title = "Clojure"
     clojure.id = "81"
     clojure.short_description = 'This is content of Clojure'
@@ -55,7 +59,7 @@ describe Weixin do
     clojure.url = "http://coffeescript.org/"
     adopt.add clojure
 
-    css_framework = Technology.new
+    css_framework = TechRadar::ThoughtWorks::Technology.new
     css_framework.title = "CSS Framework"
     css_framework.id = "82"
     adopt.add css_framework

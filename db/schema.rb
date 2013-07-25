@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522091323) do
+ActiveRecord::Schema.define(:version => 20130722081021) do
 
   create_table "field_descriptors", :force => true do |t|
     t.string "name"
@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(:version => 20130522091323) do
   create_table "fields", :force => true do |t|
     t.integer "node_id"
     t.integer "field_descriptor_id"
-    t.text "data"
+    t.text    "data"
   end
 
   create_table "node_descriptors", :force => true do |t|
     t.string "name"
+    t.string "isolate"
   end
 
   create_table "node_relations", :force => true do |t|
@@ -43,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20130522091323) do
   end
 
   create_table "relation_descriptors", :force => true do |t|
-    t.string "name"
+    t.string  "name"
     t.integer "node_descriptor_id"
     t.integer "child_node_descriptor_id"
   end

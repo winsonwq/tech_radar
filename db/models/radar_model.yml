@@ -6,6 +6,8 @@ fields:
   short_description: text
   url: text
 
+isolate: ThoughtWorks
+
 nodes:
   category:
     fields:
