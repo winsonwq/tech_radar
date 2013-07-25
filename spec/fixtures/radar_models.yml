@@ -3,6 +3,8 @@ fields:
   title1: text
   content1: long_text
 
+isolate: ThoughtWorks
+
 nodes:
   student:
     fields:

@@ -2,7 +2,7 @@
 
 case $1 in
   test)
-    RAILS_ENV=test RELOAD=false rake db:setup && RAILS_ENV=test RELOAD=false rspec -c
+    RAILS_ENV=test RELOAD=false rake db:setup && RAILS_ENV=test RELOAD=false bundle exec rspec -c
     ;;
   server)
     if [ ! -z $2 ]; then

@@ -1,21 +1,28 @@
 require 'spec_helper'
 
 describe NodeDescriptor do
-  let!(:parent_node_descriptor){ FactoryGirl.create :node_descriptor }
-  let!(:child_node_descriptor_1){ FactoryGirl.create :node_descriptor }
-  let!(:child_node_descriptor_2){ FactoryGirl.create :node_descriptor }
-  let!(:super_node_descriptor){ FactoryGirl.create :node_descriptor }
+  let!(:parent_node_descriptor){ FactoryGirl.create :node_descriptor, name: "Parent", isolate: "ThoughtWorks"}
+  let!(:child_node_descriptor_1){ FactoryGirl.create :node_descriptor, name: "Child1", isolate: "ThoughtWorks"}
+  let!(:child_node_descriptor_2){ FactoryGirl.create :node_descriptor, name: "Child2", isolate: "ThoughtWorks"}
+  let!(:super_node_descriptor){ FactoryGirl.create :node_descriptor, name: "Super", isolate: "ThoughtWorks"}
 
   let!(:field_descriptor_1){ FactoryGirl.create :field_descriptor }
   let!(:field_descriptor_2){ FactoryGirl.create :field_descriptor }
 
   before(:all) do
-    parent_node_descriptor.child_node_descriptors.push child_node_descriptor_1
+
+    parent_node_descriptor.child_node_descriptors.push child_node_descriptor_1  
     parent_node_descriptor.child_node_descriptors.push child_node_descriptor_2
     parent_node_descriptor.parent_node_descriptors.push super_node_descriptor
 
     parent_node_descriptor.field_descriptors.push field_descriptor_1
     parent_node_descriptor.field_descriptors.push field_descriptor_2
+
+    super_node_descriptor.create_model 
+    parent_node_descriptor.create_model
+    child_node_descriptor_1.create_model
+    child_node_descriptor_2.create_model
+
   end
 
   describe "relations between node descriptors" do
@@ -41,8 +48,7 @@ describe NodeDescriptor do
   end
 
   describe "callbacks when creating new model" do
-
-    let!(:clazz) {TechRadar.const_get(parent_node_descriptor.name)}
+    let!(:clazz) {TechRadar::ThoughtWorks.const_get(parent_node_descriptor.name)}
 
     specify { clazz.should_not be_nil }
 

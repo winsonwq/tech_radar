@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Node do
 
-	let!(:blog_descriptor){ FactoryGirl.create :node_descriptor }
-	let!(:comment_descriptor){ FactoryGirl.create :node_descriptor }
+	let!(:blog_descriptor){ FactoryGirl.create :node_descriptor, isolate: "ThoughtWorks" }
+	let!(:comment_descriptor){ FactoryGirl.create :node_descriptor, isolate: "ThoughtWorks" }
 
-	let!(:blog) { FactoryGirl.create :node, node_descriptor: blog_descriptor }
+	let!(:blog) { FactoryGirl.create :node, node_descriptor: blog_descriptor}
 	let!(:comment1) { FactoryGirl.create :node, node_descriptor: comment_descriptor }
 	let!(:comment2) { FactoryGirl.create :node, node_descriptor: comment_descriptor }
 

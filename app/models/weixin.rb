@@ -123,14 +123,14 @@ class Weixin
 
   def self.retrieve_up_level msg
     content = 'radar'
-    content = Technology.find(msg).assessments.first.id if search_technology? msg
-    content = Assessment.find(msg).categories.first.id if search_assessments? msg
+    content = ThoughtWorks::Technology.find(msg).assessments.first.id if search_technology? msg
+    content = ThoughtWorks::Assessment.find(msg).categories.first.id if search_assessments? msg
     content = 'radar' if search_categories? msg
     content
   end
 
   def self.details_of_technology(msg)
-    technology = Technology.find msg
+    technology = ThoughtWorks::Technology.find msg
     assessment = technology.assessments.first
     category = assessment.categories.first
 
@@ -144,7 +144,7 @@ class Weixin
   end
 
   def self.technologies_by_assess_id(msg)
-    assessment = Assessment.find msg
+    assessment = ThoughtWorks::Assessment.find msg
     category = assessment.categories.first
     response = "#{category.title} - #{assessment.title}\n"
     assessment.technologies.each do |tech|
@@ -155,7 +155,7 @@ class Weixin
   end
 
   def self.assessments_by_category_id(msg)
-    category = Category.find msg
+    category = ThoughtWorks::Category.find msg
     response = "#{category.title}\n"
 
     category.assessments.each do |assess|
@@ -167,7 +167,7 @@ class Weixin
 
   def self.main_menu
     response = ""
-    Category.all.each do |c|
+    ThoughtWorks::Category.all.each do |c|
       response += "#{c.id}: #{c.title}\n" unless c.id.nil?
     end
     response += "\n输入ID查看类别"
@@ -179,7 +179,7 @@ class Weixin
   end
 
   def self.search_technology?(msg)
-    (/^\d+$/i =~ msg).present? and Technology.find(msg).present?
+    (/^\d+$/i =~ msg).present? and ThoughtWorks::Technology.find(msg).present?
   end
 
   def self.search_assessments?(msg)
